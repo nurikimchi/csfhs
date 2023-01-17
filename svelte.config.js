@@ -5,10 +5,7 @@ import { vitePreprocess } from '@sveltejs/kit/vite';
 const config = {
 	preprocess: vitePreprocess(),
 	kit: {
-		adapter: adapter(),
-		alias: {
-			'@components': 'src/components'
-		}
+		adapter: adapter()
 	}
 };
 
