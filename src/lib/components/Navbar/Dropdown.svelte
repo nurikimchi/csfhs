@@ -52,7 +52,7 @@
 				/>
 			{/if}
 			<div
-				class="absolute pt-2 z-20"
+				class="absolute pt-2 pr-4 z-20"
 				on:mouseenter={handleMouseInDropdown}
 				on:mouseleave={handleMouseLeaveDropdown}
 				style:transform-origin="top"
