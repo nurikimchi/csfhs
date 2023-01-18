@@ -3,6 +3,7 @@
 	import { invalidate } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import '../app.css';
+	import Navbar from '$lib/components/Navbar/Navbar.svelte';
 
 	onMount(() => {
 		const {
@@ -20,6 +21,8 @@
 <svelte:head>
 	<title>CSFHS</title>
 </svelte:head>
+
+<Navbar />
 
 <main>
 	<slot />
