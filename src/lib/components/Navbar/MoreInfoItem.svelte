@@ -9,17 +9,15 @@
 </script>
 
 <a
-	class="w-full cursor-pointer group"
+	class="bg-white m-4 w-full cursor-pointer group"
 	on:mouseenter={() => (show = true)}
 	on:mouseleave={() => (show = false)}
 	{href}
 >
-	<div class="flex flex-row justify-between text-sm items-center">
-		<h1 class="font-semibold text-black hover:text-black">{title}</h1>
+	<div class="flex flex-row items-center">
+		<h1 class="text-sm font-semibold">{title}</h1>
 
 		<ExternalArrow {show} />
 	</div>
-	<p class="text-xs text-gray-500 transition duration-100 group-hover:text-gray-900">
-		{description}
-	</p>
+	<p class="text-xs max-w-[35ch] text-gray-600 group-hover:text-black">{description}</p>
 </a>
