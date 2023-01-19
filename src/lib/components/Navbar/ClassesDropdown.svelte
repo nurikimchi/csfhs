@@ -11,7 +11,7 @@
 		/>
 		<Class
 			title="Exploring Computer Science"
-			description="This is the frist course in our three-year pathway. Learn the command line interface • Develop problem-solving skills and techniques • Program using the C language • Solve problems using control flow, arrays and iteration."
+			description="This is the first course in our three-year pathway. Learn the command line interface • Develop problem-solving skills and techniques • Program using the C language • Solve problems using control flow, arrays and iteration."
 		/>
 		<Class
 			title="AP Computer Science Principles"
@@ -23,11 +23,11 @@
 		/>
 		<Class
 			title="Web Design"
-			description="Develop web sites with HTML5 and CSS • Validating HTML code using W3C • Using images including Image Maps and SVG • Responsive design with BootStrap and FlaxBox • Use JavaScript to communicate with users and modify DOM • Transcompilers including SASS and TypeScript."
+			description="Develop web sites with HTML5 and CSS • Validating HTML code using W3C • Using images including Image Maps and SVG • Responsive design with BootStrap and FlaxBox • Use JavaScript to communicate with users and modify DOM • Transpilers including SASS and TypeScript."
 		/>
 		<Class
 			title="Machine Learning Honors"
-			description="Gain understanding of every ML model covered • Use regression to model continuous data • Predect descrete resutls using classification models • Discover unkown patters with clustering models • Additional topics include association rule learning, reinforcement learing, and natural langue processing"
+			description="Gain understanding of every ML model covered • Use regression to model continuous data • Predict discrete results using classification models • Discover unknown patters with clustering models • Additional topics include association rule learning, reinforcement learning, and natural langue processing."
 		/>
 	</div>
 </Dropdown>

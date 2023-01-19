@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let width: number = 800;
+	export let width: number = 1000;
 
 	$: widthPixels = `${width}px`;
 </script>
