@@ -1,23 +1,23 @@
 <script lang="ts">
-	import ExternalArrow from './ExternalArrow.svelte';
+  import ExternalArrow from './ExternalArrow.svelte';
 
-	export let title: string;
-	export let description: string;
-	export let href: string;
+  export let title: string;
+  export let description: string;
+  export let href: string;
 
-	let show = false;
+  let show = false;
 </script>
 
 <a
-	class="bg-white m-4 w-full cursor-pointer group"
-	on:mouseenter={() => (show = true)}
-	on:mouseleave={() => (show = false)}
-	{href}
+  class="bg-white m-4 w-full cursor-pointer group"
+  on:mouseenter={() => (show = true)}
+  on:mouseleave={() => (show = false)}
+  {href}
 >
-	<div class="flex flex-row items-center">
-		<h1 class="text-sm font-semibold">{title}</h1>
+  <div class="flex flex-row items-center">
+    <h1 class="text-sm font-semibold">{title}</h1>
 
-		<ExternalArrow {show} />
-	</div>
-	<p class="text-xs max-w-[35ch] text-gray-600 group-hover:text-black">{description}</p>
+    <ExternalArrow {show} />
+  </div>
+  <p class="text-xs max-w-[35ch] text-gray-600 group-hover:text-black">{description}</p>
 </a>

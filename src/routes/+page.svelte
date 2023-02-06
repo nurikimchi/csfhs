@@ -1,7 +1,7 @@
 <script>
   import Container from '$lib/components/Container.svelte';
   import CourseCard from './CourseCard.svelte';
-  import { courses } from '$lib/utils/courses';
+  import { courses } from '$lib/utils/navdata/courses';
 </script>
 
 <Container>

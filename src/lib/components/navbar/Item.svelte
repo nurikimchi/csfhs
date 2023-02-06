@@ -1,3 +1,11 @@
+<script lang="ts" context="module">
+  export interface ItemProps {
+    title: string;
+    description: string;
+    href: string;
+  }
+</script>
+
 <script lang="ts">
   import ExternalArrow from './ExternalArrow.svelte';
 

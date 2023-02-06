@@ -4,7 +4,7 @@
   $: widthPixels = `${width}px`;
 </script>
 
-<div class="px-4 h-full">
+<div class="px-4 h-full relative">
   <div class="mx-auto h-full" style:max-width={widthPixels}>
     <slot />
   </div>
