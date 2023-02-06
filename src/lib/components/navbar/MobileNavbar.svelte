@@ -27,8 +27,8 @@
   {#if visible}
     <div class="absolute top-0 left-0 w-full z-10" transition:fade={{ duration: 75 }}>
       <div class="flex flex-col rounded-md shadow-2xl bg-white border p-4">
-        <div class="flex flex-row justify-between items-center">
-          <h1 class="font-bold text-lg mb-2">Menu</h1>
+        <div class="flex flex-row justify-between items-center mb-2">
+          <h1 class="font-bold text-lg">Menu</h1>
           <button
             class="h-[1.5em] w-[1.5em] p-1 text-white bg-indigo-600 rounded-md"
             on:click={() => (visible = false)}
@@ -39,21 +39,23 @@
 
         <SlideSelector options={selectedAreaOptions} onClick={handleSlideSelect} />
 
-        {#if selectedArea === 'classes'}
-          <MobileNavbarSection title="Classes">
-            {#each courses as course}
-              <MobileItem item={course} />
-            {/each}
-          </MobileNavbarSection>
-        {/if}
+        <div class="mt-2">
+          {#if selectedArea === 'classes'}
+            <MobileNavbarSection title="Classes">
+              {#each courses as course}
+                <MobileItem item={course} />
+              {/each}
+            </MobileNavbarSection>
+          {/if}
 
-        {#if selectedArea === 'info'}
-          <MobileNavbarSection title="Info">
-            {#each moreInformationItems as moreInformationItem}
-              <MobileItem item={moreInformationItem} />
-            {/each}
-          </MobileNavbarSection>
-        {/if}
+          {#if selectedArea === 'info'}
+            <MobileNavbarSection title="Info">
+              {#each moreInformationItems as moreInformationItem}
+                <MobileItem item={moreInformationItem} />
+              {/each}
+            </MobileNavbarSection>
+          {/if}
+        </div>
       </div>
     </div>
   {/if}
