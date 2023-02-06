@@ -1,14 +1,12 @@
-<script>
-	import Container from '$lib/components/Container.svelte';
-	import ClassesDropdown from './ClassesDropdown.svelte';
-	import MoreInfoDropdown from './MoreInfoDropdown.svelte';
+<script lang="ts">
+  import Container from '$lib/components/Container.svelte';
+  import DesktopNavbar from './DesktopNavbar.svelte';
+  import MobileNavbar from './MobileNavbar.svelte';
 </script>
 
 <nav class="py-4 border-b">
-	<Container>
-		<div class="flex flex-row">
-			<ClassesDropdown />
-			<MoreInfoDropdown />
-		</div>
-	</Container>
+  <Container>
+    <MobileNavbar />
+    <DesktopNavbar />
+  </Container>
 </nav>
