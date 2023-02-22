@@ -40,10 +40,10 @@
     <h2 class="text-2xl font-bold mb-6">Student Testimonials</h2>
     <div class="mt-4 mb-16 grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4">
       {#each data.course.testimonies as testimony}
-        <p>
-          {testimony.text} <br />
-          - <span class="font-bold">{testimony.author}</span>
-        </p>
+        <div>
+          <p>{testimony.text}</p>
+          <p class="font-bold">- {testimony.author}</p>
+        </div>
       {/each}
     </div>
   {/if}
