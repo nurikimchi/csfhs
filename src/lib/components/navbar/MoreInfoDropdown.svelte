@@ -4,7 +4,7 @@
   import MoreInfoItem from './MoreInfoItem.svelte';
 </script>
 
-<Dropdown title="More Information" padding={16} arrowLeftOffset={137 / 2}>
+<Dropdown title="General Information" padding={16} arrowLeftOffset={137 / 2}>
   <div class="flex flex-col">
     {#each moreInformationItems as { title, description, href }}
       <MoreInfoItem {title} {description} {href} />

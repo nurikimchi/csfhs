@@ -1,7 +1,9 @@
 <script lang="ts">
   import Container from '$lib/components/Container.svelte';
+  import Footer from '$lib/components/Footer.svelte';
   import ImageCarousel from '$lib/components/images/ImageCarousel.svelte';
   import Navbar from '$lib/components/navbar/Navbar.svelte';
+  import TeacherCard from '$lib/components/TeacherCard.svelte';
   import BackdropText from '$lib/components/text/BackdropText.svelte';
   import DaglerPFP from '$lib/images/dagler.jpeg';
   import type { PageData } from './$types';
@@ -17,7 +19,7 @@
       <div class="flex flex-row space-x-16 items-center">
         <div class="max-w-[60ch] flex-1">
           <BackdropText
-            text="Teaching the future leaders of Computer Science."
+            text="Teaching the future innovators of technology."
             className="font-bold text-6xl"
           />
           <p class="mt-8">
@@ -67,7 +69,7 @@
       </blockquote>
 
       <div>
-        <p class="border-gray-800 text-indigo-400 font-semibold text-sm">
+        <p class="border-gray-800 text-sky-400 font-semibold text-sm">
           Mr. Dagler, Head of Computer Science
         </p>
 
@@ -79,21 +81,30 @@
   </div>
 
   <section>
-    <BackdropText text="Meet our teachers" className="font-bold text-4xl" />
+    <div>
+      <BackdropText
+        text="Meet the instructors changing the world... one classroom at a time."
+        className="font-bold text-5xl"
+      />
+    </div>
 
-    <div class="mt-2 mb-6">
-      <ul class="flex flex-col font-semibold space-y-2 md:flex-row md:space-x-40 md:space-y-0">
-        <li>Mr. Dagler</li>
-        <li>
-          <a
-            href="mailto:cdagler@egusd.net"
-            class="text-indigo-600 transition hover:text-indigo-500"
-          >
-            cdagler@egusd.net
-          </a>
-        </li>
-        <li>@fhs.computerscience</li>
-      </ul>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+      <TeacherCard
+        name="Clay Dagler"
+        title="ML, APCSA, ECS, and CSR Instructor"
+        description="Dolor eiusmod deserunt consectetur labore et dolore in id. Est dolore et duis voluptate ipsum incididunt irure exercitation amet velit elit ipsum voluptate est. Nulla aliqua sint commodo in Lorem incididunt elit culpa officia culpa amet. Laborum eiusmod consequat consectetur proident velit deserunt laborum mollit ad nisi cillum sint. Elit velit officia officia dolor aliquip adipisicing do ut duis aliquip. Aliqua consectetur veniam fugiat irure ut eu."
+        href="/"
+        image={DaglerPFP}
+      />
+      <TeacherCard
+        name="<Rodriguez>"
+        title="APCSA Instructor"
+        description="Dolor eiusmod deserunt consectetur labore et dolore in id. Est dolore et duis voluptate ipsum incididunt irure exercitation amet velit elit ipsum voluptate est. Nulla aliqua sint commodo in Lorem incididunt elit culpa officia culpa amet. Laborum eiusmod consequat consectetur proident velit deserunt laborum mollit ad nisi cillum sint. Elit velit officia officia dolor aliquip adipisicing do ut duis aliquip. Aliqua consectetur veniam fugiat irure ut eu."
+        href="/"
+        image={DaglerPFP}
+      />
     </div>
   </section>
 </Container>
+
+<Footer />

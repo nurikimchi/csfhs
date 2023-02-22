@@ -42,7 +42,9 @@
     on:mouseenter={handleMouseIn}
     on:mouseleave={handleMouseLeave}
   >
-    <p class="font-semibold cursor-default transition hover:text-gray-600 w-max text-sm pr-2">
+    <p
+      class="font-semibold font-sans cursor-default transition hover:text-gray-600 w-max text-sm pr-2"
+    >
       {title}
     </p>
 
