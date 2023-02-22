@@ -18,7 +18,7 @@
         <h1 class="font-bold text-3xl">CSFHS</h1>
         <p class="text-sm">
           by <a class="contributer-link" href="/">Esteban Garcia</a> &
-          <a class="contributer-link" href="/">Omar Sadet</a>
+          <a class="contributer-link" href="/">Omar Sadat</a>
         </p>
       </Container>
     </div>
