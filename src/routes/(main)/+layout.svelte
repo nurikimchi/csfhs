@@ -22,22 +22,16 @@
   <title>CSFHS</title>
 </svelte:head>
 
-<div class="bg-white">
-  <Navbar />
+<Navbar />
 
-  <main>
-    <slot />
-  </main>
+<main class="bg-white">
+  <slot />
+</main>
 
-  <Footer />
-</div>
+<Footer />
 
 <style>
   :global(body) {
     @apply bg-gray-900;
-  }
-
-  * {
-    background-color: white;
   }
 </style>

@@ -7,7 +7,7 @@
 </script>
 
 <div
-  class="py-4 sticky top-0 bg-white z-20 transition-all {scrollY > 45
+  class="py-4 sticky top-0 bg-white z-20 transition-all {scrollY > 10
     ? 'border-b shadow-lg shadow-slate-400/20'
     : ''}"
 >

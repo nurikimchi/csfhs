@@ -20,7 +20,7 @@
 </script>
 
 <Container>
-  <div class="flex-[4] min-h-screen my-8">
+  <div class="flex-[4] min-h-screen py-8">
     <p
       class="font-mono uppercase text-xs text-white bg-blue-700 rounded-md w-max px-4 py-2 font-bold shadow-md shadow-indigo-400/40"
     >
@@ -52,7 +52,7 @@
       </block>
     </a>
 
-    <div class="my-12 flex flex-row space-x-8">
+    <div class="mt-12 flex flex-row space-x-8">
       <div class="flex-1">
         <BackdropText text="Meet your instructor." className="font-bold text-4xl leading-none" />
 
