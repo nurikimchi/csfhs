@@ -5,8 +5,12 @@
   import FaChevronRight from 'svelte-icons/fa/FaChevronRight.svelte';
 
   export let images: ImageOptions[];
+  export let presentation = false;
 
   let isTransitioning = false;
+
+  const CHEVRON_ARROW_STYLES =
+    'absolute z-10 top-1/2 -translate-y-1/2 px-6 h-8 opacity-50 text-gray-200 cursor-pointer';
 
   const IMAGE_ROTATION_LENGTH_MS = 5000;
   const IMAGE_VIEW_EXTRA_TIME_MS = 7000;
@@ -60,7 +64,7 @@
           alt={currentImage.alt}
           src={currentImage.src}
           transition:fade
-          class="rounded-md top-0 shadow-lg"
+          class="rounded-md top-0 shadow-lg h-full"
         />
       </div>
     {/key}
@@ -71,27 +75,25 @@
       <!-- Placeholder image for content to be after the absolute image -->
       <img alt={currentImage.alt} src={currentImage.src} class="invisible" />
 
-      <button
-        class="absolute z-10 top-1/2 -translate-y-1/2 left-0 px-6 h-8 opacity-50 text-gray-200 cursor-pointer"
-        on:click={previousImage}
-      >
-        <FaChevronLeft />
-      </button>
+      {#if !presentation}
+        <button class="{CHEVRON_ARROW_STYLES} left-0" on:click={previousImage}>
+          <FaChevronLeft />
+        </button>
 
-      <button
-        class="absolute z-10 top-1/2 -translate-y-1/2 right-0 px-6 h-8 opacity-50 text-gray-200 cursor-pointer"
-        on:click={nextImage}
-      >
-        <FaChevronRight />
-      </button>
+        <button class="{CHEVRON_ARROW_STYLES} right-0" on:click={nextImage}>
+          <FaChevronRight />
+        </button>
+      {/if}
     </div>
 
-    <div class="flex flex-row space-x-4 justify-center my-4">
-      {#each { length: images.length } as _, n}
-        <div
-          class="rounded-full p-1 {$currentImageIndex === n ? 'bg-indigo-600' : 'bg-gray-300'}"
-        />
-      {/each}
-    </div>
+    {#if !presentation}
+      <div class="flex flex-row space-x-4 justify-center my-4">
+        {#each { length: images.length } as _, n}
+          <div
+            class="rounded-full p-1 {$currentImageIndex === n ? 'bg-indigo-600' : 'bg-gray-300'}"
+          />
+        {/each}
+      </div>
+    {/if}
   </div>
 </div>

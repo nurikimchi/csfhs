@@ -1,5 +1,6 @@
 <script lang="ts">
   import { spring } from 'svelte/motion';
+  import FaChevronDown from 'svelte-icons/fa/FaChevronDown.svelte';
 
   export let title: string;
   export let padding: number = 32;
@@ -8,11 +9,13 @@
   let isInButton = false;
   let isInDropdown = false;
 
-  const fadeAnimation = spring(0);
+  const dropdownOpacity = spring(0);
+  const arrowRotation = spring(0);
 
   $: show = isInButton || isInDropdown;
-  $: fadeAnimation.set(+show);
-  $: animationIsActive = $fadeAnimation < 1 && $fadeAnimation > 0;
+  $: dropdownOpacity.set(+show);
+  $: arrowRotation.set(show ? 180 : 0);
+  $: animationIsActive = $dropdownOpacity < 1 && $dropdownOpacity > 0;
 
   function handleMouseIn() {
     isInButton = true;
@@ -34,20 +37,28 @@
 </script>
 
 <div>
-  <p
-    class="font-semibold cursor-default transition hover:text-gray-600 py-2 w-max pr-8"
+  <div
+    class="flex flex-row pr-8 py-2 items-center"
     on:mouseenter={handleMouseIn}
     on:mouseleave={handleMouseLeave}
   >
-    {title}
-  </p>
+    <p
+      class="font-semibold font-sans cursor-default transition hover:text-gray-600 w-max text-sm pr-2"
+    >
+      {title}
+    </p>
 
-  {#if $fadeAnimation !== 0}
+    <div class="h-[0.8rem] block origin-center" style="transform: rotateZ({$arrowRotation}deg);">
+      <FaChevronDown />
+    </div>
+  </div>
+
+  {#if $dropdownOpacity !== 0}
     <div>
       {#if arrowLeftOffset > 0}
         <div
           class="arrow"
-          style:opacity={$fadeAnimation}
+          style:opacity={$dropdownOpacity}
           style:margin-left="{arrowLeftOffset - 8}px"
         />
       {/if}
@@ -56,8 +67,8 @@
         on:mouseenter={handleMouseInDropdown}
         on:mouseleave={handleMouseLeaveDropdown}
         style:transform-origin="top"
-        style:opacity={$fadeAnimation}
-        style:transform="rotateX({(1 - $fadeAnimation) * 10}deg)"
+        style:opacity={$dropdownOpacity}
+        style:transform="rotateX({(1 - $dropdownOpacity) * 10}deg)"
         style:pointer-events={show ? 'initial' : 'none'}
       >
         <div
