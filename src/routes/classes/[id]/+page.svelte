@@ -30,7 +30,7 @@
   </p>
 
   {#if data.pageImages.length > 0}
-    <ImageCarousel images={data.pageImages.map((src) => ({ alt: 'Alternative', src }))} />
+    <ImageCarousel images={data.pageImages.map((src) => ({ alt: '', src }))} />
   {/if}
 
   <h2 class="text-2xl font-bold mb-6">The Computer Science Pathway</h2>
