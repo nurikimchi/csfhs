@@ -5,6 +5,8 @@
 @tailwind utilities;
 
 input,
-p {
+p,
+button,
+blockquote {
   font-family: theme('fontFamily.body');
 }

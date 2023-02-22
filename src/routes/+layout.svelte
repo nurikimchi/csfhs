@@ -22,8 +22,6 @@
   <title>CSFHS</title>
 </svelte:head>
 
-<Navbar />
-
 <main>
   <slot />
 </main>

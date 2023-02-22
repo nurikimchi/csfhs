@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Readex Pro"', 'sans-serif'],
+        sans: ['"Poppins"', 'sans-serif'],
         body: ['"Karla"', 'sans-serif']
       },
       colors: { ...colors }

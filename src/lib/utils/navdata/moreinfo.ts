@@ -6,7 +6,7 @@ export interface MoreInformation {
 
 export const moreInformationItems: MoreInformation[] = [
   {
-    title: 'Updated classroom',
+    title: 'Updated Classroom',
     description: 'Our new computer science classroom.',
     href: '/'
   },
