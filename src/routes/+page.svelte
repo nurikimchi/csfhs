@@ -11,52 +11,52 @@
   export let data: PageData;
 </script>
 
-<div class="bg-white">
+<div class="bg-white overflow-hidden">
   <Navbar />
 
-  <div class="">
-    <div class="w-full overflow-hidden">
-      <Container>
-        <section class="mt-4 md:mt-16">
-          <div class="flex flex-row space-x-16 items-center">
-            <div class="max-w-[60ch] flex-1">
-              <BackdropText
-                text="Teaching the future innovators of technology."
-                className="font-bold text-6xl"
-              />
-              <p class="mt-8">
-                Amet duis nisi ullamco cupidatat laboris anim incididunt exercitation officia
-                deserunt dolore incididunt. Cillum cupidatat ad esse consequat esse occaecat velit
-                incididunt ea fugiat fugiat labore dolore nulla.
-              </p>
+  <div>
+    <Container>
+      <section class="mt-4 md:mt-16">
+        <div class="flex flex-row space-x-16 items-center">
+          <div class="max-w-[60ch] flex-1">
+            <BackdropText
+              text="Teaching the future innovators of technology."
+              className="font-bold text-6xl"
+            />
+            <p class="mt-8">
+              Amet duis nisi ullamco cupidatat laboris anim incididunt exercitation officia deserunt
+              dolore incididunt. Cillum cupidatat ad esse consequat esse occaecat velit incididunt
+              ea fugiat fugiat labore dolore nulla.
+            </p>
 
-              <div class="mt-12 flex flex-row space-x-6">
-                <button
-                  class="rounded-full text-sm border-2 border-indigo-600 bg-indigo-600 text-white font-semibold px-6 py-2 transition hover:bg-indigo-500 hover:border-indigo-500"
-                >
-                  Join the pathway
-                </button>
-                <button
-                  class="rounded-full text-sm bg-white border-2 border-gray-900 text-black font-semibold px-6 py-2 transition hover:bg-gray-900 hover:text-white"
-                >
-                  Student resources
-                </button>
-              </div>
+            <div class="mt-12 flex flex-row space-x-6">
+              <button
+                class="rounded-full text-sm border-2 border-indigo-600 bg-indigo-600 text-white font-semibold px-6 py-2 transition hover:bg-indigo-500 hover:border-indigo-500"
+              >
+                Join the pathway
+              </button>
+              <button
+                class="rounded-full text-sm bg-white border-2 border-gray-900 text-black font-semibold px-6 py-2 transition hover:bg-gray-900 hover:text-white"
+              >
+                Student resources
+              </button>
             </div>
-            <div class="flex-1 h-full lg:block hidden">
-              <div class="absolute w-screen max-w-[900px]">
-                <div class="rotate-2 translate-x-4 shadow-2xl -translate-y-1/2">
-                  <ImageCarousel
-                    presentation
-                    images={data.images.map((i) => ({ src: i, alt: '' }))}
-                  />
-                </div>
+          </div>
+          <div class="flex-1 h-full lg:block hidden">
+            <div class="absolute w-screen max-w-[900px]">
+              <div
+                class="rotate-2 translate-x-4 -translate-y-1/2 shadow-2xl shadow-slate-900/50 rounded-md overflow-hidden"
+              >
+                <ImageCarousel
+                  presentation
+                  images={data.images.map((i) => ({ src: i, alt: '' }))}
+                />
               </div>
             </div>
           </div>
-        </section>
-      </Container>
-    </div>
+        </div>
+      </section>
+    </Container>
 
     <Container>
       <div

@@ -6,6 +6,7 @@
 
   export let images: ImageOptions[];
   export let presentation = false;
+  export let classes = 'shadow-lg';
 
   let isTransitioning = false;
 
@@ -64,7 +65,7 @@
           alt={currentImage.alt}
           src={currentImage.src}
           transition:fade
-          class="rounded-md top-0 shadow-lg h-full"
+          class="rounded-md top-0 {classes}"
         />
       </div>
     {/key}
