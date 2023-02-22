@@ -11,10 +11,10 @@
   export let data: PageData;
 </script>
 
-<div class="bg-white overflow-hidden">
+<div class="bg-white">
   <Navbar />
 
-  <div>
+  <div class="overflow-hidden">
     <Container>
       <section class="mt-4 md:mt-16">
         <div class="flex flex-row space-x-16 items-center">
