@@ -7,7 +7,7 @@
 </script>
 
 <a
-  class="rounded-md shadow-lg shadow-slate-400/20 p-8 bg-gradient-to-bl from-slate-50 to-slate-100"
+  class="rounded-md block shadow-lg shadow-slate-400/20 p-8 bg-gradient-to-bl from-slate-50 to-slate-100"
   {href}
 >
   <img src={image} alt={name} class="rounded-full w-24 mx-auto" />

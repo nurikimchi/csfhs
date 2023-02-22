@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['"Sora"', 'sans-serif'],
-        body: ['"Karla"', 'sans-serif']
+        body: ['"Karla"', 'sans-serif'],
+        mono: ['"Jetbrains Mono", mono']
       },
       colors: { ...colors }
     }

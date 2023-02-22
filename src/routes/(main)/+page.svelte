@@ -1,8 +1,6 @@
 <script lang="ts">
   import Container from '$lib/components/Container.svelte';
-  import Footer from '$lib/components/Footer.svelte';
   import ImageCarousel from '$lib/components/images/ImageCarousel.svelte';
-  import Navbar from '$lib/components/navbar/Navbar.svelte';
   import TeacherCard from '$lib/components/TeacherCard.svelte';
   import BackdropText from '$lib/components/text/BackdropText.svelte';
   import DaglerPFP from '$lib/images/dagler.jpeg';
@@ -11,9 +9,7 @@
   export let data: PageData;
 </script>
 
-<div class="bg-white overflow-hidden">
-  <Navbar />
-
+<div class="overflow-hidden">
   <div>
     <Container>
       <section class="mt-4 md:mt-16">
@@ -113,12 +109,4 @@
       </section>
     </Container>
   </div>
-
-  <Footer />
 </div>
-
-<style>
-  :global(body) {
-    @apply bg-gray-900;
-  }
-</style>
