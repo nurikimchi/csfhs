@@ -21,7 +21,7 @@
   <div class="relative z-10">
     <div class="text-white content-area">
       <Container>
-        <h1 class="font-bold text-3xl">CSFHS</h1>
+        <h1 class="font-bold text-3xl">Franklin Computer Science</h1>
         <p class="text-sm">
           by <a class="contributer-link" href="/">Esteban Garcia</a> &
           <a class="contributer-link" href="/">Omar Sadat</a>
@@ -31,9 +31,9 @@
   </div>
 </div>
 
-<style>
+<style lang="postcss">
   .content-area {
-    --standardPadding: 4rem;
+    --basePadding: 3rem;
 
     /* Constants & Calculations, referenced from Stripe.com */
     --windowWidth: 100vw;
@@ -44,16 +44,18 @@
     --gutterWidth: calc(var(--windowWidth) / 2 - var(--containerWidth) / 2);
 
     padding-top: calc(
-      var(--angleHeight) - var(--angleSin) * var(--gutterWidth) + var(--standardPadding)
+      var(--angleHeight) - var(--angleSin) * var(--gutterWidth) + var(--basePadding)
     );
-    padding-bottom: var(--standardPadding);
+    padding-bottom: var(--basePadding);
+  }
+
+  @media screen(md) {
+    .content-area {
+      --basePadding: 6rem;
+    }
   }
 
   .contributer-link {
-    @apply text-sky-400 transition;
-  }
-
-  .contributer-link:hover {
-    @apply text-sky-200;
+    @apply text-sky-400 transition hover:text-sky-200;
   }
 </style>

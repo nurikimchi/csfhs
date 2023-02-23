@@ -62,6 +62,7 @@
           style:margin-left="{arrowLeftOffset - 8}px"
         />
       {/if}
+
       <div
         class="absolute pt-2 pr-4 z-20"
         on:mouseenter={handleMouseInDropdown}
@@ -72,7 +73,7 @@
         style:pointer-events={show ? 'initial' : 'none'}
       >
         <div
-          class="bg-white rounded-md shadow-2xl max-w-2xl border-4 border-gray-100"
+          class="bg-gradient-to-tr from-slate-50 to-gray-50 rounded-md shadow-2xl shadow-slate-500/30 max-w-2xl"
           style:padding="{padding}px"
         >
           <slot />
@@ -84,7 +85,7 @@
 
 <style>
   .arrow {
-    @apply bg-gray-100 shadow-2xl z-10 rounded-sm;
+    @apply bg-slate-100 shadow-2xl shadow-slate-500/30 z-10 rounded-sm;
 
     position: absolute;
     width: 16px;

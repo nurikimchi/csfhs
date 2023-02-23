@@ -22,41 +22,44 @@
 <Container>
   <div class="flex-[4] min-h-screen py-8">
     <p
-      class="font-mono uppercase text-xs text-white bg-blue-700 rounded-md w-max px-4 py-2 font-bold shadow-md shadow-indigo-400/40"
+      class="text-xs text-white bg-blue-600 rounded-md w-max px-4 py-2 font-bold shadow-md shadow-indigo-400/40 tracking-wide"
     >
       Franklin Offered Class Only
     </p>
 
-    <div class="flex flex-col mt-8">
+    <div class="flex flex-col mt-6 md:mt-8">
       <div class="flex-1">
         <BackdropText
           text={animatedTitleOutput}
-          className="font-bold text-8xl leading-[8rem] flex-1"
+          className="font-bold text-5xl md:text-8xl leading-[5rem] md:leading-[8rem] flex-1"
         />
       </div>
 
-      <div class="flex-1">
-        <p class="text-2xl leading-10 font-medium">{data.course.description}</p>
+      <div class="flex-1 mt-6 md:mt-0">
+        <p class="md:text-2xl md:leading-10 font-medium">{data.course.description}</p>
       </div>
     </div>
 
     <a
       href="/"
-      class="w-max items-center flex flex-row my-16 rounded-l-2xl bg-gradient-to-r from-blue-700 to-blue-600 p-6 text-white uppercase text-sm tracking-widest shadow-lg shadow-blue-500/50 transition hover:-translate-y-1"
+      class="w-max items-center flex flex-row my-8 md:my-16 rounded-l-2xl bg-gradient-to-r from-blue-700 to-blue-600 p-6 text-white text-[13px] sm:text-sm md:text-base tracking-wide shadow-lg shadow-blue-500/50 transition hover:-translate-y-1"
       style="border-radius: 16px 50px 50px 16px;"
     >
-      <p class="font-medium font-sans">Sign up for the Computer Science Pathway</p>
+      <p class="font-semibold font-sans">Sign up for the Computer Science Pathway</p>
 
       <block class="w-4 h-4 block ml-2">
         <FaGraduationCap />
       </block>
     </a>
 
-    <div class="mt-12 flex flex-row space-x-8">
-      <div class="flex-1">
-        <BackdropText text="Meet your instructor." className="font-bold text-4xl leading-none" />
+    <div class="flex flex-col-reverse md:flex-row md:space-x-8">
+      <div class="flex-1 mt-8 md:mt-0 text-center md:text-left">
+        <BackdropText
+          text="Meet your instructor."
+          className="font-bold text-3xl lg:text-4xl leading-normal sm:leading-[3rem] lg:leading-normal"
+        />
 
-        <div class="my-10" />
+        <div class="mt-12 md:mt-4 lg:mt-12" />
 
         <TeacherCard
           name="Clay Dagler"
@@ -67,7 +70,7 @@
         />
       </div>
 
-      <div class="flex-1">
+      <div class="flex-1 mt-8 md:mt-0">
         {#if data.pageImages.length > 0}
           <ImageCarousel images={data.pageImages.map((src) => ({ alt: '', src }))} />
         {/if}
@@ -75,47 +78,3 @@
     </div>
   </div>
 </Container>
-
-<!-- 
-<Container>
-  <h1 class="text-center my-12 text-4xl font-bold">{data.course.title}</h1>
-
-  <h2 class="text-2xl font-bold">Teacher Information</h2>
-  <div class="mt-2 mb-6">
-    <ul class="flex flex-col font-semibold space-y-2 md:flex-row md:space-x-40 md:space-y-0">
-      <li>{data.course.teacher}</li>
-      <li>
-        <a
-          href="mailto:{data.course.email}"
-          class="text-indigo-600 transition hover:text-indigo-500"
-        >
-          {data.course.email}
-        </a>
-      </li>
-      <li>@fhs.computerscience</li>
-    </ul>
-  </div>
-
-  <p class="mb-6">
-    {data.course.description}
-  </p>
-
-  {#if data.pageImages.length > 0}
-    <ImageCarousel images={data.pageImages.map((src) => ({ alt: '', src }))} />
-  {/if}
-
-  <h2 class="text-2xl font-bold mb-6">The Computer Science Pathway</h2>
-  <p class="mb-6">{data.course.pathway}</p>
-
-  {#if data.course.testimonies.length > 0}
-    <h2 class="text-2xl font-bold mb-6">Student Testimonials</h2>
-    <div class="mt-4 mb-16 grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4">
-      {#each data.course.testimonies as testimony}
-        <div>
-          <p>{testimony.text}</p>
-          <p class="font-bold">- {testimony.author}</p>
-        </div>
-      {/each}
-    </div>
-  {/if}
-</Container> -->

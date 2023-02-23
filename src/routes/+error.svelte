@@ -7,7 +7,7 @@
   <Navbar />
 </div>
 
-<div class="flex h-screen justify-center items-center max-w-lg mx-auto">
+<div class="bg-white flex h-screen justify-center items-center max-w-lg mx-auto">
   <div class="p-4">
     <h1 class="text-2xl font-bold">An error has occured</h1>
     <p>

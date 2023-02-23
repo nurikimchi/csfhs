@@ -10,3 +10,7 @@ p,
 blockquote {
   font-family: theme('fontFamily.body');
 }
+
+:root {
+  --button-radius-right: 16px 50px 50px 16px;
+}

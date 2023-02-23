@@ -9,7 +9,7 @@
 </script>
 
 <a
-  class="bg-white m-4 w-full cursor-pointer group"
+  class="m-4 w-full cursor-pointer group"
   on:mouseenter={() => (show = true)}
   on:mouseleave={() => (show = false)}
   {href}

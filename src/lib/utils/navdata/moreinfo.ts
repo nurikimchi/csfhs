@@ -11,7 +11,7 @@ export const moreInformationItems: MoreInformation[] = [
     href: '/'
   },
   {
-    title: 'CS Pathway Outcomes',
+    title: 'Pathway Outcomes',
     description: 'Whats expected at the end of each course.',
     href: '/'
   },
