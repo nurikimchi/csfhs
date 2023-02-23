@@ -7,12 +7,12 @@
 </script>
 
 <div
-  class="py-4 sticky top-0 bg-white z-20 transition-all {scrollY > 45
+  class="hidden md:block py-4 sticky top-0 bg-white z-20 transition-all {scrollY > 10
     ? 'border-b shadow-lg shadow-slate-400/20'
     : ''}"
 >
   <Container>
-    <div class="hidden md:flex flex-row space-x-8">
+    <div class="flex flex-row space-x-8">
       <ClassesDropdown />
       <MoreInfoDropdown />
     </div>

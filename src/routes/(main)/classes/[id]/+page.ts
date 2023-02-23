@@ -10,12 +10,12 @@ export const load = (async ({ params }) => {
 
   const pageImages = Object.keys(images).flatMap((path) => {
     const img = images[path];
-    if (path.includes(params.id)) {
+    if (path.includes(`/${params.id}/`)) {
       return [img];
     }
 
     return [];
-  })
+  });
 
   return { course, pageImages };
 }) satisfies PageLoad;

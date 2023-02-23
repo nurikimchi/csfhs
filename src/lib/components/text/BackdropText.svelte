@@ -3,9 +3,9 @@
   export let className: string = '';
 </script>
 
-<div class="relative leading-[6rem] {className}">
+<div class="relative {className}">
   <p
-    class="font-sans -translate-x-1 -translate-y-1 bg-clip-text text-transparent opacity-20 bg-gradient-to-br from-blue-500 to-indigo-500 absolute select-none"
+    class="font-sans -translate-x-1 w-full -translate-y-1 bg-clip-text text-transparent opacity-20 bg-gradient-to-br from-blue-500 to-indigo-500 absolute select-none"
     aria-hidden="true"
   >
     {text}

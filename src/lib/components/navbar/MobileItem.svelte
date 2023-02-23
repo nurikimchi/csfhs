@@ -5,6 +5,6 @@
   export let item: ItemProps;
 </script>
 
-<div class="p-4 border rounded-md">
+<div class="py-4">
   <Item {...item} />
 </div>

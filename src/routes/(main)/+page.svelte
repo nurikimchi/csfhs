@@ -1,8 +1,6 @@
 <script lang="ts">
   import Container from '$lib/components/Container.svelte';
-  import Footer from '$lib/components/Footer.svelte';
   import ImageCarousel from '$lib/components/images/ImageCarousel.svelte';
-  import Navbar from '$lib/components/navbar/Navbar.svelte';
   import TeacherCard from '$lib/components/TeacherCard.svelte';
   import BackdropText from '$lib/components/text/BackdropText.svelte';
   import DaglerPFP from '$lib/images/dagler.jpeg';
@@ -11,10 +9,8 @@
   export let data: PageData;
 </script>
 
-<div class="bg-white">
-  <Navbar />
-
-  <div class="overflow-hidden">
+<div class="overflow-hidden">
+  <div>
     <Container>
       <section class="mt-4 md:mt-16">
         <div class="flex flex-row space-x-16 items-center">
@@ -31,12 +27,13 @@
 
             <div class="mt-12 flex flex-row space-x-6">
               <button
-                class="rounded-full text-sm border-2 border-indigo-600 bg-indigo-600 text-white font-semibold px-6 py-2 transition hover:bg-indigo-500 hover:border-indigo-500"
+                class="rounded-full text-sm border-2 border-indigo-600 shadow-lg shadow-indigo-600/30 tracking-wide bg-indigo-600 text-white font-semibold px-6 py-2 transition hover:bg-indigo-500 hover:border-indigo-500"
+                style="border-radius: var(--button-radius-right);"
               >
                 Join the pathway
               </button>
               <button
-                class="rounded-full text-sm bg-white border-2 border-gray-900 text-black font-semibold px-6 py-2 transition hover:bg-gray-900 hover:text-white"
+                class="rounded-full text-sm bg-slate-900 border-2 shadow-lg shadow-slate-900/20 tracking-wide border-slate-900 text-white font-semibold px-6 py-2 transition hover:bg-slate-800 hover:text-white"
               >
                 Student resources
               </button>
@@ -113,12 +110,4 @@
       </section>
     </Container>
   </div>
-
-  <Footer />
 </div>
-
-<style>
-  :global(body) {
-    @apply bg-gray-900;
-  }
-</style>
