@@ -1,9 +1,45 @@
 <script lang="ts">
-  export let name: string;
-  export let title: string;
-  export let image: string;
-  export let description: string;
-  export let href: string;
+  import type { Teacher } from '$lib/utils/navdata/courses';
+  import DaglerPFP from '$lib/images/daglernew.jpg';
+
+  interface Options {
+    name: string;
+    title: string;
+    image: string;
+    description: string;
+    href: string;
+  }
+
+  const TEACHER_OPTIONS: Record<Teacher, Options> = {
+    'Mr. Dagler': {
+      name: 'Clay Dagler',
+      title: 'ML, APCSA, ECS, and CSR Instructor',
+      description:
+        'Dolor eiusmod deserunt consectetur labore et dolore in id. Est dolore et duis voluptate ipsum incididunt irure exercitation amet velit elit ipsum voluptate est. Nulla aliqua sint commodo in Lorem incididunt elit culpa officia culpa amet. Laborum eiusmod consequat consectetur proident velit deserunt laborum mollit ad nisi cillum sint. Elit velit officia officia dolor aliquip adipisicing do ut duis aliquip. Aliqua consectetur veniam fugiat irure ut eu.',
+      href: '/',
+      image: DaglerPFP
+    },
+    'Mrs. Rodriguez': {
+      name: 'Lynette Rodriguez',
+      title: 'ML, APCSA, ECS, and CSR Instructor',
+      description:
+        'Dolor eiusmod deserunt consectetur labore et dolore in id. Est dolore et duis voluptate ipsum incididunt irure exercitation amet velit elit ipsum voluptate est. Nulla aliqua sint commodo in Lorem incididunt elit culpa officia culpa amet. Laborum eiusmod consequat consectetur proident velit deserunt laborum mollit ad nisi cillum sint. Elit velit officia officia dolor aliquip adipisicing do ut duis aliquip. Aliqua consectetur veniam fugiat irure ut eu.',
+      href: '/',
+      image: DaglerPFP
+    }
+  };
+
+  export let teacher: Teacher | Options;
+
+  function getOptions(teacherInput: typeof teacher): Options {
+    if (typeof teacherInput === 'string') {
+      return TEACHER_OPTIONS[teacherInput];
+    }
+
+    return teacherInput;
+  }
+
+  $: ({ name, href, image, title, description } = getOptions(teacher));
 </script>
 
 <a

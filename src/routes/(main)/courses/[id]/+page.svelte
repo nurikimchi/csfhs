@@ -10,24 +10,19 @@
 
   export let data: PageData;
 
-  const title = data.course.title;
+  const course = data.course;
 
-  const aniamtedTitleIndex = tweened(0, { duration: 600 });
+  const animatedTitleIndex = tweened(0, { duration: 600 });
   $: animatedTitleOutput =
-    title.slice(0, $aniamtedTitleIndex) + ($aniamtedTitleIndex === title.length ? '' : '|');
+    course.title.slice(0, $animatedTitleIndex) +
+    ($animatedTitleIndex === course.title.length ? '' : '|');
 
-  aniamtedTitleIndex.set(title.length);
+  animatedTitleIndex.set(course.title.length);
 </script>
 
 <Container>
-  <div class="flex-[4] min-h-screen py-8">
-    <p
-      class="text-xs text-white bg-blue-600 rounded-md w-max px-4 py-2 font-bold shadow-md shadow-indigo-400/40 tracking-wide"
-    >
-      Franklin Offered Class Only
-    </p>
-
-    <div class="flex flex-col mt-6 md:mt-8">
+  <div class="flex-[4] min-h-screen">
+    <div class="flex flex-col pt-6 md:pt-8">
       <div class="flex-1">
         <BackdropText
           text={animatedTitleOutput}
@@ -61,13 +56,7 @@
 
         <div class="mt-12 md:mt-4 lg:mt-12" />
 
-        <TeacherCard
-          name="Clay Dagler"
-          title="ML, APCSA, ECS, and CSR Instructor"
-          description="Dolor eiusmod deserunt consectetur labore et dolore in id. Est dolore et duis voluptate ipsum incididunt irure exercitation amet velit elit ipsum voluptate est. Nulla aliqua sint commodo in Lorem incididunt elit culpa officia culpa amet. Laborum eiusmod consequat consectetur proident velit deserunt laborum mollit ad nisi cillum sint. Elit velit officia officia dolor aliquip adipisicing do ut duis aliquip. Aliqua consectetur veniam fugiat irure ut eu."
-          href="/"
-          image={DaglerPFP}
-        />
+        <TeacherCard teacher={course.teacher} />
       </div>
 
       <div class="flex-1 mt-8 md:mt-0">
