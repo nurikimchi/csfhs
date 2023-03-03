@@ -64,7 +64,7 @@
         <img
           alt={currentImage.alt}
           src={currentImage.src}
-          transition:fade
+          transition:fade|local
           class="rounded-md top-0 {classes}"
         />
       </div>

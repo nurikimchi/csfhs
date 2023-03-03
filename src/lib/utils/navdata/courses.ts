@@ -3,13 +3,15 @@ export interface Course {
   description: string;
   pathway: string;
   testimonies: Testimonial[];
-  teacher: string;
+  teacher: Teacher;
   email: string;
   id: string;
-  href: string;
 }
 
-interface Testimonial {
+export const teachers = ['Mr. Dagler', 'Mrs. Rodriguez'] as const;
+export type Teacher = (typeof teachers)[number];
+
+export interface Testimonial {
   text: string;
   author: string;
 }
@@ -24,8 +26,7 @@ export const courses: Course[] = [
     testimonies: [],
     teacher: 'Mr. Dagler',
     email: 'cdagler@egusd.net',
-    id: 'cs-robotics',
-    href: '/'
+    id: 'cs-robotics'
   },
   {
     title: 'Exploring Computer Science',
@@ -45,27 +46,23 @@ export const courses: Course[] = [
     ],
     teacher: 'Mr. Dagler',
     email: 'cdagler@egusd.net',
-    id: 'ecs',
-    href: '/'
+    id: 'ecs'
   },
   {
     title: 'AP Computer Science Principles',
     description:
       'Explore how computing and technology is impacting us today through a project-based approach • Address real-world problems involving Big Data and Cybersecurity • Learn the history of the internet and how it works • Earn a 5.0 GPA bump and college credit by taking the AP test.',
-    pathway:
-      'AP Computer Science Principles is the second course of the three-year pathway.',
+    pathway: 'AP Computer Science Principles is the second course of the three-year pathway.',
     testimonies: [],
     teacher: 'Mrs. Rodriguez',
     email: 'lrrodrig@egusd.net',
-    id: 'apcsp',
-    href: '/'
+    id: 'apcsp'
   },
   {
     title: 'AP Computer Science A',
     description:
       'Learn content equivalent to a first-semester college-level course in CS • Learn object-oriented programming using the Java language • Solve problems by developing algorithms and using data structures • Compete at HP CodeWars • Earn a 5.0 GPA bump and college credit by taking the AP test.',
-    pathway:
-      'AP Computer Science A is the final course of the three-year pathway.',
+    pathway: 'AP Computer Science A is the final course of the three-year pathway.',
     testimonies: [
       {
         text: 'I liked the labs we did with Java that compelled us to think outside the box.',
@@ -94,8 +91,7 @@ export const courses: Course[] = [
     ],
     teacher: 'Mr. Dagler',
     email: 'cdagler@egusd.net',
-    id: 'apcsa',
-    href: '/'
+    id: 'apcsa'
   },
   {
     title: 'Web Development',
@@ -119,8 +115,7 @@ export const courses: Course[] = [
     ],
     teacher: 'Mrs. Rodriguez',
     email: 'lrrodrig@egusd.net',
-    id: 'web-dev',
-    href: '/'
+    id: 'web-dev'
   },
   {
     title: 'Machine Learning Honors',
@@ -131,7 +126,16 @@ export const courses: Course[] = [
     testimonies: [],
     teacher: 'Mr. Dagler',
     email: 'cdagler@egusd.net',
-    id: 'ml-honors',
-    href: '/'
+    id: 'ml-honors'
   }
 ];
+
+const getCourseId = (id: string) => `/courses/${id}`;
+
+export function courseHref(course: Course) {
+  return getCourseId(course.id);
+}
+
+export function courseHrefById(courseId: string) {
+  return getCourseId(courseId);
+}

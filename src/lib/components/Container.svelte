@@ -1,11 +1,16 @@
 <script lang="ts">
-  export let width: number = 1000;
-
-  $: widthPixels = `${width}px`;
+  export let width = 1000;
+  export let padding = 24;
+  export let bgColor: string | null = null;
+  export let bgColorClass: string | null = null;
 </script>
 
-<div class="px-4 h-full relative">
-  <div class="mx-auto h-full" style:max-width={widthPixels}>
+<div
+  class="h-full relative {bgColorClass}"
+  style:padding="0 {padding}px"
+  style:background-color={bgColor}
+>
+  <div class="mx-auto h-full" style:max-width="{width}px">
     <slot />
   </div>
 </div>

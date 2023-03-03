@@ -1,8 +1,9 @@
 <script lang="ts">
-  import type { Course } from '$lib/utils/navdata/courses';
+  import { courseHref, type Course } from '$lib/utils/navdata/courses';
   export let course: Course;
 
-  $: ({ title, description, href } = course);
+  $: ({ title, description } = course);
+  $: href = courseHref(course);
 </script>
 
 <a
