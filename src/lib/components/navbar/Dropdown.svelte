@@ -1,6 +1,7 @@
 <script lang="ts">
   import { spring } from 'svelte/motion';
   import FaChevronDown from 'svelte-icons/fa/FaChevronDown.svelte';
+  import { page } from '$app/stores';
 
   export let title: string;
   export let padding: number = 32;
@@ -12,9 +13,9 @@
   const dropdownOpacity = spring(0);
   const arrowRotation = spring(0);
 
-  $: show = isInButton || isInDropdown;
-  $: dropdownOpacity.set(+show);
-  $: arrowRotation.set(show ? 180 : 0);
+  $: visible = isInButton || isInDropdown;
+  $: dropdownOpacity.set(+visible);
+  $: arrowRotation.set(visible ? 180 : 0);
   $: animationIsActive = $dropdownOpacity < 1 && $dropdownOpacity > 0;
 
   function handleMouseIn() {
@@ -34,6 +35,8 @@
   function handleMouseLeaveDropdown() {
     setTimeout(() => (isInDropdown = false), 1);
   }
+
+  $: $page.url.href, (visible = false);
 </script>
 
 <div>
@@ -70,7 +73,7 @@
         style:transform-origin="top"
         style:opacity={$dropdownOpacity}
         style:transform="rotateX({(1 - $dropdownOpacity) * 10}deg)"
-        style:pointer-events={show ? 'initial' : 'none'}
+        style:pointer-events={visible ? 'initial' : 'none'}
       >
         <div
           class="bg-gradient-to-tr from-slate-50 to-gray-50 rounded-md shadow-2xl shadow-slate-500/30 max-w-2xl"

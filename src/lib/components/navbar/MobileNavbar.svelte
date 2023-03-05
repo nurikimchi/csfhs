@@ -10,6 +10,7 @@
   import SlideSelector from '../SlideSelector.svelte';
   import MobileItem from './MobileItem.svelte';
   import MobileNavbarSection from './MobileNavbarSection.svelte';
+  import { page } from '$app/stores';
 
   const NO_SCROLL_CLASSES = ['overflow-hidden', 'h-full'];
 
@@ -46,6 +47,8 @@
   function handleSlideSelect(option: SelectedArea) {
     selectedArea = option;
   }
+
+  $: $page.url.href, (visible = false);
 </script>
 
 <div id="movile-nav-csfhs" class="md:hidden w-full bg-white z-50" class:nav-enabled={visible}>
