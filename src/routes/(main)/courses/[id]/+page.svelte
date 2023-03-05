@@ -3,21 +3,25 @@
   import ImageCarousel from '$lib/components/images/ImageCarousel.svelte';
   import TeacherCard from '$lib/components/TeacherCard.svelte';
   import BackdropText from '$lib/components/text/BackdropText.svelte';
-  import DaglerPFP from '$lib/images/dagler.jpeg';
   import FaGraduationCap from 'svelte-icons/fa/FaGraduationCap.svelte';
   import { tweened } from 'svelte/motion';
   import type { PageData } from './$types';
 
   export let data: PageData;
 
-  const course = data.course;
+  $: course = data.course;
 
   const animatedTitleIndex = tweened(0, { duration: 600 });
   $: animatedTitleOutput =
     course.title.slice(0, $animatedTitleIndex) +
     ($animatedTitleIndex === course.title.length ? '' : '|');
 
-  animatedTitleIndex.set(course.title.length);
+  async function resetAnimation() {
+    await animatedTitleIndex.set(0, { duration: 0 });
+    animatedTitleIndex.set(course.title.length);
+  }
+
+  $: course.title, resetAnimation();
 </script>
 
 <Container>
