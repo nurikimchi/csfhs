@@ -41,12 +41,12 @@
 
 <div>
   <div
-    class="flex flex-row pr-8 py-2 items-center"
+    class="flex flex-row pr-8 py-2 items-center group"
     on:mouseenter={handleMouseIn}
     on:mouseleave={handleMouseLeave}
   >
     <p
-      class="font-semibold font-sans cursor-default transition hover:text-gray-600 w-max text-sm pr-2"
+      class="font-semibold font-sans cursor-default transition group-hover:text-trueGray-400 w-max text-sm pr-2"
     >
       {title}
     </p>
@@ -76,7 +76,7 @@
         style:pointer-events={visible ? 'initial' : 'none'}
       >
         <div
-          class="bg-gradient-to-tr from-slate-50 to-gray-50 rounded-md shadow-2xl shadow-slate-500/30 max-w-2xl"
+          class="bg-black max-w-2xl rounded-md border border-trueGray-900"
           style:padding="{padding}px"
         >
           <slot />
@@ -88,7 +88,7 @@
 
 <style>
   .arrow {
-    @apply bg-slate-100 shadow-2xl shadow-slate-500/30 z-10 rounded-sm;
+    @apply bg-black shadow-2xl shadow-slate-500/50 z-10 rounded-sm border border-white/10;
 
     position: absolute;
     width: 16px;

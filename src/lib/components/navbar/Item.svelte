@@ -23,11 +23,11 @@
   {href}
 >
   <div class="flex flex-row justify-between text-sm items-center">
-    <h1 class="font-semibold text-black hover:text-black">{title}</h1>
+    <h1 class="font-semibold text-white">{title}</h1>
 
     <ExternalArrow {show} />
   </div>
-  <p class="text-xs text-gray-500 transition duration-100 group-hover:text-gray-900">
+  <p class="text-xs text-gray-400 transition duration-100 group-hover:text-gray-500">
     {description}
   </p>
 </a>

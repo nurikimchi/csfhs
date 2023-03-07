@@ -51,11 +51,11 @@
   $: $page.url.href, (visible = false);
 </script>
 
-<div id="movile-nav-csfhs" class="md:hidden w-full bg-white z-50" class:nav-enabled={visible}>
+<div id="movile-nav-csfhs" class="md:hidden bg-black w-full z-50" class:nav-enabled={visible}>
   <Container>
     <div class="flex flex-row justify-end relative z-40 py-4 h-max">
       <button
-        class="cursor-pointer rounded-md w-8 h-8 relative"
+        class="cursor-pointer rounded-md w-8 h-8 relative text-white"
         on:click={() => (visible = !visible)}
       >
         {#if visible}

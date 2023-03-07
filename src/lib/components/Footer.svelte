@@ -2,20 +2,12 @@
   import Container from './Container.svelte';
 </script>
 
-<div class="bg-white relative overflow-hidden pt-16">
+<div class="relative overflow-hidden pt-16 bg-black">
   <div class="absolute w-full h-full" style="overflow: none;">
     <div
-      class="relative w-full h-full top-0 left-0 overflow-hidden -skew-y-6 bg-gray-900"
+      class="relative w-full h-full top-0 left-0 overflow-hidden -skew-y-6 bg-black border-t border-white/10"
       style="transform-origin: 100% 0%;"
-    >
-      <div class="flex flex-row w-full">
-        <div class="h-4 w-32 bg-blue-600 flex-1" />
-        <div class="h-4 w-20 bg-indigo-600 flex-1" />
-        <div class="h-4 w-32 bg-cyan-600 flex-1" />
-        <div class="h-4 w-32 bg-violet-600 flex-1" />
-        <div class="h-4 w-32 bg-sky-600 flex-1" />
-      </div>
-    </div>
+    />
   </div>
 
   <div class="relative z-10">
@@ -56,6 +48,6 @@
   }
 
   .contributer-link {
-    @apply text-sky-400 transition hover:text-sky-200;
+    @apply text-blue-500 font-semibold transition hover:text-sky-200;
   }
 </style>

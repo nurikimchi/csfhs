@@ -26,25 +26,26 @@
 
 <Container>
   <div class="flex-[4] min-h-screen">
-    <div class="flex flex-col pt-6 md:pt-8">
+    <div class="flex flex-col pt-6 md:pt-14">
       <div class="flex-1">
         <BackdropText
           text={animatedTitleOutput}
-          className="font-bold text-5xl md:text-8xl leading-[5rem] md:leading-[8rem] flex-1"
+          className="font-bold text-4xl md:text-8xl leading-[4rem] md:leading-[8rem]"
+          textClassName="text-white"
+          bgTextClassName="text-gray-800"
         />
       </div>
 
-      <div class="flex-1 mt-6 md:mt-0">
+      <div class="flex-1 mt-6 text-white">
         <p class="md:text-2xl md:leading-10 font-medium">{data.course.description}</p>
       </div>
     </div>
 
     <a
-      href="/"
-      class="w-max items-center flex flex-row my-8 md:my-16 rounded-l-2xl bg-gradient-to-r from-blue-700 to-blue-600 p-6 text-white text-[13px] sm:text-sm md:text-base tracking-wide shadow-lg shadow-blue-500/50 transition hover:-translate-y-1"
-      style="border-radius: 16px 50px 50px 16px;"
+      href="/$route-todo"
+      class="w-max items-center flex flex-row my-8 md:my-16 p-6 text-[13px] sm:text-sm md:text-base tracking-wide shadow-lg transition hover:-translate-y-1 bg-blue-600 text-white rounded-md"
     >
-      <p class="font-semibold font-sans">Sign up for the Computer Science Pathway</p>
+      <p class="font-medium font-sans">Sign up for the Computer Science pathway</p>
 
       <block class="w-4 h-4 block ml-2">
         <FaGraduationCap />
@@ -55,7 +56,9 @@
       <div class="flex-1 mt-8 md:mt-0 text-center md:text-left">
         <BackdropText
           text="Meet your instructor."
-          className="font-bold text-3xl lg:text-4xl leading-normal sm:leading-[3rem] lg:leading-normal"
+          className="font-bold text-4xl leading-[6rem]"
+          textClassName="text-white"
+          bgTextClassName="text-gray-800"
         />
 
         <div class="mt-12 md:mt-4 lg:mt-12" />

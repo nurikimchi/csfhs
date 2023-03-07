@@ -24,7 +24,7 @@
 
 <Navbar />
 
-<main class="bg-white">
+<main>
   <slot />
 </main>
 
@@ -32,6 +32,6 @@
 
 <style>
   :global(body) {
-    @apply bg-gray-900;
+    background-color: black;
   }
 </style>

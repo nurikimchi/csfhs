@@ -91,7 +91,7 @@
       <div class="flex flex-row space-x-4 justify-center my-4">
         {#each { length: images.length } as _, n}
           <div
-            class="rounded-full p-1 {$currentImageIndex === n ? 'bg-indigo-600' : 'bg-gray-300'}"
+            class="rounded-full p-1 {$currentImageIndex === n ? 'bg-blue-600' : 'bg-gray-300'}"
           />
         {/each}
       </div>

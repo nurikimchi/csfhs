@@ -43,13 +43,13 @@
 </script>
 
 <a
-  class="rounded-md block shadow-lg shadow-slate-400/20 p-8 bg-gradient-to-bl from-slate-50 to-slate-100"
+  class="rounded-md block shadow-lg p-8 border border-white/10 transition hover:-translate-y-2"
   {href}
 >
   <img src={image} alt={name} class="rounded-full w-24 mx-auto" />
   <div class="text-center mt-4">
     <h1 class="font-body text-xl font-semibold">{name}</h1>
     <h2 class="text-blue-500 font-medium">{title}</h2>
-    <p class="mt-2">{description}</p>
+    <p class="mt-2 text-trueGray-400">{description}</p>
   </div>
 </a>

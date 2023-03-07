@@ -11,7 +11,7 @@
 </script>
 
 <div
-  class="ml-2 text-indigo-600 text-xs"
+  class="ml-2 text-blue-600 text-xs"
   style="max-height: 1em; max-width: 1em;"
   style:transform="translateX({arrowPosition}px)"
   style:opacity={$arrowOpacity}
