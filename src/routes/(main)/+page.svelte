@@ -17,7 +17,7 @@
         <div class="flex flex-row space-x-16 items-center py-4 md:py-16">
           <div class="max-w-[60ch] flex-1">
             <BackdropText
-              text="Teaching the future innovators of technology."
+              text="Teaching the future innovators of technology (TST)."
               className="font-bold text-6xl leading-[6rem]"
             />
             <p class="mt-8">
