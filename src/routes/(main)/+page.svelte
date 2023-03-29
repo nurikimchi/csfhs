@@ -21,9 +21,9 @@
               className="font-bold text-6xl leading-[6rem]"
             />
             <p class="mt-8">
-              Amet duis nisi ullamco cupidatat laboris anim incididunt exercitation officia deserunt
-              dolore incididunt. Cillum cupidatat ad esse consequat esse occaecat velit incididunt
-              ea fugiat fugiat labore dolore nulla.
+              The Computer Science pathway has countless opportunities for students to discover
+              potential career paths and work with our industry connections to gain real-world
+              experience in the workplace.
             </p>
 
             <div class="mt-12 flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
@@ -66,12 +66,16 @@
               <h1 class="text-5xl font-semibold leading-[5rem]">A class for everyone.</h1>
 
               <p class="mt-2 text-gray-200 leading-8">
-                Minim id sunt duis sunt officia fugiat commodo anim dolore incididunt occaecat qui.
-                Excepteur cillum eu nisi do. Voluptate ipsum elit deserunt commodo anim incididunt
-                in ex ad excepteur duis id commodo deserunt. Reprehenderit culpa reprehenderit ex
-                fugiat excepteur esse qui enim officia ipsum irure consequat. Velit eu eiusmod irure
-                aliquip. Occaecat quis esse fugiat ut anim ullamco ut ut aute proident irure elit
-                esse.
+                Here at Franklin, we have a large selection of courses available for students to
+                expand on their interests in computer science. The STEAM Academy Pathway includes
+                Exploring Computer Science, AP Computer Science Principles, and AP Computer Science
+                A.
+              </p>
+
+              <p class="mt-4 text-gray-200 leading-8">
+                Aside from the pathway, additional courses like Computer Science and Robotics for
+                Beginners, Web Development, and Machine Learning Honors offer more specific
+                applications of programming with modern tools, languages and technologies.
               </p>
             </div>
           </div>
