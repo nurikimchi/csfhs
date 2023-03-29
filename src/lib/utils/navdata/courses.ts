@@ -53,7 +53,16 @@ export const courses: Course[] = [
     description:
       'Explore how computing and technology is impacting us today through a project-based approach • Address real-world problems involving Big Data and Cybersecurity • Learn the history of the internet and how it works • Earn a 5.0 GPA bump and college credit by taking the AP test.',
     pathway: 'AP Computer Science Principles is the second course of the three-year pathway.',
-    testimonies: [],
+    testimonies: [
+      {
+        text: 'AP Computer Science Principles provided me with a class that I was comfortable enough with to step out of my comfort zone and collaborate with new people.',
+        author: 'Royce'
+      },
+      {
+        text: 'Ap Computer Science Principles allowed me to collaborate with my peers and it helped open my mind to new technology. I was able to learn ideas and concepts that could be applied to the real world.',
+        author: 'Nicole'
+      }
+    ],
     teacher: 'Mrs. Rodriguez',
     email: 'lrrodrig@egusd.net',
     id: 'apcsp'
@@ -111,6 +120,10 @@ export const courses: Course[] = [
       {
         text: 'I liked that we were given 2 weeks to complete big projects.',
         author: 'Aniyah'
+      },
+      {
+        text: 'Web Development captured my heart with its ability to turn imagination into tangible digital creations that can be experienced by millions of people.',
+        author: 'Ameet'
       }
     ],
     teacher: 'Mrs. Rodriguez',
