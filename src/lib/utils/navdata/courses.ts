@@ -59,7 +59,7 @@ export const courses: Course[] = [
         author: 'Royce'
       },
       {
-        text: 'Ap Computer Science Principles allowed me to collaborate with my peers and it helped open my mind to new technology. I was able to learn ideas and concepts that could be applied to the real world.',
+        text: 'AP Computer Science Principles allowed me to collaborate with my peers and it helped open my mind to new technology. I was able to learn ideas and concepts that could be applied to the real world.',
         author: 'Nicole'
       }
     ],
