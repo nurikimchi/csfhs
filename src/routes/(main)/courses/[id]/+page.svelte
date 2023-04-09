@@ -57,7 +57,7 @@
     </div>
 
     <a
-      href="/"
+      href="https://frhs.egusd.net/Programs/STEAM-Pathways/index.html"
       class="w-max items-center flex flex-row my-8 md:my-16 rounded-l-2xl bg-gradient-to-r from-blue-700 to-blue-600 p-6 text-white text-[13px] sm:text-sm md:text-base tracking-wide shadow-lg shadow-blue-500/50 transition hover:-translate-y-1"
       style="border-radius: 16px 50px 50px 16px;"
     >
@@ -86,5 +86,23 @@
         {/if}
       </div>
     </div>
+
+    {#if course.testimonies.length > 0}
+      <div class="mt-8">
+        <BackdropText
+          text="Hear what past students have to say."
+          className="font-bold text-3xl lg:text-4xl leading-normal sm:leading-[3rem] lg:leading-normal"
+        />
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-2">
+          {#each course.testimonies as testimony}
+            <div>
+              <p>{testimony.text}</p>
+              <p class="font-bold">- {testimony.author}</p>
+            </div>
+          {/each}
+        </div>
+      </div>
+    {/if}
   </div>
 </Container>

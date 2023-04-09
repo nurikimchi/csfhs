@@ -6,8 +6,8 @@
   interface Options {
     name: string;
     title: string;
-    image: string;
     description: string;
+    image: string;
   }
 
   const TEACHER_OPTIONS: Record<Teacher, Options> = {
