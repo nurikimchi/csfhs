@@ -19,11 +19,11 @@
             text="Teaching the future innovators of technology."
             className="font-extrabold text-6xl leading-[6rem]"
           />
-          <h2 class="mt-8 text-3xl font- leading-[3rem]">
+          <p class="mt-8 text-xl leading-loose">
             The Computer Science pathway has countless opportunities for students to discover
             potential career paths and work with our industry connections to gain real-world
             experience in the workplace.
-          </h2>
+          </p>
 
           <div class="mt-12 flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
             <button

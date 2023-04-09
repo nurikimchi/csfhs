@@ -11,6 +11,7 @@
   import MobileItem from './MobileItem.svelte';
   import MobileNavbarSection from './MobileNavbarSection.svelte';
   import { page } from '$app/stores';
+  import IoLogoInstagram from 'svelte-icons/io/IoLogoInstagram.svelte';
 
   const NO_SCROLL_CLASSES = ['overflow-hidden', 'h-full'];
 
@@ -53,7 +54,19 @@
 
 <div id="movile-nav-csfhs" class="md:hidden w-full bg-white z-50" class:nav-enabled={visible}>
   <Container>
-    <div class="flex flex-row justify-end relative z-40 py-4 h-max">
+    <div class="flex flex-row justify-between relative z-40 py-4 h-max">
+      <div>
+        <a href="https://instagram.com/fhs.computerscience?igshid=YmMyMTA2M2Y=" class="mr-10">
+          <div class="relative">
+            <div
+              class="w-14 h-14 bg-clip-text text-transparent bg-gradient-to-tr from-indigo-500 to-blue-500 text-indigo-500"
+            >
+              <IoLogoInstagram />
+            </div>
+          </div>
+        </a>
+      </div>
+
       <button
         class="cursor-pointer rounded-md w-8 h-8 relative"
         on:click={() => (visible = !visible)}
