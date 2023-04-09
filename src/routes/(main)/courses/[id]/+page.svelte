@@ -46,7 +46,7 @@
                 <FaCheckCircle />
               </div>
 
-              <p class="font-semibold md:text-lg">
+              <p>
                 {description}
               </p>
             </li>

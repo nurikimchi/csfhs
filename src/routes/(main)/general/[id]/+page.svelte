@@ -35,7 +35,7 @@
       </div>
 
       <div class="flex-1 mt-6">
-        <div class="font-bold md:text-lg mb-6">{moreInfo.overview}</div>
+        <div class="md:text-lg mb-6">{moreInfo.overview}</div>
 
         {#if moreInfo.bullets.length > 0}
           <ul class="space-y-6">
@@ -45,16 +45,12 @@
                   <FaCheckCircle />
                 </div>
 
-                <p class="font-semibold md:text-lg">{bullet}</p>
+                <p>{bullet}</p>
               </li>
             {/each}
           </ul>
         {/if}
       </div>
-    </div>
-
-    <div class="flex-1 mt-6">
-      <ul class="space-y-6" />
     </div>
 
     <a

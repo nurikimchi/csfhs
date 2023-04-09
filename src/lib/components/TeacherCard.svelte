@@ -1,8 +1,4 @@
-<script lang="ts">
-  import type { Teacher } from '$lib/utils/navdata/courses';
-  import DaglerPFP from '$lib/images/daglernew.jpg';
-  import RodriguezPFP from '$lib/images/placeholder.png';
-
+<script lang="ts" context="module">
   interface Options {
     name: string;
     title: string;
@@ -11,7 +7,7 @@
     email: string;
   }
 
-  const TEACHER_OPTIONS: Record<Teacher, Options> = {
+  export const TEACHER_OPTIONS: Record<Teacher, Options> = {
     'Mr. Dagler': {
       name: 'Clay Dagler',
       title: 'APCSA, ECS, ML, and CSR Instructor',
@@ -28,6 +24,12 @@
       email: 'lrrodrig@egusd.net@egusd.net'
     }
   };
+</script>
+
+<script lang="ts">
+  import type { Teacher } from '$lib/utils/navdata/courses';
+  import DaglerPFP from '$lib/images/daglernew.jpg';
+  import RodriguezPFP from '$lib/images/placeholder.png';
 
   export let teacher: Teacher | Options;
 
