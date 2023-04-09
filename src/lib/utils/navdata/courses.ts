@@ -9,7 +9,7 @@ export interface Course {
 }
 
 export const teachers = ['Mr. Dagler', 'Mrs. Rodriguez'] as const;
-export type Teacher = (typeof teachers)[number];
+export type Teacher = typeof teachers[number];
 
 export interface Testimonial {
   text: string;
@@ -20,7 +20,7 @@ export const courses: Course[] = [
   {
     title: 'Computer Science and Robotics for Beginners',
     description:
-      'This course welcomes students with little to no coding experience to the wonderful world of computer science. In a safe learning environment, students will learn the basics of text-based coding and work collaboratively to write code that solves real-world problems.',
+      'Available to students with little to no programming experience • Learn the basics of text-based coding • Work collaboratively to solve real-world problems',
     pathway:
       'Computer Science and Robotics for Beginners is an optional class for 9th graders, and it is meant as an preview of the curriculum in more advanced pathway courses.',
     testimonies: [],
@@ -31,7 +31,7 @@ export const courses: Course[] = [
   {
     title: 'Exploring Computer Science',
     description:
-      'This is the first course in our three-year pathway. Learn the command line interface • Develop problem-solving skills and techniques • Program using the C language • Solve problems using control flow, arrays and iteration.',
+      'The first course in the three-year pathway • Learn the command line interface • Develop problem-solving skills and techniques • Program using the C language • Solve problems using control flow, arrays and iteration',
     pathway:
       'Exploring Computer Science serves as the first course of a three-year Computer Science pathway.',
     testimonies: [
@@ -51,7 +51,7 @@ export const courses: Course[] = [
   {
     title: 'AP Computer Science Principles',
     description:
-      'Explore how computing and technology is impacting us today through a project-based approach • Address real-world problems involving Big Data and Cybersecurity • Learn the history of the internet and how it works • Earn a 5.0 GPA bump and college credit by taking the AP test.',
+      'Explore how computing and technology is impacting us today through a project-based approach • Address real-world problems involving Big Data and Cybersecurity • Learn the history of the internet and how it works • Earn a 5.0 GPA bump and college credit by taking the AP test',
     pathway: 'AP Computer Science Principles is the second course of the three-year pathway.',
     testimonies: [
       {
@@ -70,7 +70,7 @@ export const courses: Course[] = [
   {
     title: 'AP Computer Science A',
     description:
-      'Learn content equivalent to a first-semester college-level course in CS • Learn object-oriented programming using the Java language • Solve problems by developing algorithms and using data structures • Compete at HP CodeWars • Earn a 5.0 GPA bump and college credit by taking the AP test.',
+      'Learn content equivalent to a first-semester college-level course in CS • Learn object-oriented programming using the Java language • Solve problems by developing algorithms and using data structures • Compete at HP CodeWars • Earn a 5.0 GPA bump and college credit by taking the AP test',
     pathway: 'AP Computer Science A is the final course of the three-year pathway.',
     testimonies: [
       {
@@ -105,7 +105,7 @@ export const courses: Course[] = [
   {
     title: 'Web Development',
     description:
-      'Develop web sites with HTML5 and CSS • Validating HTML code using W3C • Using images including Image Maps and SVG • Responsive design with BootStrap and FlexBox • Use JavaScript to communicate with users and modify DOM • Transpilers including SASS and TypeScript.',
+      'Develop web sites with HTML5 and CSS • Validate HTML code using W3C • Use images including Image Maps and SVG • Learn responsive design with BootStrap and FlexBox • Use JavaScript to communicate with users and modify DOM • Develop modern pages with transpilers like TypeScript and SASS',
     pathway:
       'Web Development is an elective class in the pathway, and it offers dual enrollment with a local college.',
     testimonies: [
@@ -133,7 +133,7 @@ export const courses: Course[] = [
   {
     title: 'Machine Learning Honors',
     description:
-      'Gain understanding of every ML model covered • Use regression to model continuous data • Predict discrete results using classification models • Discover unknown patters with clustering models • Additional topics include association rule learning, reinforcement learning, and natural langue processing.',
+      'Gain an understanding of various ML models • Use regression to model continuous data • Predict discrete results using classification models • Discover unknown patters with clustering models • Additional topics include association rule learning, reinforcement learning, and natural language processing',
     pathway:
       'Machine Learning Honors is an elective class in the pathway, and is the only course of its kind offered in the area.',
     testimonies: [],
