@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Sora"', 'sans-serif'],
+        sans: ['"Space Grotesk"', 'sans-serif'],
         body: ['"Karla"', 'sans-serif'],
         mono: ['"Jetbrains Mono", mono']
       },

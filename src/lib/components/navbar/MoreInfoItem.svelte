@@ -9,12 +9,12 @@
 </script>
 
 <a
-  class="m-4 w-full cursor-pointer group"
+  class="p-4 w-full cursor-pointer group"
   on:mouseenter={() => (show = true)}
   on:mouseleave={() => (show = false)}
   {href}
 >
-  <div class="flex flex-row items-center">
+  <div class="flex flex-row items-center justify-between">
     <h1 class="text-sm font-semibold">{title}</h1>
 
     <ExternalArrow {show} />

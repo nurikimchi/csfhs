@@ -4,6 +4,8 @@
   import TeacherCard from '$lib/components/TeacherCard.svelte';
   import BackdropText from '$lib/components/text/BackdropText.svelte';
   import FaGraduationCap from 'svelte-icons/fa/FaGraduationCap.svelte';
+  import FaCheckCircle from 'svelte-icons/fa/FaCheckCircle.svelte';
+  import { each } from 'svelte/internal';
   import { tweened } from 'svelte/motion';
   import type { PageData } from './$types';
 
@@ -22,20 +24,35 @@
   }
 
   $: course.title, resetAnimation();
+
+  $: descriptionTokens = course.description.split('•');
 </script>
 
 <Container>
   <div class="flex-[4] min-h-screen">
     <div class="flex flex-col pt-6 md:pt-8">
       <div class="flex-1">
+        <p class="mb-4">{new Date().getFullYear() - 1} - {new Date().getFullYear()}</p>
         <BackdropText
           text={animatedTitleOutput}
-          className="font-bold text-5xl md:text-8xl leading-[5rem] md:leading-[8rem] flex-1"
+          className="font-extrabold text-5xl md:text-8xl leading-[5rem] md:leading-[8rem] flex-1"
         />
       </div>
 
-      <div class="flex-1 mt-6 md:mt-0">
-        <p class="md:text-2xl md:leading-10 font-medium">{data.course.description}</p>
+      <div class="flex-1 mt-6">
+        <ul class="space-y-6">
+          {#each descriptionTokens as description}
+            <li class="flex flex-row">
+              <div class="text-emerald-500 min-w-[24px] h-6 mr-4">
+                <FaCheckCircle />
+              </div>
+
+              <p class="font-semibold md:text-lg">
+                {description}
+              </p>
+            </li>
+          {/each}
+        </ul>
       </div>
     </div>
 
@@ -46,7 +63,7 @@
     >
       <p class="font-semibold font-sans">Sign up for the Computer Science Pathway</p>
 
-      <block class="w-4 h-4 block ml-2">
+      <block class="h-4 block ml-4">
         <FaGraduationCap />
       </block>
     </a>

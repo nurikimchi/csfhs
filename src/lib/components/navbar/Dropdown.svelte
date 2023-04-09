@@ -2,6 +2,9 @@
   import { spring } from 'svelte/motion';
   import FaChevronDown from 'svelte-icons/fa/FaChevronDown.svelte';
   import { page } from '$app/stores';
+  import { fly } from 'svelte/transition';
+
+  const TRANSFORM_OFFSET = -240;
 
   export let title: string;
   export let padding: number = 32;
@@ -41,42 +44,35 @@
 
 <div>
   <div
-    class="flex flex-row pr-8 py-2 items-center"
+    class="flex flex-row pr-10 py-2 items-center hover:text-gray-600"
     on:mouseenter={handleMouseIn}
     on:mouseleave={handleMouseLeave}
   >
-    <p
-      class="font-semibold font-sans cursor-default transition hover:text-gray-600 w-max text-sm pr-2"
-    >
+    <p class="font-semibold font-sans cursor-default transition w-max text-sm pr-2">
       {title}
     </p>
 
-    <div class="h-[0.8rem] block origin-center" style="transform: rotateZ({$arrowRotation}deg);">
+    <div
+      class="h-[0.8rem] block origin-center transition-colors"
+      style="transform: rotateZ({$arrowRotation}deg);"
+    >
       <FaChevronDown />
     </div>
   </div>
 
   {#if $dropdownOpacity !== 0}
     <div>
-      {#if arrowLeftOffset > 0}
-        <div
-          class="arrow"
-          style:opacity={$dropdownOpacity}
-          style:margin-left="{arrowLeftOffset - 8}px"
-        />
-      {/if}
-
       <div
         class="absolute pt-2 pr-4 z-20"
         on:mouseenter={handleMouseInDropdown}
         on:mouseleave={handleMouseLeaveDropdown}
         style:transform-origin="top"
         style:opacity={$dropdownOpacity}
-        style:transform="rotateX({(1 - $dropdownOpacity) * 10}deg)"
         style:pointer-events={visible ? 'initial' : 'none'}
       >
         <div
-          class="bg-gradient-to-tr from-slate-50 to-gray-50 rounded-md shadow-2xl shadow-slate-500/30 max-w-2xl"
+          class="bg-gradient-to-tr from-slate-50 to-gray-50 rounded-md shadow-2xl shadow-slate-500/30 max-w-2xl border-[rgb(218, 223, 232)] border"
+          in:fly={{ x: -20 }}
           style:padding="{padding}px"
         >
           <slot />
@@ -85,15 +81,3 @@
     </div>
   {/if}
 </div>
-
-<style>
-  .arrow {
-    @apply bg-slate-100 shadow-2xl shadow-slate-500/30 z-10 rounded-sm;
-
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    margin-left: 21px;
-    transform: rotateZ(45deg);
-  }
-</style>
