@@ -1,7 +1,7 @@
 <script lang="ts">
   import { browser } from '$app/environment';
   import { courseHref, courses } from '$lib/utils/navdata/courses';
-  import { moreInformationItems } from '$lib/utils/navdata/moreinfo';
+  import { moreInformationItems, moreInfoHref } from '$lib/utils/navdata/moreinfo';
   import IoMdClose from 'svelte-icons/io/IoMdClose.svelte';
   import IoMdMenu from 'svelte-icons/io/IoMdMenu.svelte';
   import { fly, type TransitionConfig } from 'svelte/transition';
@@ -100,7 +100,7 @@
             {#if selectedArea === 'info'}
               <MobileNavbarSection title="Info">
                 {#each moreInformationItems as moreInformationItem}
-                  <MobileItem item={moreInformationItem} />
+                  <MobileItem item={{ ...moreInformationItem, href: moreInfoHref(moreInformationItem) }} />
                 {/each}
               </MobileNavbarSection>
             {/if}

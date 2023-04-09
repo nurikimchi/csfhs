@@ -5,7 +5,6 @@
   import BackdropText from '$lib/components/text/BackdropText.svelte';
   import FaGraduationCap from 'svelte-icons/fa/FaGraduationCap.svelte';
   import FaCheckCircle from 'svelte-icons/fa/FaCheckCircle.svelte';
-  import { each } from 'svelte/internal';
   import { tweened } from 'svelte/motion';
   import type { PageData } from './$types';
 
@@ -13,7 +12,7 @@
 
   $: course = data.course;
 
-  const animatedTitleIndex = tweened(0, { duration: 600 });
+  const animatedTitleIndex = tweened(0, { duration: 700 });
   $: animatedTitleOutput =
     course.title.slice(0, $animatedTitleIndex) +
     ($animatedTitleIndex === course.title.length ? '' : '|');
