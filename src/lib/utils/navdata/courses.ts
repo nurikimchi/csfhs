@@ -105,7 +105,7 @@ export const courses: Course[] = [
   {
     title: 'Web Development',
     description:
-      'Develop web sites with HTML5 and CSS • Validating HTML code using W3C • Using images including Image Maps and SVG • Responsive design with BootStrap and FlaxBox • Use JavaScript to communicate with users and modify DOM • Transpilers including SASS and TypeScript.',
+      'Develop web sites with HTML5 and CSS • Validating HTML code using W3C • Using images including Image Maps and SVG • Responsive design with BootStrap and FlexBox • Use JavaScript to communicate with users and modify DOM • Transpilers including SASS and TypeScript.',
     pathway:
       'Web Development is an elective class in the pathway, and it offers dual enrollment with a local college.',
     testimonies: [

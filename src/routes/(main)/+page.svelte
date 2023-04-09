@@ -81,19 +81,6 @@
               </a>
             </div>
           </div>
-
-          <div class="flex-1 h-full lg:block hidden">
-            <div class="absolute w-screen max-w-[900px]">
-              <div
-                class="rotate-2 translate-x-4 -translate-y-1/2 shadow-2xl shadow-slate-900/50 rounded-md"
-              >
-                <ImageCarousel
-                  presentation
-                  images={data.images.map((i) => ({ src: i, alt: '' }))}
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
