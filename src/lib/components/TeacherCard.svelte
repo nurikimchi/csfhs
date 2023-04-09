@@ -6,8 +6,9 @@
   interface Options {
     name: string;
     title: string;
-    image: string;
     description: string;
+    href: string;
+    image: string;
   }
 
   const TEACHER_OPTIONS: Record<Teacher, Options> = {
@@ -16,12 +17,14 @@
       title: 'APCSA, ECS, ML, and CSR Instructor',
       description:
         "As the head of the Computer Science pathway here at Franklin High, I hope to encourage my students to pursue a career in computer science. I started out teaching Math after graduating from the University of California, Davis, but slowly moved towards robotics and computer science, where I found engaged students learning more about mathematics. I've since worked as a CTE teacher with Franklin, finding any opportunities for my students to involve themselves with technology.",
+      href: 'mailto:cdagler@egusd.net',
       image: DaglerPFP
     },
     'Mrs. Rodriguez': {
       name: 'Lynette Rodriguez',
       title: 'APCSP and Web Dev Instructor',
       description: '',
+      href: 'mailto:lrrodrig@egusd.net',
       image: RodriguezPFP
     }
   };

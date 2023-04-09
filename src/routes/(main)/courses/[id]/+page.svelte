@@ -57,7 +57,7 @@
     </div>
 
     <a
-      href="/"
+      href="https://frhs.egusd.net/Programs/STEAM-Pathways/index.html"
       class="w-max items-center flex flex-row my-8 md:my-16 rounded-l-2xl bg-gradient-to-r from-blue-700 to-blue-600 p-6 text-white text-[13px] sm:text-sm md:text-base tracking-wide shadow-lg shadow-blue-500/50 transition hover:-translate-y-1"
       style="border-radius: 16px 50px 50px 16px;"
     >
