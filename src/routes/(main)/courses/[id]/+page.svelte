@@ -86,5 +86,23 @@
         {/if}
       </div>
     </div>
+
+    {#if course.testimonies.length > 0}
+      <div class="mt-8">
+        <BackdropText
+          text="Hear what past students have to say."
+          className="font-bold text-3xl lg:text-4xl leading-normal sm:leading-[3rem] lg:leading-normal"
+        />
+
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 mt-2">
+          {#each course.testimonies as testimony}
+            <div>
+              <p>{testimony.text}</p>
+              <p class="font-bold">- {testimony.author}</p>
+            </div>
+          {/each}
+        </div>
+      </div>
+    {/if}
   </div>
 </Container>
