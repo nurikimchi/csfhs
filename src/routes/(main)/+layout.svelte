@@ -29,9 +29,3 @@
 </main>
 
 <Footer />
-
-<style>
-  :global(body) {
-    @apply bg-gray-900;
-  }
-</style>
