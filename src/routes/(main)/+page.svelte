@@ -56,12 +56,14 @@
             </p>
 
             <div class="mt-12 flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
-              <a href="https://frhs.egusd.net/Programs/STEAM-Pathways/index.html"
+              <a
+                href="https://frhs.egusd.net/Programs/STEAM-Pathways/index.html"
                 class="button-radius-right rounded-full text-sm border-2 border-indigo-600 shadow-lg shadow-indigo-600/30 tracking-wide bg-indigo-600 text-white font-semibold px-6 py-2 transition hover:bg-indigo-500 hover:border-indigo-500"
               >
                 Join the pathway
               </a>
-              <a href="https://frhs.egusd.net/documents/New-STEAM-Wheel-and-Chart-1.pdf"
+              <a
+                href="https://frhs.egusd.net/documents/New-STEAM-Wheel-and-Chart-1.pdf"
                 class="button-radius-right sm:rounded-full text-sm bg-slate-900 border-2 shadow-lg shadow-slate-900/20 tracking-wide border-slate-900 text-white font-semibold px-6 py-2 transition hover:bg-slate-800 hover:text-white"
               >
                 Student resources
