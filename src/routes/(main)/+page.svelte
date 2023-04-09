@@ -17,7 +17,7 @@
         <div class="max-w-[60ch] flex-1">
           <BackdropText
             text="Teaching the future innovators of technology."
-            className="font-extrabold text-6xl leading-[6rem]"
+            className="font-bold text-6xl leading-[6rem]"
           />
           <p class="mt-8 text-xl leading-loose">
             The Computer Science pathway has countless opportunities for students to discover
