@@ -54,18 +54,16 @@
 
 <div id="movile-nav-csfhs" class="md:hidden w-full bg-white z-50" class:nav-enabled={visible}>
   <Container>
-    <div class="flex flex-row justify-between relative z-40 py-4 h-max">
-      <div>
-        <a href="https://instagram.com/fhs.computerscience?igshid=YmMyMTA2M2Y=" class="mr-10">
-          <div class="relative">
-            <div
-              class="w-14 h-14 bg-clip-text text-transparent bg-gradient-to-tr from-indigo-500 to-blue-500 text-indigo-500"
-            >
-              <IoLogoInstagram />
-            </div>
+    <div class="flex flex-row justify-between items-center relative z-40 py-4 h-max">
+      <a href="https://instagram.com/fhs.computerscience?igshid=YmMyMTA2M2Y=" class="mr-10">
+        <div class="relative">
+          <div
+            class="w-14 bg-clip-text text-transparent bg-gradient-to-tr from-indigo-500 to-blue-500 text-indigo-500"
+          >
+            <IoLogoInstagram />
           </div>
-        </a>
-      </div>
+        </div>
+      </a>
 
       <button
         class="cursor-pointer rounded-md w-8 h-8 relative"
@@ -100,7 +98,9 @@
             {#if selectedArea === 'info'}
               <MobileNavbarSection title="Info">
                 {#each moreInformationItems as moreInformationItem}
-                  <MobileItem item={{ ...moreInformationItem, href: moreInfoHref(moreInformationItem) }} />
+                  <MobileItem
+                    item={{ ...moreInformationItem, href: moreInfoHref(moreInformationItem) }}
+                  />
                 {/each}
               </MobileNavbarSection>
             {/if}
