@@ -13,6 +13,7 @@
   import { page } from '$app/stores';
   import IoLogoInstagram from 'svelte-icons/io/IoLogoInstagram.svelte';
   import FRHSLogo from '$lib/images/frhs-logo.jpeg';
+  import { writable } from 'svelte/store';
 
   const NO_SCROLL_CLASSES = ['overflow-hidden', 'h-full'];
 
@@ -28,9 +29,9 @@
   }
 
   const selectedAreaOptions = ['classes', 'info'] as const;
-  type SelectedArea = typeof selectedAreaOptions[number];
+  type SelectedArea = (typeof selectedAreaOptions)[number];
 
-  let selectedArea: SelectedArea = 'classes';
+  let selectedArea = writable<SelectedArea>('classes');
   let visible = false;
 
   $: visible, lockScroll();
@@ -44,10 +45,6 @@
     }
 
     window.document.body.classList.remove(...NO_SCROLL_CLASSES);
-  }
-
-  function handleSlideSelect(option: SelectedArea) {
-    selectedArea = option;
   }
 
   $: $page.url.href, (visible = false);
@@ -90,10 +87,10 @@
     {#if visible}
       <div class="w-full z-30" in:fly={{ y: -25, duration: 300 }}>
         <div class="flex flex-col">
-          <SlideSelector options={selectedAreaOptions} onClick={handleSlideSelect} />
+          <SlideSelector options={selectedAreaOptions} selected={selectedArea} />
 
           <div class="mt-2 mb-6">
-            {#if selectedArea === 'classes'}
+            {#if $selectedArea === 'classes'}
               <MobileNavbarSection title="Classes">
                 {#each courses as course}
                   <MobileItem item={{ ...course, href: courseHref(course) }} />
@@ -101,7 +98,7 @@
               </MobileNavbarSection>
             {/if}
 
-            {#if selectedArea === 'info'}
+            {#if $selectedArea === 'info'}
               <MobileNavbarSection title="Info">
                 {#each moreInformationItems as moreInformationItem}
                   <MobileItem
