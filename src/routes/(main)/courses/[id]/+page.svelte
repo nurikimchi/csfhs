@@ -57,7 +57,7 @@
         </ul>
       </div>
     </div>
-    <!-- 
+    
     <a
       href="https://frhs.egusd.net/Programs/STEAM-Pathways/index.html"
       class="w-max items-center flex flex-row my-8 md:my-16 rounded-l-2xl bg-gradient-to-r from-blue-700 to-blue-600 p-6 text-white text-[13px] sm:text-sm md:text-base tracking-wide shadow-lg shadow-blue-500/50 transition hover:-translate-y-1"
@@ -65,10 +65,10 @@
     >
       <p class="font-semibold font-sans">Sign up for the Computer Science Pathway</p>
 
-      <block class="h-4 block ml-4">
+      <block class="w-4 h-4 block ml-4">
         <FaGraduationCap />
       </block>
-    </a> -->
+    </a>
 
     <div class="flex flex-col-reverse md:my-8 md:flex-row md:space-x-8">
       <div class="flex-1 mt-8 md:mt-0 text-center md:text-left">
