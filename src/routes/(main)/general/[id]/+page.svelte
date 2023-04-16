@@ -37,19 +37,21 @@
       <div class="flex-1 mt-6">
         <div class="md:text-lg mb-6">{moreInfo.overview}</div>
 
-        {#if moreInfo.bullets.length > 0}
-          <ul class="space-y-6">
-            {#each moreInfo.bullets as bullet}
-              <li class="flex flex-row">
-                <div class="text-emerald-500 min-w-[24px] h-6 mr-4">
+        <ul class="flex flex-col gap-6">
+          {#each moreInfo.bullets as bullet}
+            <li class="flex flex-row">
+              <div>
+                <div class="text-emerald-500 w-[24px]">
                   <FaCheckCircle />
                 </div>
+              </div>
 
+              <div class="ml-4">
                 <p>{bullet}</p>
-              </li>
-            {/each}
-          </ul>
-        {/if}
+              </div>
+            </li>
+          {/each}
+        </ul>
       </div>
     </div>
 
@@ -60,7 +62,7 @@
     >
       <p class="font-semibold font-sans">Sign up for the Computer Science Pathway</p>
 
-      <block class="h-4 block ml-4">
+      <block class="w-4 h-4 block ml-4">
         <FaGraduationCap />
       </block>
     </a>
