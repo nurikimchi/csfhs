@@ -12,6 +12,7 @@
   import MobileNavbarSection from './MobileNavbarSection.svelte';
   import { page } from '$app/stores';
   import IoLogoInstagram from 'svelte-icons/io/IoLogoInstagram.svelte';
+  import FRHSLogo from '$lib/images/frhs-logo.jpeg';
 
   const NO_SCROLL_CLASSES = ['overflow-hidden', 'h-full'];
 
@@ -27,7 +28,7 @@
   }
 
   const selectedAreaOptions = ['classes', 'info'] as const;
-  type SelectedArea = (typeof selectedAreaOptions)[number];
+  type SelectedArea = typeof selectedAreaOptions[number];
 
   let selectedArea: SelectedArea = 'classes';
   let visible = false;
@@ -55,15 +56,20 @@
 <div id="movile-nav-csfhs" class="md:hidden w-full bg-white z-50" class:nav-enabled={visible}>
   <Container>
     <div class="flex flex-row justify-between items-center relative z-40 py-4 h-max">
-      <a href="https://instagram.com/fhs.computerscience?igshid=YmMyMTA2M2Y=" class="mr-10">
-        <div class="relative">
-          <div
-            class="w-14 bg-clip-text text-transparent bg-gradient-to-tr from-indigo-500 to-blue-500 text-indigo-500"
-          >
-            <IoLogoInstagram />
+      <div class="flex flex-row items-center">
+        <a href="/" class="mr-10">
+          <img src={FRHSLogo} alt="" class="w-12 rounded transition-all hover:brightness-125" />
+        </a>
+        <a href="https://instagram.com/fhs.computerscience?igshid=YmMyMTA2M2Y=" class="mr-10">
+          <div class="relative">
+            <div
+              class="w-14 h-14 bg-clip-text text-transparent bg-gradient-to-tr from-indigo-500 to-blue-500 text-indigo-500"
+            >
+              <IoLogoInstagram />
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
 
       <button
         class="cursor-pointer rounded-md w-8 h-8 relative"
