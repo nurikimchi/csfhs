@@ -23,8 +23,8 @@
       <Container>
         <h1 class="font-bold text-3xl">Franklin Computer Science</h1>
         <p class="text-sm">
-          by <a class="contributer-link" href="/">Esteban Garcia</a> &
-          <a class="contributer-link" href="/">Omar Sadat</a>
+          by <a class="contributer-link" href="https://github.com/estebangarcia21">Esteban Garcia</a> &
+          <a class="contributer-link" href="https://github.com/ohmrr">Omar Sadat</a>
         </p>
       </Container>
     </div>
