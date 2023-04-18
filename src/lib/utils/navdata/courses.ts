@@ -61,6 +61,10 @@ export const courses: Course[] = [
       {
         text: 'AP Computer Science Principles allowed me to collaborate with my peers and it helped open my mind to new technology. I was able to learn ideas and concepts that could be applied to the real world.',
         author: 'Nicole'
+      },
+      {
+        text: 'I liked that the curriculum taught felt very distinguished from other classes. It was a very unique class, and I felt that what I learned applied much more to the real life than normal high school courses. Everyday I saluted Mrs. Rodriguez at the door, with a wide smile on my face, ready to learn something new.',
+        author: 'Joshua'
       }
     ],
     teacher: 'Mrs. Rodriguez',
@@ -136,7 +140,28 @@ export const courses: Course[] = [
       'Gain an understanding of various ML models • Use regression to model continuous data • Predict discrete results using classification models • Discover unknown patters with clustering models • Additional topics include association rule learning, reinforcement learning, and natural language processing',
     pathway:
       'Machine Learning Honors is an elective class in the pathway, and is the only course of its kind offered in the area.',
-    testimonies: [],
+    testimonies: [
+      {
+        text: 'I enjoy collaborating with others, trying to figure out the labs and fixing the errors we have. The content of the class intrigues me because I feel machine learning is going to be a major part of our future and learning it early will benefit us.',
+        author: 'George'
+      },
+      {
+        text: 'I liked the fact that labs followed every instruction in class. I really enjoyed collaborating with my peers on solving errors in the labs. I liked the fact that labs allowed me to practice the skills I learned in class, and allowed me to tackle new problems as well.',
+        author: 'Sia'
+      },
+      {
+        text: "I loved how we're able to work in groups to collaborate in this class and the help I got from other classmates and Mr. Dagler!",
+        author: 'Bronte'
+      },
+      {
+        text: 'I liked the energy of the classroom and the coding.',
+        author: 'Maroof'
+      },
+      {
+        text: 'I liked the collaboration in this class and working on the labs and other work with my classmates.',
+        author: 'Jordan'
+      }
+    ],
     teacher: 'Mr. Dagler',
     email: 'cdagler@egusd.net',
     id: 'ml-honors'
