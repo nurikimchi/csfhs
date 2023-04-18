@@ -19,7 +19,9 @@
 </script>
 
 <svelte:head>
-  <title>CSFHS</title>
+  <title>FHS Computer Science</title>
+  <meta name="description" content="The Computer Science Pathway at Franklin High School offers a wide range of courses for students to learn about the world of technology." />
+  <meta name="keywords" content="Franklin High School Computer Science, FHS Computer Science, CSFHS, FHS, FRHS, STEAM Academy, STEAM Computer Science Pathway" />
 </svelte:head>
 
 <Navbar />
