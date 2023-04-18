@@ -3,7 +3,7 @@
   import ImageCarousel from '$lib/components/images/ImageCarousel.svelte';
   import TeacherCard, { TEACHER_OPTIONS } from '$lib/components/TeacherCard.svelte';
   import BackdropText from '$lib/components/text/BackdropText.svelte';
-  import DaglerPFP from '$lib/images/dagler.jpeg';
+  import DaglerPFP from '$lib/images/home/dagler.jpeg';
   import { courseHrefById, courses, teachers } from '$lib/utils/navdata/courses';
   import type { PageData } from './$types';
 

@@ -2,7 +2,7 @@
   import Container from '../Container.svelte';
   import ClassesDropdown from './ClassesDropdown.svelte';
   import MoreInfoDropdown from './MoreInfoDropdown.svelte';
-  import FRHSLogo from '$lib/images/frhs-logo.jpeg';
+  import FRHSLogo from '$lib/images/home/frhs-logo.jpeg';
   import IoLogoInstagram from 'svelte-icons/io/IoLogoInstagram.svelte';
 </script>
 

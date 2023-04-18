@@ -12,7 +12,7 @@
   import MobileNavbarSection from './MobileNavbarSection.svelte';
   import { page } from '$app/stores';
   import IoLogoInstagram from 'svelte-icons/io/IoLogoInstagram.svelte';
-  import FRHSLogo from '$lib/images/frhs-logo.jpeg';
+  import FRHSLogo from '$lib/images/home/frhs-logo.jpeg';
   import { writable } from 'svelte/store';
 
   const NO_SCROLL_CLASSES = ['overflow-hidden', 'h-full'];

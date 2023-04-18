@@ -1,6 +1,6 @@
 import type { PageLoad } from './$types';
 
-const images = import.meta.glob('$lib/images/legacy/**/*.{jpeg,png,jpg}', {
+const images = import.meta.glob('$lib/images/csfhs/**/*.{jpeg,png,jpg}', {
   as: 'url',
   eager: true
 });
