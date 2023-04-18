@@ -28,8 +28,8 @@
 
 <script lang="ts">
   import type { Teacher } from '$lib/utils/navdata/courses';
-  import DaglerPFP from '$lib/images/daglernew.jpg';
-  import RodriguezPFP from '$lib/images/placeholder.png';
+  import DaglerPFP from '$lib/images/home/daglernew.jpg';
+  import RodriguezPFP from '$lib/images/home/placeholder.png';
 
   export let teacher: Teacher | Options;
 
