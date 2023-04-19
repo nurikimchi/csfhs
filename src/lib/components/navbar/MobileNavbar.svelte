@@ -29,7 +29,7 @@
   }
 
   const selectedAreaOptions = ['classes', 'info'] as const;
-  type SelectedArea = (typeof selectedAreaOptions)[number];
+  type SelectedArea = typeof selectedAreaOptions[number];
 
   let selectedArea = writable<SelectedArea>('classes');
   let visible = false;
@@ -54,10 +54,14 @@
   <Container>
     <div class="flex flex-row justify-between items-center relative z-40 py-4 h-max">
       <div class="flex flex-row items-center">
-        <a href="/" class="mr-10">
+        <a href="/" class="mr-10" aria-label="Home">
           <img src={FRHSLogo} alt="" class="w-12 rounded transition-all hover:brightness-125" />
         </a>
-        <a href="https://instagram.com/fhs.computerscience?igshid=YmMyMTA2M2Y=" class="mr-10">
+        <a
+          href="https://instagram.com/fhs.computerscience?igshid=YmMyMTA2M2Y="
+          class="mr-10"
+          aria-label="CSFHS Instagram Account"
+        >
           <div class="relative">
             <div
               class="w-14 h-14 bg-clip-text text-transparent bg-gradient-to-tr from-indigo-500 to-blue-500 text-indigo-500"
@@ -71,6 +75,7 @@
       <button
         class="cursor-pointer rounded-md w-8 h-8 relative"
         on:click={() => (visible = !visible)}
+        aria-label="Toggle Mobile Navigation"
       >
         {#if visible}
           <div transition:buttonFade>
