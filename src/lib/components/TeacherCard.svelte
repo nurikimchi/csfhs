@@ -10,7 +10,7 @@
   export const TEACHER_OPTIONS: Record<Teacher, Options> = {
     'Mr. Dagler': {
       name: 'Clay Dagler',
-      title: 'APCSA, ECS, ML, and CSR Instructor',
+      title: 'AP CSA, ECS, MLH, and CS&R Instructor',
       description:
         "As the head of the Computer Science pathway here at Franklin High, I hope to encourage my students to pursue a career in computer science. I started out teaching Math after graduating from the University of California, Davis, but slowly moved towards robotics and computer science, where I found engaged students learning more about mathematics. I've since worked as a CTE teacher with Franklin, finding any opportunities for my students to involve themselves with technology.",
       image: DaglerPFP,
@@ -18,7 +18,7 @@
     },
     'Mrs. Rodriguez': {
       name: 'Lynette Rodriguez',
-      title: 'APCSP and Web Dev Instructor',
+      title: 'AP CSP and Web Development Instructor',
       description: '',
       image: RodriguezPFP,
       email: 'lrrodrig@egusd.net@egusd.net'
@@ -28,8 +28,8 @@
 
 <script lang="ts">
   import type { Teacher } from '$lib/utils/navdata/courses';
-  import DaglerPFP from '$lib/images/daglernew.jpg';
-  import RodriguezPFP from '$lib/images/placeholder.png';
+  import DaglerPFP from '$lib/images/home/daglernew.jpg';
+  import RodriguezPFP from '$lib/images/home/placeholder.png';
 
   export let teacher: Teacher | Options;
 

@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit';
 import { moreInformationItems } from '$lib/utils/navdata/moreinfo';
 import type { PageLoad } from './$types';
 
-const images = import.meta.glob('$lib/images/**/*.{png,jpg,jpeg}', { as: 'url', eager: true });
+const images = import.meta.glob('$lib/images/csfhs/**/*.{png,jpg,jpeg}', { as: 'url', eager: true });
 
 export const load = (async ({ params }) => {
   const moreInfo = moreInformationItems.find((p) => p.id === params.id);

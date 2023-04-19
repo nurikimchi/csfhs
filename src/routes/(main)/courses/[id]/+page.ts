@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit';
 import { courses } from '$lib/utils/navdata/courses';
 import type { PageLoad } from './$types';
 
-const images = import.meta.glob('$lib/images/**/*.{png,jpg,jpeg}', { as: 'url', eager: true });
+const images = import.meta.glob('$lib/images/csfhs/**/*.{png,jpg,jpeg}', { as: 'url', eager: true });
 
 export const load = (async ({ params }) => {
   const course = courses.find((c) => c.id === params.id);
