@@ -2,7 +2,7 @@
   import Container from '../Container.svelte';
   import ClassesDropdown from './ClassesDropdown.svelte';
   import MoreInfoDropdown from './MoreInfoDropdown.svelte';
-  import FRHSLogo from '$lib/images/home/frhs-logo.jpeg';
+  import CSLogo from '$lib/images/home/cs-logo-transparent.png';
   import IoLogoInstagram from 'svelte-icons/io/IoLogoInstagram.svelte';
 </script>
 
@@ -10,7 +10,7 @@
   <Container>
     <div class="flex flex-row items-center">
       <a href="/" class="mr-10" aria-label="Home">
-        <img src={FRHSLogo} alt="" class="w-12 rounded transition-all hover:brightness-125" />
+        <img src={CSLogo} alt="" class="w-12 rounded transition-all hover:brightness-125" />
       </a>
       <a
         href="https://instagram.com/fhs.computerscience?igshid=YmMyMTA2M2Y="
