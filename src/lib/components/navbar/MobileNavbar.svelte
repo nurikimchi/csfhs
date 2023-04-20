@@ -12,7 +12,7 @@
   import MobileNavbarSection from './MobileNavbarSection.svelte';
   import { page } from '$app/stores';
   import IoLogoInstagram from 'svelte-icons/io/IoLogoInstagram.svelte';
-  import FRHSLogo from '$lib/images/home/frhs-logo.jpeg';
+  import CSLogo from '$lib/images/home/cs-logo-transparent.png';
   import { writable } from 'svelte/store';
 
   const NO_SCROLL_CLASSES = ['overflow-hidden', 'h-full'];
@@ -55,7 +55,7 @@
     <div class="flex flex-row justify-between items-center relative z-40 py-4 h-max">
       <div class="flex flex-row items-center">
         <a href="/" class="mr-10" aria-label="Home">
-          <img src={FRHSLogo} alt="" class="w-12 rounded transition-all hover:brightness-125" />
+          <img src={CSLogo} alt="" class="w-12 rounded transition-all hover:brightness-125" />
         </a>
         <a
           href="https://instagram.com/fhs.computerscience?igshid=YmMyMTA2M2Y="
