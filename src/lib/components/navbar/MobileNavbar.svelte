@@ -12,7 +12,7 @@
   import SlideSelector from '../SlideSelector.svelte';
   import MobileItem from './MobileItem.svelte';
   import MobileNavbarSection from './MobileNavbarSection.svelte';
-  import CsLogo from './CSLogo.svelte';
+  import CsLogo from './CsLogo.svelte';
 
   const NO_SCROLL_CLASSES = ['overflow-hidden', 'h-full'];
 
