@@ -1,8 +1,9 @@
 <script lang="ts">
-  import { writable } from 'svelte/store';
-  import { fade } from 'svelte/transition';
+  import { onDestroy } from 'svelte';
   import FaChevronLeft from 'svelte-icons/fa/FaChevronLeft.svelte';
   import FaChevronRight from 'svelte-icons/fa/FaChevronRight.svelte';
+  import { writable } from 'svelte/store';
+  import { fade } from 'svelte/transition';
 
   export let images: ImageOptions[];
   export let presentation = false;
@@ -23,7 +24,10 @@
 
   let currentImageIndex = writable(0);
   $: currentImage = images[$currentImageIndex];
+
   let timeout: NodeJS.Timeout | null = null;
+
+  $: images, ($currentImageIndex = 0);
 
   const resetTimeout = (time = IMAGE_ROTATION_LENGTH_MS) => {
     if (timeout) {
@@ -34,14 +38,14 @@
 
   function nextImage() {
     if (!isTransitioning) {
-      currentImageIndex.update((val) => ($currentImageIndex === images.length - 1 ? 0 : val + 1));
+      currentImageIndex.update((val) => (val === images.length - 1 ? 0 : val + 1));
       resetTimeout(IMAGE_ROTATION_LENGTH_MS + IMAGE_VIEW_EXTRA_TIME_MS);
     }
   }
 
   function previousImage() {
     if (!isTransitioning) {
-      currentImageIndex.update((val) => ($currentImageIndex === 0 ? images.length - 1 : val - 1));
+      currentImageIndex.update((val) => (val === 0 ? images.length - 1 : val - 1));
       resetTimeout(IMAGE_ROTATION_LENGTH_MS + IMAGE_VIEW_EXTRA_TIME_MS);
     }
   }
@@ -49,11 +53,16 @@
   function advanceImage(initial = false) {
     if (!initial) {
       nextImage();
+      return;
     }
     resetTimeout();
   }
 
   advanceImage(true);
+
+  onDestroy(() => {
+    timeout && clearTimeout(timeout);
+  });
 </script>
 
 <div>
@@ -62,8 +71,8 @@
       <div class="absolute">
         <!-- Actual display image -->
         <img
-          alt={currentImage.alt}
-          src={currentImage.src}
+          alt={currentImage?.alt}
+          src={currentImage?.src}
           transition:fade|local
           class="rounded-md top-0 {classes}"
         />
@@ -74,7 +83,7 @@
   <div>
     <div class="relative">
       <!-- Placeholder image for content to be after the absolute image -->
-      <img alt={currentImage.alt} src={currentImage.src} class="invisible" />
+      <img alt={currentImage?.alt} src={currentImage?.src} class="invisible" />
 
       {#if !presentation}
         <button class="{CHEVRON_ARROW_STYLES} left-0" on:click={previousImage}>

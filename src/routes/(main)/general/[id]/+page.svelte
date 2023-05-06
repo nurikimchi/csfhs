@@ -1,11 +1,11 @@
 <script lang="ts">
   import Container from '$lib/components/Container.svelte';
-  import BackdropText from '$lib/components/text/BackdropText.svelte';
-  import FaGraduationCap from 'svelte-icons/fa/FaGraduationCap.svelte';
-  import FaCheckCircle from 'svelte-icons/fa/FaCheckCircle.svelte';
   import ImageCarousel from '$lib/components/images/ImageCarousel.svelte';
-  import type { PageData } from './$types';
+  import BackdropText from '$lib/components/text/BackdropText.svelte';
+  import FaCheckCircle from 'svelte-icons/fa/FaCheckCircle.svelte';
+  import FaGraduationCap from 'svelte-icons/fa/FaGraduationCap.svelte';
   import { tweened } from 'svelte/motion';
+  import type { PageData } from './$types';
 
   export let data: PageData;
   $: moreInfo = data.moreInfo;

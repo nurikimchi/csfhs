@@ -11,7 +11,7 @@
 </script>
 
 <div class="overflow-visible lg:overflow-hidden">
-  <Container>
+  <Container width={1200}>
     <section class="!pt-4 md:!pt-12">
       <div class="flex flex-row space-x-16 items-center">
         <div class="max-w-[60ch] flex-1">

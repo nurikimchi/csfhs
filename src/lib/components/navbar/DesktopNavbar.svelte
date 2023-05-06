@@ -2,16 +2,17 @@
   import Container from '../Container.svelte';
   import ClassesDropdown from './ClassesDropdown.svelte';
   import MoreInfoDropdown from './MoreInfoDropdown.svelte';
-  import CSLogo from '$lib/images/home/cs-logo-transparent.png';
   import IoLogoInstagram from 'svelte-icons/io/IoLogoInstagram.svelte';
+  import { page } from '$app/stores';
+  import CsLogo from './CsLogo.svelte';
+
+  $: isHomePage = $page.url.pathname === '/';
 </script>
 
-<div class="hidden md:block py-4 z-20 transition-all bg-white">
-  <Container>
+<div class="hidden md:block py-6 z-20 transition-all bg-white">
+  <Container width={isHomePage ? 1200 : 1000}>
     <div class="flex flex-row items-center">
-      <a href="/" class="mr-10" aria-label="Home">
-        <img src={CSLogo} alt="" class="w-12 rounded transition-all hover:brightness-125" />
-      </a>
+      <CsLogo />
       <a
         href="https://instagram.com/fhs.computerscience?igshid=YmMyMTA2M2Y="
         class="mr-10"

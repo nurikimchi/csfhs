@@ -1,19 +1,18 @@
 <script lang="ts">
   import { browser } from '$app/environment';
+  import { page } from '$app/stores';
   import { courseHref, courses } from '$lib/utils/navdata/courses';
-  import { moreInformationItems, moreInfoHref } from '$lib/utils/navdata/moreinfo';
+  import { moreInfoHref, moreInformationItems } from '$lib/utils/navdata/moreinfo';
+  import IoLogoInstagram from 'svelte-icons/io/IoLogoInstagram.svelte';
   import IoMdClose from 'svelte-icons/io/IoMdClose.svelte';
   import IoMdMenu from 'svelte-icons/io/IoMdMenu.svelte';
+  import { writable } from 'svelte/store';
   import { fly, type TransitionConfig } from 'svelte/transition';
-  import { onDestroy } from 'svelte';
   import Container from '../Container.svelte';
   import SlideSelector from '../SlideSelector.svelte';
   import MobileItem from './MobileItem.svelte';
   import MobileNavbarSection from './MobileNavbarSection.svelte';
-  import { page } from '$app/stores';
-  import IoLogoInstagram from 'svelte-icons/io/IoLogoInstagram.svelte';
-  import CSLogo from '$lib/images/home/cs-logo-transparent.png';
-  import { writable } from 'svelte/store';
+  import CsLogo from './CSLogo.svelte';
 
   const NO_SCROLL_CLASSES = ['overflow-hidden', 'h-full'];
 
@@ -29,7 +28,7 @@
   }
 
   const selectedAreaOptions = ['classes', 'info'] as const;
-  type SelectedArea = typeof selectedAreaOptions[number];
+  type SelectedArea = (typeof selectedAreaOptions)[number];
 
   let selectedArea = writable<SelectedArea>('classes');
   let visible = false;
@@ -54,9 +53,7 @@
   <Container>
     <div class="flex flex-row justify-between items-center relative z-40 py-4 h-max">
       <div class="flex flex-row items-center">
-        <a href="/" class="mr-10" aria-label="Home">
-          <img src={CSLogo} alt="" class="w-12 rounded transition-all hover:brightness-125" />
-        </a>
+        <CsLogo />
         <a
           href="https://instagram.com/fhs.computerscience?igshid=YmMyMTA2M2Y="
           class="mr-10"
