@@ -36,8 +36,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@supabase/auth-helpers-sveltekit": "^0.8.6",
-    "@supabase/supabase-js": "^2.4.0",
     "sass": "^1.57.1",
     "svelte-icons": "^2.1.0"
   }
