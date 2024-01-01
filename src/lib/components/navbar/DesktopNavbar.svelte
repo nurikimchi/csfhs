@@ -20,7 +20,7 @@
       >
         <div class="relative">
           <div
-            class="w-14 h-14 bg-clip-text text-transparent bg-gradient-to-tr from-indigo-500 to-blue-500 text-indigo-500"
+          class="w-14 h-14 bg-clip-text text-transparent bg-gradient-to-tr from-indigo-500 to-blue-500 text-indigo-500"
           >
             <IoLogoInstagram />
           </div>
