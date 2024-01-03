@@ -2,6 +2,7 @@
   import Container from '../Container.svelte';
   import ClassesDropdown from './ClassesDropdown.svelte';
   import MoreInfoDropdown from './MoreInfoDropdown.svelte';
+  import PathwayInfoDropdown from './PathwayInfoDropdown.svelte';
   import IoLogoInstagram from 'svelte-icons/io/IoLogoInstagram.svelte';
   import { page } from '$app/stores';
   import CsLogo from './CsLogo.svelte';
@@ -28,6 +29,7 @@
       </a>
       <ClassesDropdown />
       <MoreInfoDropdown />
+      <PathwayInfoDropdown />
     </div>
   </Container>
 </div>

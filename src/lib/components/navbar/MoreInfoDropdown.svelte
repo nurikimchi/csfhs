@@ -3,7 +3,7 @@
   import { moreInfoHrefById, moreInformationItems,  } from '$lib/utils/navdata/moreinfo';
   import Dropdown from './Dropdown.svelte';
   import MoreInfoItem from './MoreInfoItem.svelte';
-  import MoreInfo1Item from './MoreInfoItem.svelte';
+  import ZooProjectItem from './MoreInfoItem.svelte';
 </script>
 
 <Dropdown title="Beyond The Classroom" padding={16} arrowLeftOffset={137 / 2}>
@@ -12,7 +12,7 @@
       <MoreInfoItem {title} {description} href={moreInfoHrefById(id)} />
     {/each}
     {#each zooprojectItems as { title, description, id }}
-      <MoreInfo1Item {title} {description} href={zooprojectHrefById(id)} />
+      <ZooProjectItem {title} {description} href={zooprojectHrefById(id)} />
     {/each}
   </div>
 </Dropdown>
