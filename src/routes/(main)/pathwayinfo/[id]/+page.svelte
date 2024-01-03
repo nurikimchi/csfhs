@@ -8,19 +8,19 @@
     import type { PageData } from './$types';
   
     export let data: PageData;
-    $: moreInfo1 = data.moreInfo1;
+    $: pathWay = data.pathWay;
   
     const animatedTitleIndex = tweened(0, { duration: 600 });
     $: animatedTitleOutput =
-      moreInfo1.title.slice(0, $animatedTitleIndex) +
-      ($animatedTitleIndex === moreInfo1.title.length ? '' : '|');
+     pathWay.title.slice(0, $animatedTitleIndex) +
+      ($animatedTitleIndex === pathWay.title.length ? '' : '|');
   
     async function resetAnimation() {
       await animatedTitleIndex.set(0, { duration: 0 });
-      animatedTitleIndex.set(moreInfo1.title.length);
+      animatedTitleIndex.set(pathWay.title.length);
     }
   
-    $: moreInfo1.title, resetAnimation();
+    $: pathWay.title, resetAnimation();
   </script>
   
   <Container>
@@ -35,10 +35,10 @@
         </div>
   
         <div class="flex-1 mt-6">
-          <div class="md:text-lg mb-6">{moreInfo1.overview}</div>
+          <div class="md:text-lg mb-6">{pathWay.overview}</div>
   
           <ul class="flex flex-col gap-6">
-            {#each moreInfo1.bullets as bullet}
+            {#each pathWay.bullets as bullet}
               <li class="flex flex-row">
                 <div>
                   <div class="text-emerald-500 w-[24px]">

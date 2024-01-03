@@ -1,4 +1,4 @@
-export interface MoreInformation1 {
+export interface PathWay {
   title: string;
   description: string;
   overview: string;
@@ -6,7 +6,7 @@ export interface MoreInformation1 {
   id: string;
 }
 
-export const moreInformation1Items: MoreInformation1[] = [
+export const pathWayItems: PathWay[] = [
   {
     title: 'Updated Classroom',
     description:
@@ -34,13 +34,13 @@ export const moreInformation1Items: MoreInformation1[] = [
   },
 ];
 
-const getMoreInfo1Id = (id: string) => `/pathwayinfo/${id}`;
+const getPathWayId = (id: string) => `/pathwayinfo/${id}`;
 
-export function moreInfo1Href(info1Page: MoreInformation1) {
-  return getMoreInfo1Id(info1Page.id);
+export function pathWayHref(pathPage: PathWay) {
+  return getPathWayId(pathPage.id);
 }
 
-export function moreInfo1HrefById(info1PageId: string) {
-  return getMoreInfo1Id(info1PageId);
+export function pathWayHrefById(pathPageId: string) {
+  return getPathWayId(pathPageId);
 }
   
