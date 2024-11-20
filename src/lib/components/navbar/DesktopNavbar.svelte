@@ -2,6 +2,7 @@
   import Container from '../Container.svelte';
   import ClassesDropdown from './ClassesDropdown.svelte';
   import MoreInfoDropdown from './MoreInfoDropdown.svelte';
+  import PathwayInfoDropdown from './PathwayInfoDropdown.svelte';
   import IoLogoInstagram from 'svelte-icons/io/IoLogoInstagram.svelte';
   import { page } from '$app/stores';
   import CsLogo from './CsLogo.svelte';
@@ -20,7 +21,7 @@
       >
         <div class="relative">
           <div
-            class="w-14 h-14 bg-clip-text text-transparent bg-gradient-to-tr from-indigo-500 to-blue-500 text-indigo-500"
+          class="w-14 h-14 bg-clip-text text-transparent bg-gradient-to-tr from-indigo-500 to-blue-500 text-indigo-500"
           >
             <IoLogoInstagram />
           </div>
@@ -28,6 +29,7 @@
       </a>
       <ClassesDropdown />
       <MoreInfoDropdown />
+      <PathwayInfoDropdown />
     </div>
   </Container>
 </div>
