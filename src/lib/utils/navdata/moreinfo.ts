@@ -4,6 +4,7 @@ export interface MoreInformation {
   overview: string;
   bullets: string[];
   id: string;
+  hideSignUp?: boolean;
   about?: {
     text: string;
   };
@@ -59,14 +60,15 @@ export const moreInformationItems: MoreInformation[] = [
     id: 'student-leadership'
   },
   {
-    title: 'HPE School Certificate Program',
+    title: 'Hewlett Packard Enterprise School Certificate Program',
     description:
       'Earn a certificate for demonstrating your programming knowledge',
     id: 'hpe-certification',
-    overview: "This certification program is an optional exam where passing students earn a certificate for Solo Application Development, Database & Customer Requirements Gathering - Section C.",
+    overview: "Earn a certificate for your college application and resume!",
     bullets: [],
+    hideSignUp: false,
     about: {
-      text: "This certification program is unlike school exams and was designed to simulate working at a company. Besides knowing how to code, students will have to know the basics of github and get comfortable contacting their clients (roleplayed by the proctors) through outlook. Simulating the real world, students have full access to the internet and may look things up. To pass, the student must create a minimal viable product within a 6 hour time limit. The student is able to choose between one of the supported languages.",
+      text: "This certification program simulates what it's like to work at a company. Besides knowing how to code, students will have to know the basics of github, contact their clients (roleplayed by the proctors) through outlook, and solve problems by themselves. Since this is not a class lecture, students don't take notes or recieve any help from their supervisor. However, students are granted full access to the internet and allowed to look things up. To pass, the student must create a minimal viable product within a 6 hour time limit with a supported programming languages.",
     }
   },
 ];

@@ -28,12 +28,14 @@
     <div class="flex flex-col pt-6 md:pt-8">
       <div class="flex-1">
         <p class="mb-4">{new Date().getFullYear() - 1} - {new Date().getFullYear()}</p>
+        {#if moreInfo.about}
+          <img src="../HPE-square-logo.png" class="w-80" alt="HPE's logo">
+        {/if}
         <BackdropText
           text={animatedTitleOutput}
           className="font-extrabold text-5xl md:text-8xl leading-[5rem] md:leading-[8rem]"
         />
       </div>
-
       <div class="flex-1 mt-6">
         <div class="md:text-lg mb-6">{moreInfo.overview}</div>
 
@@ -55,6 +57,7 @@
       </div>
     </div>
 
+    {#if (moreInfo.hideSignUp)}
     <a
       href="https://frhs.egusd.net/Programs/STEAM-Pathways/index.html"
       class="w-max items-center flex flex-row my-8 md:my-10 rounded-l-2xl bg-gradient-to-r from-blue-700 to-blue-600 p-6 text-white text-[13px] sm:text-sm md:text-base tracking-wide shadow-lg shadow-blue-500/50 transition hover:-translate-y-1"
@@ -66,10 +69,11 @@
         <FaGraduationCap />
       </block>
     </a>
+    {/if}
 
     {#if moreInfo.about}
-      <h1 class="mt-24 font-body text-3xl font-semibold">What is this program?</h1>
-      <p class="mt-4">{moreInfo.about.text}</p>
+      <h1 class="mt-8 font-body text-3xl font-semibold">What is this program?</h1>
+      <p class="mt-4 text-1xl">{moreInfo.about.text}</p>
       <div class="my-8">
         <h1 class="text-2xl mb-2 font-semibold">Supported Language</h1>
         <ul>
@@ -91,15 +95,16 @@
         </ul>
       </div>
       
-      <div class="mt-8 mb-24">
+      <div class="mt-12 mb-24">
         <h1 class="text-1xl font-semibold text-blue-700">Want more information?</h1>
         <h1 class="text-3xl font-semibold">Checkout the offical website!</h1>
-        <a class="my-6 p-4 rounded-l-2xl bg-violet-500 text-white w-max items-center flex flex-row rounded-l-2xl shadow-lg shadow-blue-500/50 transition hover:translate-x-3"
-        style="border-radius: 16px 50px 50px 16px;" href="https://schoolcerts.ext.hpe.com/">Program Website</a>
         <a class="my-6 p-4 rounded-l-2xl bg-violet-600 text-white w-max items-center flex flex-row rounded-l-2xl shadow-lg shadow-blue-500/50 transition hover:translate-x-3"
-        style="border-radius: 16px 50px 50px 16px;" href="https://schoolcerts.ext.hpe.com/rules#experienceLevels">Policy and Expectaction</a>
+        style="border-radius: 16px 50px 50px 16px;" href="https://schoolcerts.ext.hpe.com/">Program Website</a>
+        <a class="my-6 p-4 rounded-l-2xl bg-violet-700 text-white w-max items-center flex flex-row rounded-l-2xl shadow-lg shadow-blue-500/50 transition hover:translate-x-3"
+        style="border-radius: 16px 50px 50px 16px;" href="https://schoolcerts.ext.hpe.com/certificates#top">List of Certificates</a>
         <a class="my-6 p-4 rounded-l-2xl bg-violet-800 text-white w-max items-center flex flex-row rounded-l-2xl shadow-lg shadow-blue-500/50 transition hover:translate-x-3"
-        style="border-radius: 16px 50px 50px 16px;" href="https://schoolcerts.ext.hpe.com/certificates#top">List of Students who have earned a certificate</a>
+        style="border-radius: 16px 50px 50px 16px;" href="https://schoolcerts.ext.hpe.com/rules#experienceLevels">Policy and Expectaction</a>
+
       </div>
     {/if}
 
