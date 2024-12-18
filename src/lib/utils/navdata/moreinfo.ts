@@ -4,6 +4,9 @@ export interface MoreInformation {
   overview: string;
   bullets: string[];
   id: string;
+  about?: {
+    text: string;
+  };
 }
 
 export const moreInformationItems: MoreInformation[] = [
@@ -54,7 +57,18 @@ export const moreInformationItems: MoreInformation[] = [
       'Another way students can go beyond the classroom is by participating in our student leadership team. As a leader, students will work with their team to promote computer science education and recruit future students for the pathway.',
     bullets: [],
     id: 'student-leadership'
-  }
+  },
+  {
+    title: 'HPE School Certificate Program',
+    description:
+      'Earn a certificate for demonstrating your programming knowledge',
+    id: 'hpe-certification',
+    overview: "This certification program is an optional exam where passing students earn a certificate for Solo Application Development, Database & Customer Requirements Gathering - Section C.",
+    bullets: [],
+    about: {
+      text: "This certification program is unlike school exams and was designed to simulate working at a company. Besides knowing how to code, students will have to know the basics of github and get comfortable contacting their clients (roleplayed by the proctors) through outlook. Simulating the real world, students have full access to the internet and may look things up. To pass, the student must create a minimal viable product within a 6 hour time limit. The student is able to choose between one of the supported languages.",
+    }
+  },
 ];
 
 const getMoreInfoId = (id: string) => `/general/${id}`;
