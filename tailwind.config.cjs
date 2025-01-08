@@ -6,11 +6,20 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Space Grotesk"', 'sans-serif'],
+        sans: ['"Inter Tight"', 'serif'],
         body: ['"Karla"', 'sans-serif'],
         mono: ['"Jetbrains Mono", mono']
       },
-      colors: { ...colors }
+      colors: { ...colors },
+      keyframes: {
+        expand: {
+          '0%': { width: '0%', marginLeft: '50%' },
+          '100%': { width: '100%', marginLeft: '0%' },
+        },
+      },
+      animation: {
+        expand: 'expand 2s ease-in-out forwards',
+      },
     }
   },
   plugins: []
