@@ -21,10 +21,16 @@ export interface Testimonial {
   author: string;
 }
 
+import ecsr from '$lib/images/home/ecsr-logo.png';
+import ecs from '$lib/images/home/ecs-logo.jpeg';
+import apcsp from '$lib/images/home/apcsp-logo.png';
+import apcsa from '$lib/images/home/apcsa-logo.jpeg';
+import mlh from '$lib/images/home/mlh.jpeg';
+
 export const courses: Course[] = [
   {
     title: 'Computer Science & Robotics For Beginners',
-    coverImage: 'src/lib/images/csfhs/ecsr-logo.png',
+    coverImage: ecsr,
     grades: 'All grades',
     description:
       'Available to students with little to no programming experience • Learn the basics of text-based coding • Work collaboratively to solve real-world problems',
@@ -42,7 +48,7 @@ export const courses: Course[] = [
   },
   {
     title: 'Exploring Computer Science',
-    coverImage: 'src/lib/images/csfhs/ecs-logo.jpeg',
+    coverImage: ecs,
     grades: 'Sophomore',
     description:
       'The first course in the three-year pathway • Learn the command line interface • Develop problem-solving skills and techniques • Program using the C language • Solve problems using control flow, arrays and iteration',
@@ -67,7 +73,7 @@ export const courses: Course[] = [
   },
   {
     title: 'AP Computer Science Principles',
-    coverImage: 'src/lib/images/csfhs/apcsp-logo.png',
+    coverImage: apcsp,
     grades: 'Junior',
     description:
       'Explore how computing and technology is impacting us today through a project-based approach • Address real-world problems involving Big Data and Cybersecurity • Earn a 5.0 GPA bump and college credit by taking the AP test.',
@@ -95,7 +101,7 @@ export const courses: Course[] = [
   },
   {
     title: 'AP Computer Science A',
-    coverImage: 'src/lib/images/csfhs/apcsa-logo.jpeg',
+    coverImage: apcsa,
     grades: 'Senior',
     description:
       'Learn content equivalent to a first-semester college-level course in CS • Learn object-oriented programming using the Java language • Solve problems by developing algorithms and using data structures • Compete at HP CodeWars • Earn a 5.0 GPA bump and college credit by taking the AP test',
@@ -135,7 +141,7 @@ export const courses: Course[] = [
   },
   {
     title: 'Machine Learning Honors',
-    coverImage: 'src/lib/images/csfhs/mlh.jpeg',
+    coverImage: mlh,
     grades: 'Senior',
     description:
       'Gain an understanding of various ML models • Use regression to model continuous data • Predict discrete results using classification models • Discover unknown patters with clustering models • Additional topics include association rule learning, reinforcement learning, and natural language processing',
