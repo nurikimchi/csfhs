@@ -28,10 +28,7 @@
     <div class="flex flex-col pt-6 md:pt-8">
       <div class="flex-1">
         <p class="mb-4">{new Date().getFullYear() - 1} - {new Date().getFullYear()}</p>
-        <BackdropText
-          text={animatedTitleOutput}
-          className="font-extrabold text-5xl md:text-8xl leading-[5rem] md:leading-[8rem]"
-        />
+        <h1 class="font-extrabold text-5xl md:text-8xl leading-[5rem] md:leading-[8rem]">{animatedTitleOutput}</h1>
       </div>
 
       <div class="flex-1 mt-6">
