@@ -15,7 +15,7 @@
   {href}
 >
   <div class="flex flex-row items-center justify-between">
-    <h1 class="text-sm font-semibold">{title}</h1>
+    <h1 class="text-m font-semibold">{title}</h1>
 
     <ExternalArrow {show} />
   </div>

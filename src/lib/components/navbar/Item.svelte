@@ -22,7 +22,7 @@
   on:mouseleave={() => (show = false)}
   {href}
 >
-  <div class="flex flex-row justify-between text-sm items-center">
+  <div class="flex flex-row justify-between text-lg items-center">
     <h1 class="font-semibold text-black hover:text-black">{title}</h1>
 
     <ExternalArrow {show} />

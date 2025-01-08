@@ -12,7 +12,9 @@
 <div class="hidden md:block py-6 z-20 transition-all bg-white">
   <Container width={isHomePage ? 1200 : 1000}>
     <div class="flex flex-row items-center">
-      <CsLogo />
+      {#if !isHomePage}
+        <CsLogo />
+      {/if}
       <a
         href="https://instagram.com/fhs.computerscience?igshid=YmMyMTA2M2Y="
         class="mr-10"
