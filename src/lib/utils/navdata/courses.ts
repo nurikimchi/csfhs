@@ -1,14 +1,19 @@
 export interface Course {
   title: string;
+  coverImage: string;
+  grades: string;
   description: string;
   pathway: string;
   testimonies: Testimonial[];
   teacher: Teacher;
   email: string;
   id: string;
+  colSpanClass: string;
+  roundedClass: string;
+  imgClass: string;
 }
 
-export const teachers = ['Mr. Dagler', 'Mrs. Rodriguez'] as const;
+export const teachers = ['Mr. Dagler', 'Mrs. Rodriguez'] as const; // 'Mrs. Rodriguez'
 export type Teacher = typeof teachers[number];
 
 export interface Testimonial {
@@ -16,20 +21,35 @@ export interface Testimonial {
   author: string;
 }
 
+import ecsr from '$lib/images/home/ecsr-logo.png';
+import ecs from '$lib/images/home/ecs-logo.jpeg';
+import apcsp from '$lib/images/home/apcsp-logo.png';
+import apcsa from '$lib/images/home/apcsa-logo.jpeg';
+import mlh from '$lib/images/home/mlh.jpeg';
+
 export const courses: Course[] = [
   {
-    title: 'Computer Science and Robotics for Beginners',
+    title: 'Computer Science & Robotics For Beginners',
+    coverImage: ecsr,
+    grades: 'All grades',
     description:
       'Available to students with little to no programming experience • Learn the basics of text-based coding • Work collaboratively to solve real-world problems',
     pathway:
-      'Computer Science and Robotics for Beginners is an optional class for 9th graders, and it is meant as an preview of the curriculum in more advanced pathway courses.',
-    testimonies: [],
+      'Computer Science and Robotics for Beginners is an elective class for 9th graders, and it is meant as an preview of the curriculum in more advanced pathway courses.',
+    testimonies: [
+
+    ],
     teacher: 'Mr. Dagler',
     email: 'cdagler@egusd.net',
-    id: 'cs-robotics'
+    id: 'cs-robotics',
+    colSpanClass: "lg:col-span-3",
+    roundedClass: "max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem]",
+    imgClass: "h-80 object-cover",
   },
   {
     title: 'Exploring Computer Science',
+    coverImage: ecs,
+    grades: 'Sophomore',
     description:
       'The first course in the three-year pathway • Learn the command line interface • Develop problem-solving skills and techniques • Program using the C language • Solve problems using control flow, arrays and iteration',
     pathway:
@@ -42,16 +62,21 @@ export const courses: Course[] = [
       {
         text: "The very first coding problem I was assigned was to create a code that outputs the user's name. At first, I was struggling to see what was wrong with it, and all of a sudden it hit me! I fixed my error and the code started working. The feeling of satisfaction I had in that moment is indescribable, and I get that feeling each time I successfully complete a code. My first experience got me thinking… What else can I do with programming?",
         author: 'Sanjitha'
-      }
+      },
     ],
     teacher: 'Mr. Dagler',
     email: 'cdagler@egusd.net',
-    id: 'ecs'
+    id: 'ecs',
+    colSpanClass: "lg:col-span-3",
+    roundedClass: "lg:rounded-tr-[2rem]",
+    imgClass: "h-80 object-cover",
   },
   {
     title: 'AP Computer Science Principles',
+    coverImage: apcsp,
+    grades: 'Junior',
     description:
-      'Explore how computing and technology is impacting us today through a project-based approach • Address real-world problems involving Big Data and Cybersecurity • Learn the history of the internet and how it works • Earn a 5.0 GPA bump and college credit by taking the AP test',
+      'Explore how computing and technology is impacting us today through a project-based approach • Address real-world problems involving Big Data and Cybersecurity • Earn a 5.0 GPA bump and college credit by taking the AP test.',
     pathway: 'AP Computer Science Principles is the second course of the three-year pathway.',
     testimonies: [
       {
@@ -69,10 +94,15 @@ export const courses: Course[] = [
     ],
     teacher: 'Mrs. Rodriguez',
     email: 'lrrodrig@egusd.net',
-    id: 'apcsp'
+    id: 'apcsp',
+    colSpanClass: "lg:col-span-2",
+    roundedClass: "lg:rounded-bl-[2rem]",
+    imgClass: "h-80 object-cover",
   },
   {
     title: 'AP Computer Science A',
+    coverImage: apcsa,
+    grades: 'Senior',
     description:
       'Learn content equivalent to a first-semester college-level course in CS • Learn object-oriented programming using the Java language • Solve problems by developing algorithms and using data structures • Compete at HP CodeWars • Earn a 5.0 GPA bump and college credit by taking the AP test',
     pathway: 'AP Computer Science A is the final course of the three-year pathway.',
@@ -104,38 +134,15 @@ export const courses: Course[] = [
     ],
     teacher: 'Mr. Dagler',
     email: 'cdagler@egusd.net',
-    id: 'apcsa'
-  },
-  {
-    title: 'Web Development',
-    description:
-      'Develop web sites with HTML5 and CSS • Validate HTML code using W3C • Use images including Image Maps and SVG • Learn responsive design with BootStrap and FlexBox • Use JavaScript to communicate with users and modify DOM • Develop modern pages with transpilers like TypeScript and SASS',
-    pathway:
-      'Web Development is an elective class in the pathway, and it offers dual enrollment with a local college.',
-    testimonies: [
-      {
-        text: 'I liked how we all worked at our own pace and that if we needed help Mr. Dagler was very supportive and guided us to the solutions.',
-        author: 'Gabriel'
-      },
-      {
-        text: 'The projects were very straight forward but required us to do research and learn about new tags. This class really promoted self research with help available if necessary.',
-        author: 'Christopher'
-      },
-      {
-        text: 'I liked that we were given 2 weeks to complete big projects.',
-        author: 'Aniyah'
-      },
-      {
-        text: 'Web Development captured my heart with its ability to turn imagination into tangible digital creations that can be experienced by millions of people.',
-        author: 'Ameet'
-      }
-    ],
-    teacher: 'Mrs. Rodriguez',
-    email: 'lrrodrig@egusd.net',
-    id: 'web-dev'
+    id: 'apcsa',
+    colSpanClass: "lg:col-span-2",
+    roundedClass: "",
+    imgClass: "h-80 object-cover",
   },
   {
     title: 'Machine Learning Honors',
+    coverImage: mlh,
+    grades: 'Senior',
     description:
       'Gain an understanding of various ML models • Use regression to model continuous data • Predict discrete results using classification models • Discover unknown patters with clustering models • Additional topics include association rule learning, reinforcement learning, and natural language processing',
     pathway:
@@ -164,7 +171,10 @@ export const courses: Course[] = [
     ],
     teacher: 'Mr. Dagler',
     email: 'cdagler@egusd.net',
-    id: 'ml-honors'
+    id: 'ml-honors',
+    colSpanClass: "lg:col-span-2",
+    roundedClass: "max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]",
+    imgClass: "h-80 object-cover",
   }
 ];
 
