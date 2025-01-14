@@ -5,14 +5,14 @@
 <footer class="bg-white">
   <div class="mx-auto max-w-8xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
     <nav class="-mb-4 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6" aria-label="Footer">
-      <a href="/courses/cs-robotics" class="text-gray-600 hover:text-gray-900">Computer Science & Robotics For Beginners</a>
-      <a href="/courses/ecs" class="text-gray-600 hover:text-gray-900">Exploring Computer Science</a>
-      <a href="/courses/apcsp" class="text-gray-600 hover:text-gray-900">AP Computer Science Principles</a>
-      <a href="/courses/apcsa" class="text-gray-600 hover:text-gray-900">AP Computer Science A</a>
-      <a href="/courses/mlh" class="text-gray-600 hover:text-gray-900">Machine Learning Honors</a>
+      <a href="/courses/cs-robotics" class="text-gray-600 hover:text-gray-900 text-s lg:text-md">Computer Science & Robotics For Beginners</a>
+      <a href="/courses/ecs" class="text-gray-600 hover:text-gray-900 text-s">Exploring Computer Science</a>
+      <a href="/courses/apcsp" class="text-gray-600 hover:text-gray-900 text-s">AP Computer Science Principles</a>
+      <a href="/courses/apcsa" class="text-gray-600 hover:text-gray-900 text-s">AP Computer Science A</a>
+      <a href="/courses/mlh" class="text-gray-600 hover:text-gray-900 text-s">Machine Learning Honors</a>
       <!-- <a href="/general/student-leadership" class="text-gray-600 hover:text-gray-900">Student Leadership</a> -->
     </nav>
-    <p class="mt-10 text-center text-sm/6 text-gray-600">&copy; 2025 Franklin High School Computer Science. All rights reserved.</p>
+    <p class="mt-16 text-center text-sm/6 text-gray-600 text-s">&copy; 2025 Franklin High School Computer Science. All rights reserved.</p>
   </div>
 </footer>
 

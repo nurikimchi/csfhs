@@ -3,10 +3,12 @@
   import ImageCarousel from '$lib/components/images/ImageCarousel.svelte';
   import TeacherCard from '$lib/components/TeacherCard.svelte';
   import BackdropText from '$lib/components/text/BackdropText.svelte';
-  import FaGraduationCap from 'svelte-icons/fa/FaGraduationCap.svelte';
-  import FaCheckCircle from 'svelte-icons/fa/FaCheckCircle.svelte';
+  // import FaGraduationCap from 'svelte-icons/fa/FaGraduationCap.svelte';
+  // import FaCheckCircle from 'svelte-icons/fa/FaCheckCircle.svelte';
   import { tweened } from 'svelte/motion';
   import type { PageData } from './$types';
+  import { opportunitiesHrefById } from '$lib/utils/navdata/opportunities';
+  import { preview } from 'vite';
 
   export let data: PageData;
 
@@ -23,7 +25,7 @@
   }
 
   $: course.title, resetAnimation();
-  $: descriptionTokens = course.description.split('•');
+  $: previewTokens = course.preview.split('•');
 </script>
 
 <Container>
@@ -32,22 +34,22 @@
       <div class="flex-1">
         <p class="mb-4">{new Date().getFullYear() - 1} - {new Date().getFullYear()}</p>
 
-        <h1 class="text-left font-bold text-4xl md:text-7xl leading-[4rem] md:leading-[6rem]">{animatedTitleOutput}</h1>
+        <h1 class="text-left font-bold pr-[14rem] text-4xl lg:text-5xl lg:leading-[5rem] md:text-6xl leading-[3rem] md:leading-[5rem]">{animatedTitleOutput}</h1>
       </div>
 
-      <div class="flex-1 mt-6">
+      <div class="flex-1 mt-10">
         <ul class="flex flex-col gap-6">
-          {#each descriptionTokens as description}
+          {#each previewTokens as preview}
             <li class="flex flex-row">
               <div>
                 <div class="text-emerald-500 w-[24px]">
-                  <FaCheckCircle />
+                  <!-- <FaCheckCircle /> -->
                 </div>
               </div>
 
               <div class="ml-4">
                 <p>
-                  {description}
+                  {preview}
                 </p>
               </div>
             </li>
@@ -56,7 +58,7 @@
       </div>
     </div>
     
-    <a
+    <!-- <a
       href="https://docs.google.com/forms/d/e/1FAIpQLSeFnPzPjKdTvhm6TlgftfXbswy2KZDZB3O053m4pyaYAh7xzA/viewform"
       target="_blank"
       class="w-max items-center flex flex-row my-8 md:my-16 rounded-l-2xl bg-gradient-to-r from-blue-700 to-blue-600 p-6 text-white text-[13px] sm:text-sm md:text-base tracking-wide shadow-lg shadow-blue-500/50 transition hover:-translate-y-1"
@@ -67,13 +69,13 @@
       <block class="w-4 h-4 block ml-4">
         <FaGraduationCap />
       </block>
-    </a>
+    </a> -->
 
     {#if course.testimonies.length > 0}
-      <div class="mt-8">
-        <h1 class="font-bold text-3xl lg:text-3xl text-center mb-8 leading-normal sm:leading-[3rem] lg:leading-normal">Hear what past students have to say.</h1>
+      <div class="mt-16">
+        <h1 class="font-bold text-2xl text-left lg:text-3xl mt-16 leading-normal sm:leading-[3rem] lg:leading-normal">Hear what past students have to say.</h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
           {#each course.testimonies as testimony}
             <div>
               <p>{testimony.text}</p>
@@ -87,7 +89,7 @@
     <div class="flex flex-col-reverse md:my-8 md:flex-row md:space-x-8">
       <div class="flex-1 mt-8 md:mt-0 text-center md:text-left">
 
-        <h1 class="font-bold text-2xl lg:text-2xl leading-normal sm:leading-[3rem] lg:leading-normal">Instructor</h1>
+        <h1 class="font-bold text-left mt-16 text-2xl lg:text-2xl leading-normal sm:leading-[3rem] lg:leading-normal">Instructor</h1>
 
 
         <div class="mt-6 md:mt-4 lg:mt-" >
@@ -97,7 +99,7 @@
 
       <div class="flex-1 mt-8 md:mt-0">
         {#if data.pageImages.length > 0}
-        <h1 class="font-bold text-2xl lg:text-2xl text-right leading-normal sm:leading-[3rem] lg:leading-normal">Photos</h1>
+        <h1 class="font-bold text-2xl mt-16 lg:text-2xl text-left lg:text-right leading-normal sm:leading-[3rem] lg:leading-normal">Photos</h1>
         <div class="mt-6 md:mt-4 lg:mt-" >
           <ImageCarousel images={data.pageImages.map((src) => ({ alt: '', src }))} />
         </div>

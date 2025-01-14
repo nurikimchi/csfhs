@@ -40,29 +40,6 @@ export const moreInformationItems: MoreInformation[] = [
     id: 'industry-connections'
   },
   {
-    title: 'Student Leadership',
-    description:
-      'Another opportunity for students to participate in the pathway outside of the classroom is by being a part of the leadership team',
-    overview:
-      'Another way students can go beyond the classroom is by participating in our student leadership team. As a leader, students will work with their team to promote computer science education and recruit future students for the pathway.',
-    bullets: [],
-    id: 'student-leadership'
-  },
-  {
-    title: 'NCWIT',
-    description: 'Aspirations in Computing (AiC) engages, inspires, and supports thousands of high school and college students who want to change the world.',
-    overview: '"The National Center for Women & Information Technology (NCWIT) is a 501(c)(3) nonprofit organization that works to increase participation of girls and women in computing."',
-    bullets: [],
-    id: 'ncwit'
-  },
-  {
-    title: 'HPE High School Certification Program',
-    description: 'HPE offers current high school students the ability to train for on-the-job technical skills. Students who successfully complete a course will receive a certificate they can add to their resume and college applications.',
-    overview: 'HPE offers current high school students the ability to train for on-the-job technical skills. Students who successfully complete a course will receive a certificate they can add to their resume and college applications.',
-    bullets: [],
-    id: 'hpe-cert'
-  },
-  {
     title: 'Updated Classroom',
     description:
       'The new and improved Computer Science classroom here at Franklin High School, and how it benefits CS education',

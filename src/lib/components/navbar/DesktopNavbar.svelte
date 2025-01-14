@@ -2,7 +2,8 @@
   import Container from '../Container.svelte';
   import ClassesDropdown from './ClassesDropdown.svelte';
   import MoreInfoDropdown from './MoreInfoDropdown.svelte';
-  import IoLogoInstagram from 'svelte-icons/io/IoLogoInstagram.svelte';
+  import OpportunitiesDropdown from './OpportunitiesDropdown.svelte';
+  // import IoLogoInstagram from 'svelte-icons/io/IoLogoInstagram.svelte';
   import { page } from '$app/stores';
   import CsLogo from './CsLogo.svelte';
 
@@ -13,9 +14,9 @@
   <Container width={isHomePage ? 1200 : 1000}>
     <div class="flex flex-row items-center">
       {#if !isHomePage}
-        <CsLogo />
+        <CsLogo/>
       {/if}
-      <a
+      <!-- <a
         href="https://instagram.com/fhs.computerscience?igshid=YmMyMTA2M2Y="
         class="mr-10"
         aria-label="CSFHS Instagram Account"
@@ -27,9 +28,11 @@
             <IoLogoInstagram />
           </div>
         </div>
-      </a>
+      </a> -->
       <ClassesDropdown />
+      <OpportunitiesDropdown/>
       <MoreInfoDropdown />
+
     </div>
   </Container>
 </div>
