@@ -93,7 +93,7 @@ export const opportunities: Opportunities[] = [
         ],
         signup: {
             talkToTeacher: false,
-            link: ''
+            link: 'https://docs.google.com/forms/d/e/1FAIpQLSdz71SJ4raxsMROgLMX049yv63qG6zoOlpmzfL4vY9nYDqT4w/viewform?usp=header'
         },
         type: 'Club',
         club: 'CS4Girls',
@@ -130,7 +130,7 @@ export const opportunities: Opportunities[] = [
         ],
         signup: {
             talkToTeacher: false,
-            link: ''
+            link: 'https://docs.google.com/forms/d/e/1FAIpQLScI2z76KIx5svYkfOL7kAn_-8Xmz5mTnjJ7z88_HkMUCNuUOg/viewform?usp=header'
         },
         type: 'Club',
         club: 'Full-Stack Development',
