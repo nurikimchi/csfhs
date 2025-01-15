@@ -6,7 +6,7 @@ const config: UserConfig = {
   test: {
     include: ['src/**/*.{test,spec}.{js,ts}']
   },
-  optimizeDeps: { exclude: ["fsevents"]}
+  optimizeDeps: { exclude: ["fsevents"]},
 };
 
 export default config;
