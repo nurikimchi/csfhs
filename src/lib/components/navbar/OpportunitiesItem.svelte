@@ -20,7 +20,7 @@
     <ExternalArrow {show} />
   </div>
 
-  <p class="mt-2 text-xs max-w-[16rem] text-gray-600 group-hover:text-black">{preview}</p>
+  <p class="mt-2 text-xs max-w-[32rem] lg:max-w-[16rem] text-gray-600 group-hover:text-black">{preview}</p>
 
   <div class="flex flex-row items-center mt-2">
       {#if type === 'Award'}

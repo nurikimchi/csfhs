@@ -38,6 +38,7 @@ export type CourseType = typeof courseTypes[number];
 export interface Testimonial {
   text: string;
   author: string;
+  subtitle?: string;
 }
 
 import ecsr from '$lib/images/home/ecsr-logo.png';
@@ -59,11 +60,13 @@ export const courses: Course[] = [
     testimonies: [
       {
         text: 'I thought it was fascinating that a little programming could do something so cool like outputting your name. It just made me wonder, what else can coding do?',
-        author: 'Janelle'
+        author: 'Janelle',
+        subtitle: 'University of California, Irvine',
       },
       {
         text: "The feeling of satisfaction I had in that moment is indescribable, and I get that feeling each time I successfully complete a code. My first experience got me thinking: what else can I do with programming?",
-        author: 'Sanjitha'
+        author: 'Sanjitha',
+        subtitle: 'Carnegie Mellon University'
       },
     ],
     teacher: 'Mr. Dagler',
@@ -178,7 +181,8 @@ export const courses: Course[] = [
       },
       {
         text: 'I liked the fact that labs followed every instruction in class. I really enjoyed collaborating with my peers on solving errors in the labs. I liked the fact that labs allowed me to practice the skills I learned in class, and allowed me to tackle new problems as well.',
-        author: 'Sia'
+        author: 'Sia',
+        subtitle: 'University of California, Berkeley'
       },
       {
         text: "I loved how we're able to work in groups to collaborate in this class and the help I got from other classmates and Mr. Dagler!",
@@ -186,7 +190,8 @@ export const courses: Course[] = [
       },
       {
         text: 'I liked the energy of the classroom and the coding.',
-        author: 'Maroof'
+        author: 'Maroof',
+        subtitle: 'CSU Sacramento'
       },
       {
         text: 'I liked the collaboration in this class and working on the labs and other work with my classmates.',
@@ -201,6 +206,8 @@ export const courses: Course[] = [
     imgClass: "h-80 object-cover",
   }
 ];
+
+
 
 export const mainCourses: SelectedCourses[] = [
   {

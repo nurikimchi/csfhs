@@ -8,7 +8,7 @@
 
 <!-- change this! -->
   
-<Dropdown title="Extracurricular Opportunities" padding={16} arrowLeftOffset={137 / 2}>
+<Dropdown title="Extracurricular Opportunities" padding={14} arrowLeftOffset={137 / 2}>
     <div class="grid grid-gap-2 grid-rows-3 grid-cols-3 w-full">
         {#each opportunities as { title, preview, type, id }}
             <OpportunitiesItem {title} {preview} {type} href={opportunitiesHrefById(id)} />
