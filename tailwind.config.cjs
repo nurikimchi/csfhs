@@ -4,13 +4,23 @@ const colors = require('tailwindcss/colors');
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
+    
     extend: {
       fontFamily: {
-        sans: ['"Inter Tight"', 'serif'],
-        body: ['"Karla"', 'sans-serif'],
+        sans: ['"Inter"', 'serif'],
+        body: ['"Roboto"', 'sans-serif'],
         mono: ['"Jetbrains Mono", mono']
       },
-      colors: { ...colors },
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        black: colors.black,
+        white: colors.white,
+        gray: colors.gray,
+        emerald: colors.emerald,
+        indigo: colors.indigo,
+        yellow: colors.yellow,
+      },
       keyframes: {
         expand: {
           '0%': { width: '0%', marginLeft: '50%' },
