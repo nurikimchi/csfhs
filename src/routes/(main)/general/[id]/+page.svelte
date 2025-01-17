@@ -115,5 +115,23 @@
         </div>
       </div>
     {/if}
+
+    {#if moreInfo.testimonies && moreInfo.testimonies.length> 0}
+      <div class="mt-8">
+        <BackdropText
+          text="Hear what past students have to say."
+          className="font-bold text-3xl lg:text-3xl leading-normal sm:leading-[3rem] lg:leading-normal"
+        />
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-2">
+          {#each moreInfo.testimonies as testimony}
+            <div>
+              <p>{testimony.text}</p>
+              <p class="font-bold">- {testimony.author}</p>
+            </div>
+          {/each}
+        </div>
+      </div>
+    {/if}
   </div>
 </Container>

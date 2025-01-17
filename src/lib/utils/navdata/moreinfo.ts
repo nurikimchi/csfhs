@@ -4,12 +4,16 @@ export interface MoreInformation {
   overview: string;
   bullets: string[];
   id: string;
+  testimonies?:Testimonial[];
   hideSignUp?: boolean;
   about?: {
     text: string;
   };
 }
-
+export interface Testimonial {
+  text: string;
+  author: string;
+}
 export const moreInformationItems: MoreInformation[] = [
   {
     title: 'Updated Classroom',
@@ -66,6 +70,20 @@ export const moreInformationItems: MoreInformation[] = [
     id: 'hpe-certification',
     overview: "Earn a certificate for your college application and resume!",
     bullets: [],
+    testimonies: [
+      {
+        author:"Raymond",
+        text:"The event provided a nuanced and unique perspective on my future in computer science and realistic expectations for the career and the field. Mr. Kyle Younger was my favorite part of the event. I loved his accent and his vibe."
+      },
+      {
+        author:"Weivin",
+        text:"I think this event helped me prepare by giving a job like experience, working with customers in the field of programming. It was very fun to be able to work in a environment of coding."
+      },
+      {
+        author:"Nina",
+        text:"I really liked the event! It was very hands-on and simulated working at a company. I had to email clients to schedule meet-ups where they would give me new information and I would show my progress. The instructors were all super friendly."
+      }
+    ],
     hideSignUp: false,
     about: {
       text: "This certification program simulates what it's like to work at a company. Besides knowing how to code, students will have to know the basics of github, contact their clients (roleplayed by the proctors) through outlook, and solve problems by themselves. Since this is not a class lecture, students don't take notes or recieve any help from their supervisor. However, students are granted full access to the internet and allowed to look things up. To pass, the student must create a minimal viable product within a 6 hour time limit with a supported programming languages.",
