@@ -45,7 +45,7 @@ export interface Testimonials {
     },
     {
       name: 'Marlon',
-      subtitle: 'Associate IT Security Engineer @Stanford Healthcare',
+      subtitle: 'Associate IT Security Engineer at Stanford Healthcare',
       quote:
         'My interest for software and cybersecurity flourished under Mr. Dagler’s tutelage at Franklin. I’m happy to be in this field and hope that Franklin inspires more computer scientists to keep going!',
       class:
