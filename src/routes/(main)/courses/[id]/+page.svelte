@@ -1,9 +1,9 @@
 <script lang="ts">
   import Container from '$lib/components/Container.svelte';
-  import ImageCarousel from '$lib/components/images/ImageCarousel.svelte';
+  import ImageCarousel from '$lib/components/images-components/ImageCarousel.svelte';
   import TeacherCard from '$lib/components/TeacherCard.svelte';
-  // import FaGraduationCap from 'svelte-icons/fa/FaGraduationCap.svelte';
-  import FaCheckCircle from 'svelte-icons/fa/FaCheckCircle.svelte';
+
+  import Checkmark from '$lib/components/icons/Checkmark.svelte';
   import { tweened } from 'svelte/motion';
   import type { PageData } from './$types';
 
@@ -23,6 +23,22 @@
 
   $: course.title, resetAnimation();
   $: bulletPoints = course.preview.split('•');
+
+  import type { Testimonial } from '$lib/utils/navdata/courses';
+
+  let selectedTestimonials:Testimonial[] = [];
+
+  function getRandomTestimonials(testimonies: Testimonial[], count: number) {
+    let shuffled = [...testimonies];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled.slice(0, count);
+  }
+
+  $: selectedTestimonials = getRandomTestimonials(course.testimonies, 4);
+
 </script>
 
 
@@ -50,7 +66,7 @@
         </svg>
 
 
-        {#each course.testimonies as testimony}
+        {#each selectedTestimonials as testimony}
         <figure class="mb-12 border-l border-indigo-600 pl-8">
           <blockquote class="text-xl/8 font-normal tracking-tight text-gray-900">
             <p>{testimony.text}</p>
@@ -71,7 +87,7 @@
           {#each bulletPoints as bulletPoint}
           <li class="flex gap-x-3">
             <div class="mt-1 size-5 flex-none text-violet-600 w-5 h-5">
-              <FaCheckCircle/>
+              <Checkmark/>
             </div>
             <span>{bulletPoint}</span>
           </li>

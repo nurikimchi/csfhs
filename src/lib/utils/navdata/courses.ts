@@ -54,7 +54,7 @@ export const courses: Course[] = [
     grades: 'Sophomore',
     type: 'Pathway',
     preview:
-      'The first course in the three-year pathway • Learn the command line interface • Develop problem-solving skills and techniques • Program using the C language • Solve problems using control flow, arrays and iteration',
+      'The first course in the three-year pathway • Learn the command line interface • Develop problem-solving skills and techniques • Program using the C++ language • Solve problems using control flow, arrays and iteration',
     pathway:
       'Exploring Computer Science serves as the first course of a three-year Computer Science pathway.',
     testimonies: [
@@ -180,7 +180,7 @@ export const courses: Course[] = [
         author: 'George'
       },
       {
-        text: 'I liked the fact that labs followed every instruction in class. I really enjoyed collaborating with my peers on solving errors in the labs. I liked the fact that labs allowed me to practice the skills I learned in class, and allowed me to tackle new problems as well.',
+        text: 'I really enjoyed collaborating with my peers on solving errors in the labs. I liked the fact that labs allowed me to practice the skills I learned in class, and allowed me to tackle new problems as well.',
         author: 'Sia',
         subtitle: 'University of California, Berkeley'
       },

@@ -1,6 +1,6 @@
 <script lang="ts">
     import Container from '$lib/components/Container.svelte';
-    import ImageCarousel from '$lib/components/images/ImageCarousel.svelte';
+    import ImageCarousel from '$lib/components/images-components/ImageCarousel.svelte';
     import { tweened } from 'svelte/motion';
     import type { PageData } from './$types';
   
@@ -21,7 +21,6 @@
   </script>
   
   <Container>
-
       <div class="overflow-hidden bg-white py-24 sm:py-32">
         <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
           <div class="max-w-2xl">

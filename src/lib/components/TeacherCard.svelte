@@ -21,7 +21,7 @@
       title: 'AP Computer Science Principles',
       description: '',
       image: RodriguezPFP,
-      email: 'lrrodrig@egusd.net@egusd.net'
+      email: 'lrrodrig@egusd.net'
     }
   };
 </script>
@@ -44,11 +44,11 @@
   $: ({ name, image, title, description, email } = getOptions(teacher));
 </script>
 
-<a href="mailto:{email}" class="rounded-md block p-8 transition border">
+<div class="rounded-md block p-8 transition border">
   <img src={image} alt={name} class="rounded-full w-24 mx-auto" />
   <div class="text-center mt-4">
     <h1 class="font-body text-xl font-semibold">{name}</h1>
     <h2 class="text-blue-500 font-medium">{title}</h2>
     <p class="mt-2">{description}</p>
   </div>
-</a>
+</div>

@@ -2,7 +2,7 @@
   import ExternalArrow from './ExternalArrow.svelte';
 
   export let title: string;
-  export let description: string;
+  export let preview: string;
   export let href: string;
 
   let show = false;
@@ -19,5 +19,5 @@
 
     <ExternalArrow {show} />
   </div>
-  <p class="text-xs max-w-[35ch] text-gray-600 group-hover:text-black">{description}</p>
+  <p class="text-xs max-w-[35ch] text-gray-600 group-hover:text-black">{preview}</p>
 </a>

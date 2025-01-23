@@ -6,8 +6,8 @@
 
 <Dropdown title="General Information" padding={16} arrowLeftOffset={137 / 2}>
   <div class="flex flex-col gap-y-4">
-    {#each moreInformationItems as { title, description, id }}
-      <MoreInfoItem {title} {description} href={moreInfoHrefById(id)} />
+    {#each moreInformationItems as { title, preview, id }}
+      <MoreInfoItem {title} {preview} href={moreInfoHrefById(id)} />
     {/each}
   </div>
 </Dropdown>
