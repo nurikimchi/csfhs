@@ -3,6 +3,7 @@
   import ClassesDropdown from './ClassesDropdown.svelte';
   import MoreInfoDropdown from './MoreInfoDropdown.svelte';
   import OpportunitiesDropdown from './OpportunitiesDropdown.svelte';
+  import FieldtripsDropdown from './FieldtripsDropdown.svelte';
   // import IoLogoInstagram from 'svelte-icons/io/IoLogoInstagram.svelte';
   import { page } from '$app/stores';
   import CsLogo from './CsLogo.svelte';
@@ -32,6 +33,7 @@
       <ClassesDropdown />
       <OpportunitiesDropdown/>
       <MoreInfoDropdown />
+      <FieldtripsDropdown />
 
     </div>
   </Container>

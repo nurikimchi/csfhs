@@ -8,7 +8,7 @@ const Faq: Faq[] = [
     {
         id: 1,
         question: "How do I register for the pathway?",
-        answer: 'The banner at the top currently has a link to the 2025-2026 Google Form registration.',
+        answer: 'The banner at the top currently has a link to the 2025-2026 Google Form registration. Make sure to sign up for Exploring Computer Science by your sophomore year.',
     },
     {
         id: 2,

@@ -1,9 +1,9 @@
 <script lang="ts">
   import Container from '$lib/components/Container.svelte';
-  import ImageCarousel from '$lib/components/images/ImageCarousel.svelte';
+  import ImageCarousel from '$lib/components/images-components/ImageCarousel.svelte';
   import BackdropText from '$lib/components/text/BackdropText.svelte';
-  import FaCheckCircle from 'svelte-icons/fa/FaCheckCircle.svelte';
-  import FaGraduationCap from 'svelte-icons/fa/FaGraduationCap.svelte';
+
+  import Checkmark from '$lib/components/icons/Checkmark.svelte'
   import { tweened } from 'svelte/motion';
   import type { PageData } from './$types';
 
@@ -38,9 +38,12 @@
           {#each moreInfo.bullets as bullet}
             <li class="flex flex-row">
               <div>
+
                 <div class="text-emerald-500 w-[24px]">
-                  <FaCheckCircle />
+                  <!-- check mark svg -->
+                  <Checkmark/>                 
                 </div>
+
               </div>
 
               <div class="ml-4">
@@ -51,18 +54,6 @@
         </ul>
       </div>
     </div>
-
-    <!-- <a
-      href="https://frhs.egusd.net/Programs/STEAM-Pathways/index.html"
-      class="w-max items-center flex flex-row my-8 md:my-10 rounded-l-2xl bg-gradient-to-r from-blue-700 to-blue-600 p-6 text-white text-[13px] sm:text-sm md:text-base tracking-wide shadow-lg shadow-blue-500/50 transition hover:-translate-y-1"
-      style="border-radius: 16px 50px 50px 16px;"
-    >
-      <p class="font-semibold font-sans">Sign up for the Computer Science Pathway</p>
-
-      <block class="w-4 h-4 block ml-4">
-        <FaGraduationCap />
-      </block>
-    </a> -->
 
     {#if data.pageImages.length > 0}
       <div class="flex flex-col-reverse md:flex-row md:space-x-8">
