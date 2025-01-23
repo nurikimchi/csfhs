@@ -26,9 +26,11 @@
 >
   <div class="flex flex-row justify-between text-lg items-center">
     <h1 class="font-semibold text-black hover:text-black">{title}</h1>
-    <div class="ml-auto">
-      <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-700">{grades}</span>
-    </div>
+    {#if type === 'Pathway' || type === 'Elective'}
+      <div class="ml-auto">
+        <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-700">{grades}</span>
+      </div>
+    {/if}
     <div class="ml-4">
       
       {#if type === 'Pathway'}
