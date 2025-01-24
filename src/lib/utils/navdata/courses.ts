@@ -54,7 +54,7 @@ export const courses: Course[] = [
     grades: 'Sophomore',
     type: 'Pathway',
     preview:
-      'The first course in the three-year pathway • Learn the command line interface • Develop problem-solving skills and techniques • Program using the C++ language • Solve problems using control flow, arrays and iteration',
+      'The first course in the three-year pathway • Introduction to computer science and problem-solving • Learn and use the four parts of every program • Program using the C++ language • Solve problems using control flow, arrays, iteration and several standard libraries.',
     pathway:
       'Exploring Computer Science serves as the first course of a three-year Computer Science pathway.',
     testimonies: [
@@ -127,16 +127,19 @@ export const courses: Course[] = [
         author: 'Denise'
       },
       {
-        text: 'I like this class because it involves a lot of Math and critical thinking.',
-        author: 'Peiqi'
+        text: 'AP CSA teaches how to program in general. You learn some basic fundamentals of CS algorithms in this class, this class barely has any homework, and it should be review for most people coming from ECS. This class is also by far one of the best classes Franklin has to offer, and the AP label shouldn\'t deter you from trying out this really fun course.',
+        author: 'Brentt',
+        subtitle: 'Class of 2025'
       },
       {
-        text: 'I liked learning how to code in a fun way that I can use in the future.',
-        author: 'Nick'
+        text: 'AP CSA was an interesting, in depth class that created an abstract way of thinking that I can apply to my daily life. Although the class became rigorous at times, Mr. Dagler and the pathway classes ensured that everyone was prepared for success!',
+        author: 'Caroline',
+        subtitle: 'Class of 2025'
       },
       {
-        text: 'It is very interactive with a combination of notes and doing it independently.',
-        author: 'Sophia'
+        text: 'One of the most intriguing classes for those interested in advanced programming.',
+        author: 'Yongxiang',
+        subtitle: 'Class of 2025'
       }
     ],
     teacher: 'Mr. Dagler',
@@ -176,27 +179,37 @@ export const courses: Course[] = [
       'Machine Learning Honors is an elective class in the pathway, and is the only course of its kind offered in the area.',
     testimonies: [
       {
-        text: 'I enjoy collaborating with others, trying to figure out the labs and fixing the errors we have. The content of the class intrigues me because I feel machine learning is going to be a major part of our future and learning it early will benefit us.',
-        author: 'George'
-      },
-      {
         text: 'I really enjoyed collaborating with my peers on solving errors in the labs. I liked the fact that labs allowed me to practice the skills I learned in class, and allowed me to tackle new problems as well.',
         author: 'Sia',
         subtitle: 'University of California, Berkeley'
       },
       {
-        text: "I loved how we're able to work in groups to collaborate in this class and the help I got from other classmates and Mr. Dagler!",
-        author: 'Bronte'
+        text: 'I didn\'t even know how to code before this but Mr. Dagler opened my eyes.',
+        author: 'Andrew',
+        subtitle: 'Class of 2025',
       },
       {
-        text: 'I liked the energy of the classroom and the coding.',
-        author: 'Maroof',
-        subtitle: 'CSU Sacramento'
+        text: 'I really enjoy this class. I like how there is a lot of time to learn and finish assignments. This is one of the few classes I feel like I learned something in. I had a great time.',
+        author: 'Jumanah',
+        subtitle: 'Class of 2025',
       },
       {
-        text: 'I liked the collaboration in this class and working on the labs and other work with my classmates.',
-        author: 'Jordan'
-      }
+        text: 'MLH repeats all the fun aspects with AP CSA, but now with an emphasis on machine learning. Even if you think CS or math isn\'t your cup of tea, this class is still appealing because most concepts should feel intuitive, and Python is easy to learn and understand. Plus, this course doesn\'t have that much homework, or need crazy in-depth knowledge about math, you just need to pay attention and think logically. Anyone can take this class and perform well in it.',
+        author: 'Brentt',
+        subtitle: 'Class of 2025',
+      },
+      {
+        text: 'I really enjoyed doing projects in MLH because they analyzed real world data like housing prices, purchasing power based on salary and age, and energy efficiency. Our projects teach us important ML topics like regression and classification.',
+        author: 'Gaby',
+        subtitle: 'Class of 2025',
+      },
+      {
+        text: 'Machine Learning is a class I\'ve been wanting to take ever since I was a freshman. My favorite aspect about the class is developing statistical models and algorithms to predict trends using data from previous years. Mr. Dagler is a really great mentor and teacher who guided me through the CS Pathway. Dagler has a huge emphasis on helping his students understand the difficult nature of computer science. Overall, I would definitely recommend taking this class!',
+        author: 'Khloe',
+        subtitle: 'Class of 2025',
+      },
+      
+
     ],
     teacher: 'Mr. Dagler',
     email: 'cdagler@egusd.net',
