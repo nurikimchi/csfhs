@@ -228,7 +228,7 @@ export const mainCourses: SelectedCourses[] = [
     coverImage: ecs,
     grades: 'Sophomore',
     preview:
-      'The first course in the three-year pathway • Learn the command line interface • Develop problem-solving skills and techniques • Program using the C language • Solve problems using control flow, arrays and iteration',
+    'The first course in the three-year pathway • Introduction to computer science and problem-solving • Learn and use the four parts of every program • Program using the C++ language • Solve problems using control flow, arrays, iteration and several standard libraries.',
     pathway:
       'Exploring Computer Science serves as the first course of a three-year Computer Science pathway.',
     testimonies: [
