@@ -4,6 +4,7 @@
   import { courseHref, courses } from '$lib/utils/navdata/courses';
   import { moreInfoHref, moreInformationItems } from '$lib/utils/navdata/moreinfo';
   import { opportunitiesHref, opportunities } from '$lib/utils/navdata/opportunities'
+  import { fieldtripHref, fieldtrips } from '$lib/utils/navdata/fieldtrips';
 
   /* eslint-disable */
   // @ts-ignore
@@ -38,7 +39,7 @@
     };
   }
 
-  const selectedAreaOptions = ['classes', 'info', 'opportunities'] as const;
+  const selectedAreaOptions = ['classes', 'info', 'opportunities', 'fieldtrips'] as const;
   type SelectedArea = (typeof selectedAreaOptions)[number];
 
   let selectedArea = writable<SelectedArea>('classes');
@@ -133,6 +134,15 @@
               </MobileNavbarSection>
             {/if}
 
+            {#if $selectedArea === 'fieldtrips'}
+              <MobileNavbarSection title="Field Trips">
+                {#each fieldtrips as fieldtrip}
+                  <MobileItem
+                    item={{ ...fieldtrip, href: fieldtripHref(fieldtrip) }}
+                  />
+                {/each}
+              </MobileNavbarSection>
+            {/if}
             <div class="pb-[70px]"></div>
           </div>
         </div>
