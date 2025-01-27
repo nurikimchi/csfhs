@@ -288,6 +288,10 @@ export const opportunities: Opportunities[] = [
                 author: 'Omar Ahmad',
                 quote: 'The event will help prepare me for difficult and unforeseen events that could occur in the real-world jobs. My favorite part was socialization and the "Natural Disaster" section',
             },
+            {
+                author: 'Nina Dong',
+                quote: 'The event was very practial and I really like the "gathering information from the client" part. It mimics the working world and was an unexpected, but pleasant twist. My favorite part of the event was the instructors. They were super nice and easy to talk to.',
+            },
         ],
         signup: {
             talkToTeacher: true,
