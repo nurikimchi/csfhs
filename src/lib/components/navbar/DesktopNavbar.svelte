@@ -11,9 +11,9 @@
   $: isHomePage = $page.url.pathname === '/';
 </script>
 
-<div class="hidden md:block py-6 z-20 transition-all bg-white">
-  <Container width={isHomePage ? 1200 : 1000}>
-    <div class="flex flex-row items-center">
+<div class="hidden md:block py-6 z-20 transition-all ml-[4rem]">
+  <!-- <Container width={isHomePage ? 1200 : 1000}> -->
+    <div class="flex flex-row items-center justify-items-center ">
       {#if !isHomePage}
         <CsLogo/>
       {/if}
@@ -36,5 +36,5 @@
       <FieldtripsDropdown />
 
     </div>
-  </Container>
+  <!-- </Container> -->
 </div>

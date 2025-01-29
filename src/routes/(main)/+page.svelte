@@ -12,10 +12,18 @@
 
   import GoogleSvg from '$lib/images/google.svg';
   import StanfordSvg from '$lib/images/stanford.svg';
-  import BerkeleySvg from '$lib/images/berkeley.svg';
+  import UcBerkeley from '$lib/images/cal-berkeley.png';
   import CarnegieMellonSvg from '$lib/images/carnegie-mellon.svg';
   import UclaSvg from '$lib/images/ucla.svg';
 
+  import GeorgiaTech from '$lib/images/GeorgiaTech.png'
+  import LockheedMartin from '$lib/images/lockheed-martin.svg'
+  import Uci from '$lib/images/uci.png'
+  import Purdue from '$lib/images/purdue.svg'
+  import PrincetonSeal from '$lib/images/princeton-seal.svg'
+  import Princeton from '$lib/images/princeton.png';
+  import UcDavis from '$lib/images/ucdavis.png';
+  
   import StanfordMedical from '$lib/images/csfhs/StanfordMedical.png'
 
   import Faq from '$lib/utils/faq';
@@ -151,12 +159,20 @@
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <h2 class="text-center text-lg/8 md:text-4xl font-semibold text-gray-900">Graduates went to</h2>
     <div class="mx-auto mt-16 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={StanfordSvg} alt="Stanford" width="158" height="48">
-      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={BerkeleySvg} alt="Berkeley" width="158" height="48">
-      <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src={GoogleSvg} alt="Google" width="158" height="48">
+      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={UcBerkeley} alt="Berkeley" width="158" height="48">
       <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={CarnegieMellonSvg} alt="Carnegie Mellon" width="158" height="48">
+      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={UcDavis} alt="University of California, Davis" width="158" height="48">
+      <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src={GoogleSvg} alt="Google" width="158" height="48">
+      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={GeorgiaTech} alt="Georgia Tech" width="158" height="48">
+      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={LockheedMartin} alt="Lockheed Martin" width="158" height="48">
       <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src={UclaSvg} alt="UCLA" width="158" height="48">
+      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={StanfordSvg} alt="Stanford" width="158" height="48">
+      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={Uci} alt="University of California, Irvine" width="158" height="48">
+      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={Purdue} alt="Purdue University" width="158" height="48">
     </div>
+    <!-- <div class="mx-auto mt-16 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5"> -->
+    <!-- col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1 -->
+    <!-- </div> -->
   </div>
 </div>
 
