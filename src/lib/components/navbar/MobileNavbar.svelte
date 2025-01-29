@@ -39,7 +39,7 @@
     };
   }
 
-  const selectedAreaOptions = ['classes', 'info', 'opportunities', 'fieldtrips'] as const;
+  const selectedAreaOptions = ['classes', 'info', 'opportunities', 'Field Trips'] as const;
   type SelectedArea = (typeof selectedAreaOptions)[number];
 
   let selectedArea = writable<SelectedArea>('classes');
@@ -109,7 +109,7 @@
 
           <div class="mt-2 mb-6">
             {#if $selectedArea === 'classes'}
-              <MobileNavbarSection title="Classes">
+              <MobileNavbarSection>
                 {#each courses as course}
                   <MobileItem item={{ ...course, href: courseHref(course) }} />
                 {/each}
@@ -117,7 +117,7 @@
             {/if}
 
             {#if $selectedArea === 'info'}
-              <MobileNavbarSection title="Info">
+              <MobileNavbarSection>
                 {#each moreInformationItems as moreInformationItem}
                   <MobileItem
                     item={{ ...moreInformationItem, href: moreInfoHref(moreInformationItem) }}
@@ -127,15 +127,15 @@
             {/if}
             
             {#if $selectedArea === 'opportunities'}
-              <MobileNavbarSection title="Opportunities">
+              <MobileNavbarSection>
                 {#each opportunities as { title, preview, type, id }}
                   <OpportunitiesItem {title} {preview} {type} href={opportunitiesHrefById(id)}/>
                 {/each}
               </MobileNavbarSection>
             {/if}
 
-            {#if $selectedArea === 'fieldtrips'}
-              <MobileNavbarSection title="Field Trips">
+            {#if $selectedArea === 'Field Trips'}
+              <MobileNavbarSection>
                 {#each fieldtrips as fieldtrip}
                   <MobileItem
                     item={{ ...fieldtrip, href: fieldtripHref(fieldtrip) }}
