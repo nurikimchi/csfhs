@@ -4,188 +4,140 @@
   import TeacherCard, { TEACHER_OPTIONS } from '$lib/components/TeacherCard.svelte';
   import BackdropText from '$lib/components/text/BackdropText.svelte';
   import DaglerPFP from '$lib/images/home/dagler.jpeg';
-  import { courseHrefById, courses, mainCourses, electiveCourses, teachers } from '$lib/utils/navdata/courses';
+  import { courseHrefById, courses, teachers } from '$lib/utils/navdata/courses';
   import type { PageData } from './$types';
-  // import CsLogo from '$lib/components/navbar/CsLogo.svelte'
-  import CsLogo from '$lib/images/csfhs.jpg';
-  import Testimonials  from '$lib/utils/testimonials'
 
-  import GoogleSvg from '$lib/images/google.svg';
-  import StanfordSvg from '$lib/images/stanford.svg';
-  import UcBerkeley from '$lib/images/cal-berkeley.png';
-  import CarnegieMellonSvg from '$lib/images/carnegie-mellon.svg';
-  import UclaSvg from '$lib/images/ucla.svg';
-
-  import GeorgiaTech from '$lib/images/GeorgiaTech.png'
-  import LockheedMartin from '$lib/images/lockheed-martin.svg'
-  import Uci from '$lib/images/uci.png'
-  import Purdue from '$lib/images/purdue.svg'
-  import PrincetonSeal from '$lib/images/princeton-seal.svg'
-  import Princeton from '$lib/images/princeton.png';
-  import UcDavis from '$lib/images/ucdavis.png';
-  
-  import StanfordMedical from '$lib/images/csfhs/StanfordMedical.png'
-
-  import Faq from '$lib/utils/faq';
-  // export let data: PageData;
+  export let data: PageData;
 </script>
 
+<div class="overflow-visible lg:overflow-hidden">
+  <Container width={1200}>
+    <section class="!pt-4 md:!pt-12">
+      <div class="flex flex-row space-x-16 items-center">
+        <div class="max-w-[60ch] flex-1">
+          <BackdropText
+            text="Teaching the future innovators of technology."
+            className="font-bold text-6xl leading-[6rem]"
+          />
+          <p class="mt-8 text-xl leading-loose">
+            The Computer Science pathway has countless opportunities for students to discover
+            potential career paths and work with our industry connections to gain real-world
+            experience in the workplace.
+          </p>
 
+          <div class="mt-12 flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
+            <a
+              href="https://frhs.egusd.net/Programs/STEAM-Pathways/index.html"
+              class="button-radius-right text-center rounded-full text-sm border-2 border-indigo-600 shadow-lg shadow-indigo-600/30 tracking-wide bg-indigo-600 text-white font-semibold px-6 py-2 transition hover:bg-indigo-500 hover:border-indigo-500"
+            >
+              Join the pathway
+            </a>
+            <a
+              href="https://frhs.egusd.net/documents/New-STEAM-Wheel-and-Chart-1.pdf"
+              class="button-radius-right text-center sm:rounded-full text-sm bg-slate-900 border-2 shadow-lg shadow-slate-900/20 tracking-wide border-slate-900 text-white font-semibold px-6 py-2 transition hover:bg-slate-800 hover:text-white"
+            >
+              Student resources
+            </a>
+          </div>
+        </div>
 
-<div class="bg-white">
-
-  <div class="relative text-center">
-    <div class="absolute inset-0 w-0 bg-[#49277c] text-white py-4 animate-expand"></div>
-    <div class="relative">
-      <div class="mx-auto max-w-7xl px-6">
-        <img src={CsLogo} class="mx-auto max-w-full h-auto rounded-md" alt="Computer Science logo"/>
-      </div>
-    </div>
-  </div>
-  
-</div>
-
-
-<!-- Pathway -->
-<div class="bg-white py-16 lg:mt-24 lg:py-0 sm:py-0">
-  <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-6">
-    <p class="font-sans mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">Pathway Courses</p>
-    <div class="mt-8 grid grid-cols-1 gap-4 sm:mt-10 lg:grid-cols-6 lg:grid-rows-1">
-      {#each mainCourses as course, index}
-        <div class={`relative ${course.colSpanClass}`}>
-          <div class={`absolute inset-px rounded-lg bg-white ${course.roundedClass}`}></div>
-          <div
-            class={`relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] ${course.roundedClass}`}
-          >
-            <img class={course.imgClass} src={course.coverImage} alt={course.title} />
-            <div class="p-10 pt-4">
-              <h3 class="text-sm/4 font-semibold text-indigo-600">{course.grades}</h3>
-              <a href="/courses/{course.id}">
-                <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">{course.title}</p>
-              </a>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-600">{course.preview}</p>
+        <div class="flex-1 h-full lg:block hidden">
+          <div class="absolute w-screen max-w-[900px]">
+            <div
+              class="rotate-2 translate-x-4 -translate-y-1/2 shadow-2xl shadow-slate-900/50 rounded-md"
+            >
+              <ImageCarousel presentation images={data.images.map((i) => ({ src: i, alt: '' }))} />
             </div>
           </div>
-          <div
-            class={`pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 ${course.roundedClass}`}
-          ></div>
         </div>
-      {/each}
+      </div>
 
-    </div>
-  </div>
-</div>
+      <div class="max-w-4xl mx-auto overflow-hidden rounded-md text-white mt-24">
+        <div class="flex flex-col items-center text-center">
+          <img src={DaglerPFP} alt="Mr. Dagler" class="rounded-full h-24 w-24" />
 
+          <blockquote class="text-gray-800 my-8 text-lg">
+            “Welcome to the Computer Science Pathway at Franklin High School. In this website, you
+            will find a description for all of the classes in the pathway and how I connect my
+            students to industry partners: <b>guest speakers</b>, <b>field trips</b>,
+            <b>coding camps</b>, and
+            <b>competitions</b>. All of the classes and activities in our Computer Science program
+            are based around our CS Pathway Outcomes.”
+          </blockquote>
 
-<div class="bg-white py-16 lg:mt-24 lg:py-0 sm:py-0">
-  <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-6">
-    <p class="font-sans mt-2 max-w-lg text-pretty text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">Elective Courses</p>
-    <div class="mt-8 grid grid-cols-1 gap-4 sm:mt-10 lg:grid-cols-6 lg:grid-rows-1">
-      {#each electiveCourses as course, index}
-        <div class={`relative ${course.colSpanClass}`}>
-          <div class={`absolute inset-px rounded-lg bg-white ${course.roundedClass}`}></div>
-          <div
-            class={`relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] ${course.roundedClass}`}
-          >
-            <img class={course.imgClass} src={course.coverImage} alt={course.title} />
-            <div class="p-10 pt-4">
-              <h3 class="text-sm/4 font-semibold text-indigo-600">{course.grades}</h3>
-              <a href="/courses/{course.id}">
-                <p class="font-sans mt-2 text-lg font-medium tracking-tight text-gray-950">{course.title}</p>
-              </a>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-600">{course.preview}</p>
-            </div>
+          <div>
+            <p class="border-gray-800 text-indigo-600 font-semibold text-sm">
+              Clay Dagler, Head of Computer Science
+            </p>
+            <p class="text-sm mt-1 text-gray-600">
+              {TEACHER_OPTIONS['Mr. Dagler'].email}
+            </p>
           </div>
-          <div
-            class={`pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 ${course.roundedClass}`}
-          ></div>
         </div>
-      {/each}
-
-    </div>
-  </div>
+      </div>
+    </section>
+  </Container>
 </div>
 
+<Container bgColorClass="bg-gray-900">
+  <section>
+    <div class="grid lg:grid-cols-2 gap-12">
+      <div class="w-full">
+        <div class="sticky top-24">
+          <div class="overflow-hidden w-full text-white">
+            <h1 class="text-5xl font-bold leading-[5rem]">A course for everyone.</h1>
 
-<!-- TESTIMONIALs -->
+            <p class="mt-2 text-gray-200 leading-8">
+              Here at Franklin, we have a large selection of courses available for students to
+              expand on their interests in computer science. The STEAM Academy Pathway includes
+              Exploring Computer Science, AP Computer Science Principles, and AP Computer Science A.
+            </p>
 
-<section class="bg-white py-24 mt-32 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-      <div class="flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20">
-        <img class="h-12 self-start" src={GoogleSvg} alt="">
-        <figure class="mt-10 flex flex-auto flex-col justify-between">
-          <blockquote class="text-lg/8 text-gray-900">
-            <p>{Testimonials[3].quote}</p>
-          </blockquote>
-          <figcaption class="mt-10 flex items-center gap-x-6">
-            <div class="text-base">
-              <div class="font-semibold text-gray-900">{Testimonials[3].name}</div>
-              <div class="mt-1 text-gray-500">{Testimonials[3].subtitle}</div>
-            </div>
-          </figcaption>
-        </figure>
+            <p class="mt-4 text-gray-200 leading-8">
+              Aside from the pathway, additional courses like Computer Science and Robotics for
+              Beginners, Web Development, and Machine Learning Honors offer more specific
+              applications of programming with modern tools, languages and technologies.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="flex flex-col border-t border-gray-900/10 pt-10 sm:pt-16 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0 xl:pl-20">
-        <img class="h-12 self-start" src={StanfordMedical} alt="">
-        <figure class="mt-10 flex flex-auto flex-col justify-between">
-          <blockquote class="text-lg/8 text-gray-900">
-            <p>{Testimonials[4].quote}</p>
-          </blockquote>
-          <figcaption class="mt-10 flex items-center gap-x-6">
-            <div class="text-base">
-              <div class="font-semibold text-gray-900">{Testimonials[4].name}</div>
-              <div class="mt-1 text-gray-500">{Testimonials[4].subtitle}</div>
+
+      <div class="relative w-full">
+        <div class="flex flex-col space-y-8">
+          {#each courses as { title, description, pathway, teacher, id }}
+            <div class="border rounded p-8 text-white border-gray-800 bg-gray-800 block">
+              <h1 class="font-medium text-lg">{title}</h1>
+              <p class="text-sm mt-1">{teacher}</p>
+              <p class="my-6 text-gray-400">{pathway} <br /> <br /> {description}</p>
+
+              <a
+                href={courseHrefById(id)}
+                class="block text-center w-full border rounded border-gray-700 py-2 text-sm font-medium text-gray-100 transition hover:bg-gray-900 hover:border-gray-900"
+              >
+                Learn more
+              </a>
             </div>
-          </figcaption>
-        </figure>
+          {/each}
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-
-
-<!-- ALUMNI -->
-<div class="bg-white py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <h2 class="text-center text-lg/8 md:text-4xl font-semibold text-gray-900">Graduates went to</h2>
-    <div class="mx-auto mt-16 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={UcBerkeley} alt="Berkeley" width="158" height="48">
-      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={CarnegieMellonSvg} alt="Carnegie Mellon" width="158" height="48">
-      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={UcDavis} alt="University of California, Davis" width="158" height="48">
-      <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src={GoogleSvg} alt="Google" width="158" height="48">
-      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={GeorgiaTech} alt="Georgia Tech" width="158" height="48">
-      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={LockheedMartin} alt="Lockheed Martin" width="158" height="48">
-      <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src={UclaSvg} alt="UCLA" width="158" height="48">
-      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={StanfordSvg} alt="Stanford" width="158" height="48">
-      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={Uci} alt="University of California, Irvine" width="158" height="48">
-      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={Purdue} alt="Purdue University" width="158" height="48">
-    </div>
-    <!-- <div class="mx-auto mt-16 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5"> -->
-    <!-- col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1 -->
-    <!-- </div> -->
-  </div>
-</div>
-
+  </section>
+</Container>
 
 <Container>
   <section>
     <div>
-      <h1 class="text-center font-bold text-4xl md:text-6xl leading-[4rem] md:leading-[6rem]">Meet your instructor</h1>
+      <BackdropText
+        text="Our instructors."
+        className="text-center font-bold text-4xl md:text-7xl leading-[4rem] md:leading-[6rem]"
+      />
     </div>
 
-    <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16"> -->
-      <div class="mt-16">
-        {#each teachers as teacher}
-          <div class="mt-8">
-          
-            <TeacherCard {teacher} />
-          </div>
-        {/each}
-
-      </div>
-    <!-- </div> -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+      {#each teachers as teacher}
+        <TeacherCard {teacher} />
+      {/each}
+    </div>
   </section>
 </Container>
 
@@ -194,44 +146,3 @@
     @apply py-8 md:py-24;
   }
 </style>
-
-<!-- FREQUENTLY ASKED QUESITONS -->
-<!-- Do I need to be an experienced programmer? Do I work on my own?  -->
-<div class="bg-white">
-  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
-    <div class="mx-auto max-w-4xl divide-y divide-gray-900/10">
-      <h2 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Frequently asked questions</h2>
-      {#each Faq as faq}
-      <dl class="mt-10 space-y-6 divide-y divide-gray-900/10">
-        <div class="pt-6">
-
-          <dt>
-            <!-- Expand/collapse question button -->
-            <button type="button" class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="faq-0" aria-expanded="false">
-              <span class="text-base/7 font-semibold">{faq.question}</span>
-              
-            </button>
-          </dt>
-          
-          <dd class="mt-2 pr-12" id="faq-0">
-            <p class="text-base/7 text-gray-600">{faq.answer}</p>
-          </dd>
-        </div>
-        <!-- More questions... -->
-      </dl>
-      {/each}
-
-    </div>
-  </div>
-</div>
-<!-- these are the buttons for the faq
-<span class="ml-6 flex h-7 items-center">
-
-  <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-  </svg>
-
-  <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-  </svg>
-</span> -->
