@@ -147,6 +147,10 @@ export const opportunities: Opportunities[] = [
                 stat: '1',
             },
             {
+                label: 'Took second in nationals and state',
+                stat: '1',
+            },
+            {
                 label: 'Regional podium finishers',
                 stat: '4+',
             },

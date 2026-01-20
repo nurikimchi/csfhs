@@ -3,6 +3,9 @@
   import ImageCarousel from '$lib/components/images-components/ImageCarousel.svelte';
   import TeacherCard from '$lib/components/TeacherCard.svelte';
 
+  // import EducationWeek logo from testimonies folder
+  import eduLogo from '../../../../testimonies/educationweek.jpg';
+
   import Checkmark from '$lib/components/icons/Checkmark.svelte';
   import { tweened } from 'svelte/motion';
   import type { PageData } from './$types';
@@ -50,7 +53,6 @@
     </div>
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:mx-0">
-        <p class="text-base/7 font-semibold text-indigo-600">{new Date().getFullYear() - 1} - {new Date().getFullYear()}</p>
         <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:leading-[4rem]">{course.title}</h1>
         <p class="mt-6 text-xl/8 text-gray-700">{course.pathway}</p>
       </div>
@@ -66,23 +68,38 @@
           </svg>
   
   
-          {#each selectedTestimonials as testimony}
-          <figure class="mb-12 border-l border-indigo-600 pl-8">
-            <blockquote class="text-xl/8 font-normal tracking-tight text-gray-900">
-              <p>{testimony.text}</p>
-            </blockquote>
-            <figcaption class="mt-8 flex gap-x-4">
-              <div class="text-sm/6">
-                <div class="font-semibold text-gray-900">{testimony.author}</div>
-                {#if testimony.subtitle != null}
-                <div class="text-gray-600">{testimony.subtitle}</div>
-                {/if}
-              </div>
-            </figcaption>
-          </figure>
-          {/each}
+          <div class="max-h-96 overflow-y-auto pr-4">
+            {#each course.testimonies as testimony}
+            <figure class="mb-12 border-l border-indigo-600 pl-8">
+              <blockquote class="text-xl/8 font-normal tracking-tight text-gray-900">
+                <p>{testimony.text}</p>
+              </blockquote>
+              <figcaption class="mt-8 flex gap-x-4">
+                <div class="text-sm/6">
+                  <div class="font-semibold text-gray-900">{testimony.author}</div>
+                  {#if testimony.subtitle != null}
+                  <div class="text-gray-600">{testimony.subtitle}</div>
+                  {/if}
+                </div>
+              </figcaption>
+            </figure>
+            {/each}
+          </div>
         </div>
         <div class="max-w-xl text-base/7 text-gray-700 lg:col-span-7">
+          {#if course.id === 'ml-honors'}
+            <div class="mt-6 mb-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+              <div class="flex items-center gap-4">
+                <img src={eduLogo} alt="EducationWeek" class="w-[240px] max-w-full h-auto object-contain" />
+                <p class="text-xl text-gray-700 m-0">
+                  <a href="https://www.edweek.org/technology/these-students-are-learning-the-math-that-makes-ai-tick/2025/10" target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:underline">Learn more about Machine Learning Honors presented by EducationWeek</a>
+                </p>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600 italic mt-2">
+              Education Week is the nation's premier source for trusted, in-depth reporting and insights on K–12 education, empowering educators, policymakers, and school leaders with the information they need to drive meaningful change.
+            </p>
+          {/if}
           <ul role="list" class="mt-8 max-w-xl space-y-8 text-gray-600">
             {#each bulletPoints as bulletPoint}
             <li class="flex gap-x-3">

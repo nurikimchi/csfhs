@@ -4,6 +4,7 @@ export interface MoreInformation {
   overview: string;
   bullets: string[];
   id: string;
+  videoUrl?: string;
 }
 
 export const moreInformationItems: MoreInformation[] = [
@@ -47,6 +48,21 @@ export const moreInformationItems: MoreInformation[] = [
       "We are excited to announce that the Computer Science pathway has an updated classroom. Tables and laptops have replaced the rows of desktops to give students more opportunities to collaborate and work together. Each group has a TV screen to make it easier to see the teacher's notes and allow students to project their own screens from their laptops. The walls now have large whiteboards to provide students with more opportunities to problem solve and plan out their projects.",
     bullets: [],
     id: 'updated-classroom'
+  },
+  {
+    title: 'Zoo Project',
+    preview:
+      'A collaboration between FSD and the City of Elk Grove to create a virtual reality simulation showcasing the new zoo.',
+    overview:
+      'In 2024, the City of Elk Grove commissioned Full-Stack Development to create an immersive virtual reality experience for the community\'s new zoo. After six months of prototyping, developing, and communication with city officials, FSD presented its virtual reality simulation at a City Council meeting. Mayor Bobbie Singh-Allen, Vice Mayor Kevin Spease, Councilman Darren Suen, Rod Brewer, and Sergio Robles voted unanimously for the creation of the zoo. The project garnered significant media attention, with local news stations interviewing Mr. Dagler, the club\'s president, and vice president while showcasing their work. This high-impact technical project exemplifies how pathway students can contribute to meaningful community initiatives while gaining real-world development experience.',
+    bullets: [
+      'Presented to City Council',
+      'Featured on local news',
+      'Contributed to unanimous vote for zoo creation',
+      'Real-world VR development experience'
+    ],
+    id: 'zoo-project',
+    videoUrl: 'https://www.youtube.com/embed/74Y_TmQUIFw?start=2696'
   },
 ];
 

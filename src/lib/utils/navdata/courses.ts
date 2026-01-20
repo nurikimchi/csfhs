@@ -208,6 +208,67 @@ export const courses: Course[] = [
         author: 'Khloe',
         subtitle: 'Class of 2025',
       },
+      {
+        text: 'I LIKED MR. DAGLER\'S SUPER ENERGETIC AND MOTIVATED TEACHING',
+        author: 'Owen',
+        subtitle: 'Class of 2022',
+      },
+      {
+        text: 'i enjoyed the classification section, was fun to learn',
+        author: 'Jeffrey',
+        subtitle: 'Class of 2022',
+      },
+      {
+        text: 'I enjoyed going into the class in the early morning and doing the labs.',
+        author: 'Kaylina',
+        subtitle: 'Class of 2022',
+      },
+      {
+        text: 'This class intrigued me because we could code out programs that could make predictions as if the computer itself was learning and adapting from its mistakes. This class is offered at very little schools in California, so I would 100% take the opportunity to learn about Machine Learning with one of the nicest, and engaging teachers on campus. ',
+        author: 'Kyle Shun',
+        subtitle: 'Class of 2022',
+      },
+      {
+        text: 'I liked learning about regression and dealing with multiple dimensions of data. I also liked finding trends in data only using input values. Each problem is a puzzle.',
+        author: 'Jackson',
+        subtitle: 'Class of 2022',
+      },
+      {
+        text: 'I enjoyed the project focus in the class, where I could spend time working independently with assistance where needed',
+        author: 'Jaxon',
+        subtitle: 'Class of 2022',
+      },
+      {
+        text: 'I enjoyed solving challenging problems and the collaborative environment of this class. Being able to work with my peers made the labs a lot more fun and engaging. This was an amazing class and I definitely would recommend it to others. ',
+        author: 'Matthew',
+        subtitle: 'Class of 2022',
+      },
+      {
+        text: 'I really like doing the labs and seeing the results of models',
+        author: 'Hannah',
+        subtitle: 'Class of 2022',
+      },
+      {
+        text: 'I like the teamwork environment and the labs we  do in class',
+        author: 'Tyler',
+        subtitle: 'Class of 2022',
+      },
+      {
+        text: 'I didn\'t know much about Machine Learning or about the coding language but after trying it out, I liked learning a new language and teaching with real life examples made coding easy to understand. It was amazing to create something of AI at my fingertips!',
+        author: 'Jadyn',
+        subtitle: 'Class of 2022',
+      },
+      {
+        text: 'What I like about Machine Learning  is the experience that I had with this class. I wish for this class to continue improving and expanding throughout the years, hoping for more students to attend this class at some point.',
+        author: 'Ethan',
+        subtitle: 'Class of 2022',
+      },
+      {
+        text: 'I liked how easy it was. At first, this class seemed intimidating but after taking it for the 2 terms I had it, I learned to enjoy this class and not be feared by it. #TeamDagler',
+        author: 'Kailyn',
+        subtitle: 'Class of 2022',
+      },
+
       
 
     ],

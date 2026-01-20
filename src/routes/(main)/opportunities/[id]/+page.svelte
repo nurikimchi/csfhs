@@ -24,7 +24,6 @@
       <div class="overflow-hidden bg-white py-24 sm:py-32">
         <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
           <div class="max-w-2xl">
-            <p class="text-base/7 font-semibold text-indigo-600">{new Date().getFullYear() - 1} - {new Date().getFullYear()}</p>
             <h1 class="mt-2 lg:leading-[4rem] text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">{animatedTitleOutput}</h1>
             <p class="mt-6 text-balance text-xl/8 text-gray-700">{opportunity.preview}</p>
           </div>

@@ -32,14 +32,6 @@
 
 
 
-<!-- banner -->
-<div class="flex items-center justify-center gap-x-6 bg-gray-900 px-6 py-2.5 sm:pr-3.5 lg:pl-8">
-  <p class="text-sm/6 text-white text-center">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeFnPzPjKdTvhm6TlgftfXbswy2KZDZB3O053m4pyaYAh7xzA/viewform" target="_blank">
-      <strong class="font-semibold underline text-l lg:text-md">Registrations are open for the 2025-2026 school year!</strong>&nbsp;<span aria-hidden="true" class="text-md lg:text-lg">&rarr;</span>
-    </a>
-  </p>
-</div>
 <div class="bg-white">
 
   <div class="relative text-center">

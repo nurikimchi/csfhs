@@ -27,7 +27,6 @@
   <div class="flex-[4] min-h-screen">
     <div class="flex flex-col pt-6 md:pt-8">
       <div class="flex-1">
-        <p class="mb-4">{new Date().getFullYear() - 1} - {new Date().getFullYear()}</p>
         <h1 class="text-left font-bold pr-[14rem] text-4xl md:text-6xl leading-[3rem] md:leading-[5rem]">{animatedTitleOutput}</h1> 
       </div>
 
@@ -56,9 +55,24 @@
     </div>
 
     {#if data.pageImages.length > 0}
-      <div class="flex flex-col-reverse md:flex-row md:space-x-8">
+      <div class="flex flex-col-reverse md:flex-row md:space-x-8 mt-12">
         <div class="flex-1 mt-16 md:mt-0">
           <ImageCarousel images={data.pageImages.map((src) => ({ alt: '', src }))} />
+        </div>
+      </div>
+    {/if}
+
+    {#if moreInfo.videoUrl}
+      <div class="mt-12">
+        <div class="relative w-full" style="padding-bottom: 56.25%;">
+          <iframe
+            class="absolute top-0 left-0 w-full h-full rounded-lg"
+            src={moreInfo.videoUrl}
+            title="YouTube video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     {/if}
