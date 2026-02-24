@@ -9,6 +9,13 @@ export interface Opportunities {
     type: OppType;
     club?: Club;
     id: string;
+    externalLink?: ExternalLink;
+    videoUrl?: string;
+}
+
+export interface ExternalLink {
+    url: string;
+    text: string;
 }
 
 export interface Achievement {
@@ -283,6 +290,35 @@ export const opportunities: Opportunities[] = [
         type: 'Certification',
         club: undefined,
         id: 'hpe-cert'
+      },
+      {
+        title: 'Congressional App Challenge',
+        preview: 'A nationwide competition for high school students to create and submit their own apps.',
+        description: 'The Congressional App Challenge is an official initiative of the U.S. House of Representatives where students compete by creating and exhibiting their software application, or "app", for mobile, tablet, or computer devices on a platform of their choice.',
+        descriptionSecond: 'Winners are recognized by their Member of Congress, and winning apps are featured on the House of Representatives\' website and promoted across their social media platforms. Rep. Doris Matsui has named Omar Ahmad and Preston Chang of Franklin High School as the winners of the 2025 Congressional App Challenge in California\'s Seventh District. Their app RecycleRightCA gamifies the recycling process to make it more engaging and rewarding.',
+        achievements: [
+            {
+                label: 'District winners',
+                stat: '2',
+            },
+        ],
+        testimonials: [
+            {
+                author: '',
+                quote: '',
+            },
+        ],
+        signup: {
+            talkToTeacher: true
+        },
+        type: 'Competition',
+        club: undefined,
+        id: 'congressional-app',
+        externalLink: {
+            url: 'https://www.congressionalappchallenge.us/2025-winners/#California',
+            text: 'View the winning apps from California here'
+        },
+        videoUrl: 'https://www.youtube.com/embed/W8oCgQ0U3w8'
       },
 ]
 

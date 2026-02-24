@@ -30,27 +30,57 @@
           <section class="mt-20 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-16">
             <div class="lg:pr-8">
               <h2 class="text-pretty text-2xl font-semibold tracking-tight text-gray-900">About</h2>
+              {#if opportunity.externalLink}
+                <div class="mt-6 mb-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
+                  <div class="flex items-center gap-4">
+                    {#if opportunity.id === 'congressional-app'}
+                      {#await import('$lib/images/csfhs/opportunities/congressional-app/congressionalapp_logo.png') then logo}
+                        <img src={logo.default} alt="Congressional App Challenge" class="w-[180px] max-w-full h-auto object-contain" />
+                      {/await}
+                    {/if}
+                    <p class="text-lg text-gray-700 m-0">
+                      <a href={opportunity.externalLink.url} target="_blank" rel="noopener noreferrer" class="font-semibold text-indigo-600 hover:underline">{opportunity.externalLink.text}</a>
+                    </p>
+                  </div>
+                </div>
+              {/if}
               <p class="mt-6 text-base/7 text-gray-600">{opportunity.description}</p>
               <p class="mt-8 text-base/7 text-gray-600">{opportunity.descriptionSecond}</p>
             </div>
             <div class="pt-16 lg:row-span-2 lg:-mr-16 xl:mr-auto">
-              <div class="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
-                {#if data.pageImages.length > 0}
-                    {#each data.pageImages as image, index}
-                        {#if index % 2 == 0}
-                            <div class="aspect-square overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
-                                <img alt="" src={image} class="block size-full object-cover">
-                            </div>
-                        {/if}
-                        {#if index % 2 != 0}
-                            <div class="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
-                                <img alt="" src={image} class="block size-full object-cover">
-                            </div>
-                        {/if}
-                    {/each}
-                {/if}
-              </div>
+              {#if opportunity.id !== 'congressional-app'}
+                <div class="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
+                  {#if data.pageImages.length > 0}
+                      {#each data.pageImages as image, index}
+                          {#if index % 2 == 0}
+                              <div class="aspect-square overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10">
+                                  <img alt="" src={image} class="block size-full object-cover">
+                              </div>
+                          {/if}
+                          {#if index % 2 != 0}
+                              <div class="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline outline-1 -outline-offset-1 outline-black/10 lg:-mt-40">
+                                  <img alt="" src={image} class="block size-full object-cover">
+                              </div>
+                          {/if}
+                      {/each}
+                  {/if}
+                </div>
+              {/if}
             </div>
+            {#if opportunity.videoUrl}
+              <div class="lg:col-span-2 max-lg:mt-16">
+                <div class="relative w-full max-w-5xl mx-auto" style="padding-bottom: 56.25%;">
+                  <iframe
+                    class="absolute top-0 left-0 w-full h-full rounded-lg shadow-xl"
+                    src={opportunity.videoUrl}
+                    title="YouTube video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            {/if}
             <div class="max-lg:mt-16 lg:col-span-1">
               <p class="text-base/7 font-semibold text-gray-500">The numbers</p>
               <hr class="mt-6 border-t border-gray-200">

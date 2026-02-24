@@ -23,6 +23,7 @@
   import PrincetonSeal from '$lib/images/princeton-seal.svg'
   import Princeton from '$lib/images/princeton.png';
   import UcDavis from '$lib/images/ucdavis.png';
+  import Westpoint from '$lib/images/westpoint.png';
   
   import StanfordMedical from '$lib/images/csfhs/StanfordMedical.png'
 
@@ -161,6 +162,7 @@
       <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={StanfordSvg} alt="Stanford" width="158" height="48">
       <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={Uci} alt="University of California, Irvine" width="158" height="48">
       <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src={Purdue} alt="Purdue University" width="158" height="48">
+      <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1 lg:col-start-3" src={Westpoint} alt="West Point" width="158" height="48">
     </div>
     <!-- <div class="mx-auto mt-16 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5"> -->
     <!-- col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1 -->
